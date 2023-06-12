@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="842.188" height="281.535" viewBox="0 0 631.641 211.152" xml:space="preserve" color-interpolation-filters="sRGB" style="fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3">
+		<style>
+		.st1,.st2{fill:#1f64ff;stroke:none;stroke-linecap:butt;stroke-width:.739845}
+		.st2{fill:none;stroke-width:.75}
+		.st3{fill:#000;font-family:Symbol;font-size:1.5em}
+		.st4,.st5,.st6{font-size:1em}
+		.st5,.st6{font-family:Noto Sans}
+		.st6{fill:#fff;font-size:1.5em}
+		</style>
+<g id="shape1-1" transform="translate(330.087 -72.74)">
+<path 	class="st1" d="M0 154.48h300.522v56.672H0z"/></g>
+<g id="shape2-3" transform="translate(330.228 -.74)">
+<path 	class="st1" d="M0 154.48h300.522v56.672H0z"/></g>
+<g id="shape3-5" transform="translate(330.228 -153.74)">
+<path 	class="st1" d="M0 154.48h300.522v56.672H0z"/></g>
+<g id="shape4-7" transform="translate(.75 -155.076)">
+<path 	class="st2" d="M0 157.152h270v54H0z"/>
+<text y="173.71" 	class="st3">
+<tspan 	class="st4">·</tspan> 
+<tspan 	class="st5">Make things (articles, genes,  </tspan>
+<tspan x="18" dy="1.207em" 	class="st5">antibodies, etc.) easier to find </tspan> </text></g>
+<g id="shape5-13" transform="translate(.75 -83.076)">
+<path 	class="st2" d="M0 175.152h270v36H0z"/>
+<text y="198.67" 	class="st3">
+<tspan 	class="st4">·</tspan> 
+<tspan 	class="st5">Answer questions </tspan> </text></g>
+<g id="shape6-18" transform="translate(.75 -11.076)">
+<path 	class="st2" d="M0 175.152h270v36H0z"/>
+<text y="198.67" 	class="st3">
+<tspan 	class="st4">·</tspan> 
+<tspan 	class="st5">Generate hypotheses </tspan> </text></g>
+<g id="shape7-23" transform="translate(345.837 -155.076)">
+<path 	class="st2" d="M0 157.152h285.053v54H0z"/>
+<text y="178.75" 	class="st6">controlled vocabularies (MeSH) 
+<tspan x="0" dy="1.2em" 	class="st4">ontologies (Gene Ontology)</tspan> </text></g>
+<g id="shape8-27" transform="translate(345.837 -71.826)">
+<path 	class="st2" d="M0 152.652h273.803v58.5H0z"/>
+<text y="176.5" 	class="st6">knowledge graphs on the Web: 
+<tspan x="0" dy="1.2em" 	class="st4">the SPARQL query language</tspan></text></g>
+<g id="shape9-31" transform="translate(345.837 -2.076)">
+<path 	class="st2" d="M0 157.152h269.303v54H0z"/>
+<text y="178.75" 	class="st6">knowledge plus computation =
+<tspan style="fill:#000;font-size:1em"> </tspan>
+<tspan x="0" dy="1.2em" 	class="st4">inference, the ABC model</tspan> </text></g>
+</svg>
