@@ -1,8 +1,11 @@
 <!--
 issues
+  does NOT include Truett correction
   make SPARQL work - outlink
+
 has unique CSS for PubChem from extractor
   ./33 is broken - refer to original; missing CSS
+
 grid is basically correct
   upgrade to use new terse structure
 -->
@@ -103,7 +106,6 @@ Story template: Knowledge Graph
 <style amp-custom>
 
 :root {
-
   --space-unit-v: 1rem;
   --space-xxxxs:  calc(0.125 * var(--space-unit-v)); 
   --space-xxxs:   calc(0.25  * var(--space-unit-v));
@@ -231,8 +233,8 @@ Story template: Knowledge Graph
 }
 
 /* use mnemonic for target/theme color */
-.c-white {color:var(--on-ffffff)}
-.on-logo {color:var(--on-1f64ff)}
+.c-white  {color:var(--on-ffffff)}
+.c-onlogo {color:var(--on-1f64ff)}
 
 @font-face {
   font-family:Poppins-100-Normal;
@@ -538,9 +540,9 @@ Story template: Knowledge Graph
   font-display: swap;
 }
 
-/*************
- *  title page
- *  switch to logical labels - color
+/************
+ * title page
+ * switch to logical labels - color
  */
 
 .noedge{padding:0;}
@@ -593,7 +595,7 @@ Story template: Knowledge Graph
   text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3);
 }
 
-/*
+/***************************
  *  updated to new structure
  *  text-shadow: 0px 4px 4px rgb(0 0 0 / .95);
  *  Poppins
@@ -660,8 +662,8 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 
-/****************
- *  anchor custom
+/***************
+ * anchor custom
  */
 
 .uline {
@@ -693,15 +695,9 @@ blockquote:before {
 
 /* switch to ta-l ta-c ta-r */
 
-.ta-c {
-  text-align: center;
-}
-.ta-r {
-  text-align: right;
-}
-.ta-l {
-  text-align: left;
-}
+.ta-c {text-align: center;}
+.ta-r {text-align: right;}
+.ta-l {text-align: left;}
 
 
 /***************************
@@ -709,7 +705,6 @@ blockquote:before {
  *  alt
  *      grid-template-rows: fit-content(40%);
  */
-
 
 .grid-knowledge-graph {
   display: grid;
@@ -880,7 +875,7 @@ blockquote:before {
   height: 200px;
 }
 
-/*********
+/********
  * Truett
  * controls PubChem illustrations
  */
@@ -2920,16 +2915,16 @@ PubChem in a Single Picture
 <div style="padding-left:10vw;">
 <div class="pf w0 h0">
 <!--
-          media="(min-width: 650px)"
+    media="(min-width: 650px)"
 -->
-      <amp-img
-          src="./37/pc-item-28-w5975-h3013.jpg"
-          width="5975"
-          height="3013"
-          heights="(min-width:500px) 500px, 30%"
-          layout="responsive"
-      ></amp-img>
-  </div>
+<amp-img
+    src="./37/pc-item-28-w5975-h3013.jpg"
+    width="5975"
+    height="3013"
+    heights="(min-width:500px) 500px, 30%"
+    layout="responsive"
+></amp-img>
+</div>
 </div>
 </div>
 </div>
