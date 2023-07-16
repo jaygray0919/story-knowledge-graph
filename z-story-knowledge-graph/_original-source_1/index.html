@@ -1,0 +1,3141 @@
+<!--
+18 slides
+
+replace
+	“”
+	with html-hex
+
+Mélanie Courtot
+-->
+<!doctype html>
+<html amp>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>
+Knowledge Graphs
+</title>
+<link rel="canonical" href="https://example.io">
+
+<link title="mask-icon" rel="mask-icon" type="image/svg+xml" property="schema:image" color="#1F64FF" href="https://ontomatica.io/static/image/logo/onto-symbol-w252-h252.svg" crossorigin />
+
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+
+<link rel="preload" as="font" href="https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri.woff2" crossorigin>.
+<link rel="preload" as="font" href="https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri-Light.woff2" crossorigin>.
+<link rel="preload" as="font" href="https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri-Bold.woff2" crossorigin>.
+<link rel="preload" as="font" href="https://s3.amazonaws.com/benetta.net/fonts/arial/Arial.woff2" crossorigin>.
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}
+@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+<style amp-custom>
+
+#page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.pf {
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    margin: 0;
+    border: 0;
+}
+.pc {
+    position: absolute;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+.bi {
+    position: absolute;
+    border: 0;
+    margin: 0;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@media print {
+    .pf {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+        page-break-inside: avoid;
+    }
+    @-moz-document url-prefix() {
+        .pf {
+            overflow: visible;
+            border: 1px solid #fff;
+        }
+        .pc {
+            overflow: visible;
+        }
+    }
+}
+
+.c {
+    position: absolute;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: block;
+}
+.t {
+    position: absolute;
+    white-space: pre;
+    font-size: 1px;
+    transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -webkit-transform-origin: 0 100%;
+    unicode-bidi: bidi-override;
+    -moz-font-feature-settings: "liga" 0;
+}
+.t:after {
+    content: "";
+}
+.t:before {
+    content: "";
+    display: inline-block;
+}
+.t span {
+    position: relative;
+    unicode-bidi: bidi-override;
+}
+._ {
+    display: inline-block;
+    color: transparent;
+    z-index: -1;
+}
+::selection {
+    background: rgba(127, 255, 255, 0.4);
+}
+::-moz-selection {
+    background: rgba(127, 255, 255, 0.4);
+}
+.pi {
+    display: none;
+}
+.d {
+    position: absolute;
+    transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -webkit-transform-origin: 0 100%;
+}
+.it {
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes swing {
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(0);
+    }
+    90% {
+        transform: rotate(720deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+@-webkit-keyframes swing {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+    10% {
+        -webkit-transform: rotate(0);
+    }
+    90% {
+        -webkit-transform: rotate(720deg);
+    }
+    100% {
+        -webkit-transform: rotate(720deg);
+    }
+}
+
+@media screen {
+    #outline {
+        font-family: Georgia, Times, "Times New Roman", serif;
+        font-size: 13px;
+        margin: 2em 1em;
+    }
+    #outline a,
+    #outline a:active,
+    #outline a:hover,
+    #outline a:visited {
+        line-height: 1.2;
+        color: #e8e8e8;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-decoration: none;
+        display: block;
+        overflow: hidden;
+        outline: 0;
+    }
+    #outline a:hover {
+        color: #0cf;
+    }
+    #page-container {
+        background-color: #9e9e9e;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjOWU5ZTllIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=);
+        -webkit-transition: left 0.5s;
+        transition: left 0.5s;
+    }
+    .pf {
+        margin: 13px auto;
+        box-shadow: 1px 1px 3px 1px #333;
+        border-collapse: separate;
+    }
+}
+
+.ff0 {
+    font-family: sans-serif;
+    visibility: hidden;
+}
+
+@font-face {
+    font-family: ff1;
+    font-style: normal;
+    font-display: optional;
+    src: local("Calibri Light"), local(Calibri-Light),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri-Light.woff2)
+            format("woff2");
+}
+.ff1 {
+    font-family: ff1;
+    line-height: 0.983887;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+@font-face {
+    font-family: ff2;
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local("Calibri"), local(Calibri),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri.woff)
+            format("woff");
+}
+.ff2 {
+    font-family: ff2;
+    line-height: 0.98291;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+@font-face {
+    font-family: ff3;
+    font-style: normal;
+    font-display: optional;
+    src: local("Calibri Light"), local(Calibri-Light),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri-Light.woff2)
+            format("woff2");
+}
+.ff3 {
+    font-family: ff3;
+    line-height: 0.983887;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+@font-face {
+    font-family: ff4;
+    font-style: normal;
+    font-display: optional;
+    src: local("Calibri Bold"), local(Calibri-Bold),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri-Bold.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri-Bold.woff)
+            format("woff");
+}
+.ff4 {
+    font-family: ff4;
+    line-height: 0.940918;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+@font-face {
+    font-family: ff5;
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local("Arial"), local(Arial),
+        url(https://s3.amazonaws.com/benetta.net/fonts/arial/Arial.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/arial/Arial.woff)
+            format("woff");
+}
+.ff5 {
+    font-family: ff5;
+    line-height: 1.106934;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+@font-face {
+    font-family: ff6;
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local("Calibri"), local(Calibri),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri.woff)
+            format("woff");
+}
+.ff6 {
+    font-family: ff6;
+    line-height: 0.98291;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+@font-face {
+    font-family: ff7;
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local("Arial"), local(Arial),
+        url(https://s3.amazonaws.com/benetta.net/fonts/arial/Arial.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/arial/Arial.woff)
+            format("woff");
+}
+.ff7 {
+    font-family: ff7;
+    line-height: 1.361816;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+@font-face {
+    font-family: ff8;
+    font-style: normal;
+    font-display: optional;
+    src: local("Arial Bold"), local(Arial-Bold),
+        url(https://s3.amazonaws.com/benetta.net/fonts/arial/Arial-Bold.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/arial/Arial-Bold.woff)
+            format("woff");
+}
+.ff8 {
+    font-family: ff8;
+    line-height: 1.424316;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+@font-face {
+    font-family: ff9;
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local("Times New Roman"), local(TimesNewRoman),
+        url(https://s3.amazonaws.com/benetta.net/fonts/times-new-roman/TimesNewRoman.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/times-new-roman/TimesNewRoman.woff)
+            format("woff");
+}
+.ff9 {
+    font-family: ff9;
+    line-height: 0.708008;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+@font-face {
+    font-family: ffa;
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local("Times New Roman"), local(TimesNewRoman),
+        url(https://s3.amazonaws.com/benetta.net/fonts/times-new-roman/TimesNewRoman.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/times-new-roman/TimesNewRoman.woff)
+            format("woff");
+}
+.ffa {
+    font-family: ffa;
+    line-height: 0.708008;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+@font-face {
+    font-family: ffb;
+    font-style: italic;
+    font-weight: normal;
+    font-display: optional;
+    src: local("Arial Italic"), local(Arial-Italic),
+        url(https://s3.amazonaws.com/benetta.net/fonts/arial/Arial-Italic.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/arial/Arial-Italic.woff)
+            format("woff");
+}
+
+@font-face {
+    font-family: ffc;
+    font-style: normal;
+    font-display: optional;
+    src: local("Calibri Italic"), local(Calibri-Italic),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri-Italic.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri-Italic.woff)
+            format("woff");
+}
+
+@font-face {
+    font-family: ffd;
+    font-style: normal;
+    font-display: optional;
+    src: local("Calibri Bold"), local(Calibri-Bold),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri-Bold.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/calibri/Calibri-Bold.woff)
+            format("woff");
+}
+.ffd {
+    font-family: ffd;
+    line-height: 0.940918;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+@font-face {
+    font-family: ffe;
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local("Courier New"), local(CourierNew),
+        url(https://s3.amazonaws.com/benetta.net/fonts/courier/CourierNew.woff2)
+            format("woff2"),
+        url(https://s3.amazonaws.com/benetta.net/fonts/courier/CourierNew.woff)
+            format("woff");
+}
+.ffe {
+    font-family: ffe;
+    line-height: 0.866699;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+}
+
+.m0 {
+    transform: matrix(0.375, 0, 0, 0.375, 0, 0);
+    -ms-transform: matrix(0.375, 0, 0, 0.375, 0, 0);
+    -webkit-transform: matrix(0.375, 0, 0, 0.375, 0, 0);
+}
+.m1 {
+    transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+    -ms-transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+    -webkit-transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+}
+.ls13 {
+    letter-spacing: -0.3572px;
+}
+.ls9 {
+    letter-spacing: -0.3212px;
+}
+.ls11 {
+    letter-spacing: -0.312px;
+}
+.ls2 {
+    letter-spacing: -0.25px;
+}
+.ls4 {
+    letter-spacing: -0.2388px;
+}
+.ls14 {
+    letter-spacing: -0.2168px;
+}
+.ls18 {
+    letter-spacing: -0.1992px;
+}
+.ls10 {
+    letter-spacing: -0.192px;
+}
+.ls3 {
+    letter-spacing: -0.1268px;
+}
+.ls6 {
+    letter-spacing: -0.12px;
+}
+.ls5 {
+    letter-spacing: -0.1172px;
+}
+.ls15 {
+    letter-spacing: -0.0628px;
+}
+.ls7 {
+    letter-spacing: -0.024px;
+}
+.ls0 {
+    letter-spacing: 0;
+}
+.ls16 {
+    letter-spacing: 0.024px;
+}
+.lsc {
+    letter-spacing: 0.02496px;
+}
+.ls19 {
+    letter-spacing: 0.0448px;
+}
+.ls8 {
+    letter-spacing: 0.0604px;
+}
+.lse {
+    letter-spacing: 0.096px;
+}
+.lsa {
+    letter-spacing: 0.1636px;
+}
+.ls12 {
+    letter-spacing: 0.2008px;
+}
+.lsb {
+    letter-spacing: 0.2168px;
+}
+.ls1 {
+    letter-spacing: 0.264px;
+}
+.ls17 {
+    letter-spacing: 2.448px;
+}
+.sc_ {
+    text-shadow: none;
+}
+.sc1 {
+    text-shadow: -0.015em 0 #000, 0 0.015em #000, 0.015em 0 #000,
+        0 -0.015em #000;
+}
+.sc0 {
+    text-shadow: -0.015em 0 transparent, 0 0.015em transparent,
+        0.015em 0 transparent, 0 -0.015em transparent;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .sc_ {
+        -webkit-text-stroke: 0 transparent;
+    }
+    .sc1 {
+        -webkit-text-stroke: 0.015em #000;
+        text-shadow: none;
+    }
+    .sc0 {
+        -webkit-text-stroke: 0.015em transparent;
+        text-shadow: none;
+    }
+}
+
+.ws0 {
+    word-spacing: 0;
+}
+._1b {
+    margin-left: -1286.89504px;
+}
+._1c {
+    margin-left: -1210.622496px;
+}
+._1a {
+    margin-left: -691.67264px;
+}
+._1d {
+    margin-left: -543.3424px;
+}
+._4 {
+    margin-left: -16.03056px;
+}
+._21 {
+    margin-left: -13.369408px;
+}
+._20 {
+    margin-left: -11.119616px;
+}
+._7 {
+    margin-left: -9.05904px;
+}
+._9 {
+    margin-left: -8.05248px;
+}
+._d {
+    margin-left: -5.908224px;
+}
+._8 {
+    margin-left: -4.905472px;
+}
+._0 {
+    margin-left: -3.128512px;
+}
+._1 {
+    margin-left: -1.92px;
+}
+._2 {
+    width: 1.164736px;
+}
+._6 {
+    width: 2.544704px;
+}
+._3 {
+    width: 4.338944px;
+}
+._11 {
+    width: 5.407488px;
+}
+._25 {
+    width: 16.334592px;
+}
+._15 {
+    width: 17.976px;
+}
+._12 {
+    width: 20.484736px;
+}
+._1e {
+    width: 21.6px;
+}
+._13 {
+    width: 24.6624px;
+}
+._a {
+    width: 26.410624px;
+}
+._5 {
+    width: 32.856px;
+}
+._e {
+    width: 35.64px;
+}
+._b {
+    width: 38.4px;
+}
+._f {
+    width: 41.256px;
+}
+._24 {
+    width: 43.944px;
+}
+._10 {
+    width: 45.456px;
+}
+._22 {
+    width: 51.096px;
+}
+._c {
+    width: 58.392px;
+}
+._1f {
+    width: 64.0224px;
+}
+._16 {
+    width: 67.896px;
+}
+._14 {
+    width: 84.216px;
+}
+._17 {
+    width: 113.655104px;
+}
+._19 {
+    width: 311.661344px;
+}
+._18 {
+    width: 343.91744px;
+}
+._23 {
+    width: 633.560512px;
+}
+._26 {
+    width: 906.92px;
+}
+.fc1 {
+    color: #0563c1;
+}
+.fc3 {
+    color: red;
+}
+.fc6 {
+    color: #767171;
+}
+.fc2 {
+    color: #fff;
+}
+.fc0 {
+    color: #000;
+}
+.fc4 {
+    color: #595959;
+}
+.fc8 {
+    color: #007e82;
+}
+.fc5 {
+    color: #118080;
+}
+.fc7 {
+    color: #333f50;
+}
+.fc9 {
+    color: #005f62;
+}
+.fs1d {
+    font-size: 48px;
+}
+.fs8 {
+    font-size: 54.24px;
+}
+.fs1e {
+    font-size: 56.16px;
+}
+.fs1f {
+    font-size: 56.256px;
+}
+.fs1b {
+    font-size: 63.84px;
+}
+.fs1c {
+    font-size: 63.936px;
+}
+.fse {
+    font-size: 72px;
+}
+.fs13 {
+    font-size: 72.096px;
+}
+.fs16 {
+    font-size: 75.84px;
+}
+.fs17 {
+    font-size: 75.936px;
+}
+.fs18 {
+    font-size: 80.16px;
+}
+.fs21 {
+    font-size: 80.256px;
+}
+.fs4 {
+    font-size: 87.84px;
+}
+.fs5 {
+    font-size: 87.936px;
+}
+.fs12 {
+    font-size: 96px;
+}
+.fs14 {
+    font-size: 96.096px;
+}
+.fs15 {
+    font-size: 104.16px;
+}
+.fs22 {
+    font-size: 104.256px;
+}
+.fsc {
+    font-size: 111.84px;
+}
+.fsd {
+    font-size: 111.936px;
+}
+.fs9 {
+    font-size: 114.336px;
+}
+.fs2 {
+    font-size: 128.16px;
+}
+.fs3 {
+    font-size: 128.256px;
+}
+.fs1a {
+    font-size: 144px;
+}
+.fs19 {
+    font-size: 144.096px;
+}
+.fs6 {
+    font-size: 159.84px;
+}
+.fs7 {
+    font-size: 159.936px;
+}
+.fsb {
+    font-size: 176.16px;
+}
+.fsf {
+    font-size: 176.256px;
+}
+.fs1 {
+    font-size: 192px;
+}
+.fs0 {
+    font-size: 192.096px;
+}
+.fs10 {
+    font-size: 240px;
+}
+.fs11 {
+    font-size: 240.096px;
+}
+.fs20 {
+    font-size: 288.096px;
+}
+.y0 {
+    bottom: 0;
+}
+.yef {
+    bottom: 9.9px;
+}
+.y5e {
+    bottom: 10.368px;
+}
+.y61 {
+    bottom: 11.052px;
+}
+.y9a {
+    bottom: 12.852px;
+}
+.yf6 {
+    bottom: 13.968px;
+}
+.y130 {
+    bottom: 19.044px;
+}
+.y118 {
+    bottom: 20.196px;
+}
+.y121 {
+    bottom: 28.044px;
+}
+.yd6 {
+    bottom: 31.896px;
+}
+.y43 {
+    bottom: 37.62px;
+}
+.yf5 {
+    bottom: 46.368px;
+}
+.y159 {
+    bottom: 50.868px;
+}
+.y173 {
+    bottom: 51.516px;
+}
+.y141 {
+    bottom: 52.992px;
+}
+.y162 {
+    bottom: 56.7px;
+}
+.y106 {
+    bottom: 59.508px;
+}
+.y9 {
+    bottom: 64.944px;
+}
+.y70 {
+    bottom: 68.184px;
+}
+.y73 {
+    bottom: 77.184px;
+}
+.y3e {
+    bottom: 79.56px;
+}
+.y81 {
+    bottom: 84.636px;
+}
+.y172 {
+    bottom: 87.336px;
+}
+.y68 {
+    bottom: 91.476px;
+}
+.y3f {
+    bottom: 108.108px;
+}
+.yd4 {
+    bottom: 109.044px;
+}
+.y3d {
+    bottom: 111.996px;
+}
+.y59 {
+    bottom: 114.732px;
+}
+.y6f {
+    bottom: 116.964px;
+}
+.y72 {
+    bottom: 118.944px;
+}
+.y171 {
+    bottom: 128.052px;
+}
+.y161 {
+    bottom: 134.892px;
+}
+.y80 {
+    bottom: 135.036px;
+}
+.y144 {
+    bottom: 137.124px;
+}
+.yde {
+    bottom: 137.448px;
+}
+.y115 {
+    bottom: 138.42px;
+}
+.y83 {
+    bottom: 143.64px;
+}
+.y87 {
+    bottom: 144.54px;
+}
+.y139 {
+    bottom: 148.32px;
+}
+.y58 {
+    bottom: 153.975px;
+}
+.y6a {
+    bottom: 157.68px;
+}
+.y10d {
+    bottom: 158.115px;
+}
+.y113 {
+    bottom: 160.02px;
+}
+.y71 {
+    bottom: 160.71px;
+}
+.y5d {
+    bottom: 161.535px;
+}
+.yd5 {
+    bottom: 162.15px;
+}
+.y8 {
+    bottom: 166.29px;
+}
+.yea {
+    bottom: 167.295px;
+}
+.y44 {
+    bottom: 173.01px;
+}
+.y165 {
+    bottom: 175.35px;
+}
+.ydd {
+    bottom: 176.655px;
+}
+.y170 {
+    bottom: 177.915px;
+}
+.y36 {
+    bottom: 179.28px;
+}
+.y143 {
+    bottom: 180.33px;
+}
+.y26 {
+    bottom: 180.9px;
+}
+.y114 {
+    bottom: 181.62px;
+}
+.y116 {
+    bottom: 187.56px;
+}
+.y86 {
+    bottom: 189.75px;
+}
+.y13e {
+    bottom: 191.265px;
+}
+.y138 {
+    bottom: 191.52px;
+}
+.y168 {
+    bottom: 192.135px;
+}
+.y57 {
+    bottom: 193.215px;
+}
+.y104 {
+    bottom: 194.94px;
+}
+.y103 {
+    bottom: 194.97px;
+}
+.y9f {
+    bottom: 196.23px;
+}
+.y137 {
+    bottom: 200.01px;
+}
+.y12d {
+    bottom: 201.27px;
+}
+.yee {
+    bottom: 201.315px;
+}
+.y7 {
+    bottom: 201.96px;
+}
+.y10c {
+    bottom: 204.375px;
+}
+.yfd {
+    bottom: 205.455px;
+}
+.y5c {
+    bottom: 207.795px;
+}
+.y136 {
+    bottom: 209.265px;
+}
+.yfa {
+    bottom: 210.06px;
+}
+.y84 {
+    bottom: 213.765px;
+}
+.y16f {
+    bottom: 213.915px;
+}
+.y4e {
+    bottom: 214.275px;
+}
+.y15 {
+    bottom: 214.38px;
+}
+.y109 {
+    bottom: 214.845px;
+}
+.y85 {
+    bottom: 218.55px;
+}
+.y7d {
+    bottom: 219.315px;
+}
+.y67 {
+    bottom: 219.99px;
+}
+.y108 {
+    bottom: 221.115px;
+}
+.y9e {
+    bottom: 221.43px;
+}
+.y107 {
+    bottom: 221.91px;
+}
+.ydc {
+    bottom: 222.015px;
+}
+.y164 {
+    bottom: 225.75px;
+}
+.yfb {
+    bottom: 230.76px;
+}
+.y25 {
+    bottom: 231.3px;
+}
+.y56 {
+    bottom: 233.715px;
+}
+.yfc {
+    bottom: 234.255px;
+}
+.y37 {
+    bottom: 234.465px;
+}
+.y14a {
+    bottom: 235.335px;
+}
+.y167 {
+    bottom: 237.495px;
+}
+.y112 {
+    bottom: 237.6px;
+}
+.y35 {
+    bottom: 239.58px;
+}
+.y76 {
+    bottom: 240.33px;
+}
+.ye9 {
+    bottom: 240.555px;
+}
+.y1b {
+    bottom: 240.735px;
+}
+.yf9 {
+    bottom: 242.46px;
+}
+.yff {
+    bottom: 244.05px;
+}
+.y12c {
+    bottom: 244.47px;
+}
+.y9d {
+    bottom: 246.63px;
+}
+.ydf {
+    bottom: 250.995px;
+}
+.yed {
+    bottom: 251.715px;
+}
+.y16e {
+    bottom: 252.075px;
+}
+.y10b {
+    bottom: 252.435px;
+}
+.y6 {
+    bottom: 252.54px;
+}
+.y101 {
+    bottom: 252.87px;
+}
+.y5b {
+    bottom: 255.855px;
+}
+.y14 {
+    bottom: 259.74px;
+}
+.y4d {
+    bottom: 260.715px;
+}
+.y156 {
+    bottom: 262.8px;
+}
+.y154 {
+    bottom: 264.09px;
+}
+.y12b {
+    bottom: 264.135px;
+}
+.y160 {
+    bottom: 266.475px;
+}
+.ydb {
+    bottom: 267.375px;
+}
+.y7c {
+    bottom: 269.715px;
+}
+.y66 {
+    bottom: 270.39px;
+}
+.y9c {
+    bottom: 271.83px;
+}
+.y12a {
+    bottom: 273.42px;
+}
+.y140 {
+    bottom: 274.575px;
+}
+.y150 {
+    bottom: 274.65px;
+}
+.y163 {
+    bottom: 276.15px;
+}
+.yfe {
+    bottom: 276.45px;
+}
+.y13d {
+    bottom: 283.425px;
+}
+.y55 {
+    bottom: 283.785px;
+}
+.y34 {
+    bottom: 284.97px;
+}
+.y100 {
+    bottom: 285.27px;
+}
+.y16d {
+    bottom: 287.925px;
+}
+.y149 {
+    bottom: 292.605px;
+}
+.y3c {
+    bottom: 294.51px;
+}
+.y9b {
+    bottom: 297.03px;
+}
+.y10a {
+    bottom: 297.825px;
+}
+.y152 {
+    bottom: 298.11px;
+}
+.y155 {
+    bottom: 298.155px;
+}
+.y14e {
+    bottom: 299.34px;
+}
+.y29 {
+    bottom: 301.065px;
+}
+.yec {
+    bottom: 302.115px;
+}
+.y5 {
+    bottom: 303.12px;
+}
+.y40 {
+    bottom: 304.845px;
+}
+.y4c {
+    bottom: 307.185px;
+}
+.y110 {
+    bottom: 307.23px;
+}
+.ye8 {
+    bottom: 312.405px;
+}
+.yda {
+    bottom: 312.765px;
+}
+.y5a {
+    bottom: 314.565px;
+}
+.y13c {
+    bottom: 315.825px;
+}
+.y132 {
+    bottom: 317.49px;
+}
+.y13f {
+    bottom: 317.805px;
+}
+.y14f {
+    bottom: 317.88px;
+}
+.y54 {
+    bottom: 318.525px;
+}
+.y13 {
+    bottom: 320.22px;
+}
+.y142 {
+    bottom: 320.505px;
+}
+.y65 {
+    bottom: 320.835px;
+}
+.yf8 {
+    bottom: 321.48px;
+}
+.yf7 {
+    bottom: 321.51px;
+}
+.y15f {
+    bottom: 324.825px;
+}
+.y78 {
+    bottom: 328.245px;
+}
+.y16c {
+    bottom: 328.605px;
+}
+.y105 {
+    bottom: 328.68px;
+}
+.y33 {
+    bottom: 330.33px;
+}
+.y148 {
+    bottom: 332.565px;
+}
+.y135 {
+    bottom: 336.345px;
+}
+.y99 {
+    bottom: 340.59px;
+}
+.y97 {
+    bottom: 342.645px;
+}
+.y166 {
+    bottom: 343.185px;
+}
+.y92 {
+    bottom: 345.24px;
+}
+.y3a {
+    bottom: 346.14px;
+}
+.y24 {
+    bottom: 348.045px;
+}
+.y13b {
+    bottom: 348.225px;
+}
+.y95 {
+    bottom: 348.84px;
+}
+.y93 {
+    bottom: 349.815px;
+}
+.yeb {
+    bottom: 352.545px;
+}
+.ye1 {
+    bottom: 353.16px;
+}
+.y4b {
+    bottom: 353.445px;
+}
+.yd9 {
+    bottom: 358.125px;
+}
+.y7b {
+    bottom: 359.31px;
+}
+.y75 {
+    bottom: 362.445px;
+}
+.ye {
+    bottom: 364.32px;
+}
+.y12 {
+    bottom: 365.61px;
+}
+.ye7 {
+    bottom: 371.625px;
+}
+.y47 {
+    bottom: 373.605px;
+}
+.y147 {
+    bottom: 373.965px;
+}
+.y7f {
+    bottom: 374.685px;
+}
+.y32 {
+    bottom: 375.69px;
+}
+.yd {
+    bottom: 376.05px;
+}
+.y19 {
+    bottom: 378.03px;
+}
+.y16b {
+    bottom: 378.465px;
+}
+.y39 {
+    bottom: 378.54px;
+}
+.y7a {
+    bottom: 380.91px;
+}
+.y126 {
+    bottom: 381.6px;
+}
+.y98 {
+    bottom: 383.79px;
+}
+.y129 {
+    bottom: 384.63px;
+}
+.ye0 {
+    bottom: 385.56px;
+}
+.y96 {
+    bottom: 385.845px;
+}
+.y20 {
+    bottom: 388.545px;
+}
+.y53 {
+    bottom: 389.445px;
+}
+.y18 {
+    bottom: 389.775px;
+}
+.y94 {
+    bottom: 390.96px;
+}
+.y14d {
+    bottom: 391.17px;
+}
+.y4 {
+    bottom: 395.925px;
+}
+.y15e {
+    bottom: 398.265px;
+}
+.y28 {
+    bottom: 398.31px;
+}
+.y23 {
+    bottom: 398.49px;
+}
+.y4a {
+    bottom: 399.885px;
+}
+.yd8 {
+    bottom: 403.485px;
+}
+.y74 {
+    bottom: 405.39px;
+}
+.y11 {
+    bottom: 410.97px;
+}
+.y8e {
+    bottom: 413.79px;
+}
+.y16a {
+    bottom: 414.465px;
+}
+.y91 {
+    bottom: 417.93px;
+}
+.y8f {
+    bottom: 418.35px;
+}
+.y146 {
+    bottom: 418.785px;
+}
+.ye6 {
+    bottom: 423.465px;
+}
+.y134 {
+    bottom: 425.775px;
+}
+.y124 {
+    bottom: 428.145px;
+}
+.y52 {
+    bottom: 429.945px;
+}
+.y46 {
+    bottom: 433.905px;
+}
+.y64 {
+    bottom: 435.495px;
+}
+.y31 {
+    bottom: 435.99px;
+}
+.y41 {
+    bottom: 437.25px;
+}
+.y10e {
+    bottom: 444.63px;
+}
+.y13a {
+    bottom: 444.78px;
+}
+.y3 {
+    bottom: 447.765px;
+}
+.y49 {
+    bottom: 447.945px;
+}
+.y1f {
+    bottom: 448.845px;
+}
+.y7e {
+    bottom: 450.285px;
+}
+.y169 {
+    bottom: 452.625px;
+}
+.y157 {
+    bottom: 453.6px;
+}
+.y102 {
+    bottom: 455.22px;
+}
+.y131 {
+    bottom: 455.76px;
+}
+.y145 {
+    bottom: 460.185px;
+}
+.yd7 {
+    bottom: 464.01px;
+}
+.y60 {
+    bottom: 464.73px;
+}
+.ye3 {
+    bottom: 465.15px;
+}
+.y133 {
+    bottom: 468.975px;
+}
+.y15d {
+    bottom: 471.57px;
+}
+.y111 {
+    bottom: 472.14px;
+}
+.y8c {
+    bottom: 474.48px;
+}
+.y51 {
+    bottom: 481.11px;
+}
+.y30 {
+    bottom: 481.395px;
+}
+.y14c {
+    bottom: 483.12px;
+}
+.y63 {
+    bottom: 486.075px;
+}
+.y123 {
+    bottom: 486.51px;
+}
+.y153 {
+    bottom: 488.49px;
+}
+.y128 {
+    bottom: 489.93px;
+}
+.ye5 {
+    bottom: 490.47px;
+}
+.y45 {
+    bottom: 494.25px;
+}
+.y11f {
+    bottom: 495.255px;
+}
+.y27 {
+    bottom: 495.51px;
+}
+.y38 {
+    bottom: 495.825px;
+}
+.yd0 {
+    bottom: 497.19px;
+}
+.ye2 {
+    bottom: 497.595px;
+}
+.yd1 {
+    bottom: 502.635px;
+}
+.y2 {
+    bottom: 506.085px;
+}
+.y48 {
+    bottom: 506.67px;
+}
+.y12e {
+    bottom: 508.935px;
+}
+.y1e {
+    bottom: 509.37px;
+}
+.y158 {
+    bottom: 510.735px;
+}
+.y117 {
+    bottom: 511.635px;
+}
+.y22 {
+    bottom: 515.19px;
+}
+.y8b {
+    bottom: 517.14px;
+}
+.y125 {
+    bottom: 519.915px;
+}
+.y50 {
+    bottom: 520.17px;
+}
+.y120 {
+    bottom: 522.795px;
+}
+.y2f {
+    bottom: 526.755px;
+}
+.y5f {
+    bottom: 529.56px;
+}
+.y127 {
+    bottom: 533.13px;
+}
+.y62 {
+    bottom: 536.505px;
+}
+.y16 {
+    bottom: 538.92px;
+}
+.yf2 {
+    bottom: 539.385px;
+}
+.y11b {
+    bottom: 539.97px;
+}
+.yd3 {
+    bottom: 542.805px;
+}
+.yf {
+    bottom: 543.345px;
+}
+.y122 {
+    bottom: 544.83px;
+}
+.y8d {
+    bottom: 548.745px;
+}
+.ye4 {
+    bottom: 549.69px;
+}
+.y1d {
+    bottom: 554.73px;
+}
+.y1a {
+    bottom: 557.07px;
+}
+.y8a {
+    bottom: 559.98px;
+}
+.y4f {
+    bottom: 560.85px;
+}
+.y90 {
+    bottom: 561.09px;
+}
+.y21 {
+    bottom: 565.635px;
+}
+.y11c {
+    bottom: 567.51px;
+}
+.y42 {
+    bottom: 571.35px;
+}
+.y2e {
+    bottom: 572.115px;
+}
+.yf0 {
+    bottom: 572.25px;
+}
+.yf4 {
+    bottom: 577.185px;
+}
+.y10f {
+    bottom: 578.445px;
+}
+.y1 {
+    bottom: 583.89px;
+}
+.yf1 {
+    bottom: 589.785px;
+}
+.y6c {
+    bottom: 591.84px;
+}
+.yd2 {
+    bottom: 600.45px;
+}
+.y6e {
+    bottom: 621.9px;
+}
+.y3b {
+    bottom: 629.535px;
+}
+.y2d {
+    bottom: 632.625px;
+}
+.y2b {
+    bottom: 634.755px;
+}
+.y6b {
+    bottom: 635.25px;
+}
+.y89 {
+    bottom: 640.005px;
+}
+.y69 {
+    bottom: 640.8px;
+}
+.y11a {
+    bottom: 644.19px;
+}
+.yf3 {
+    bottom: 648.51px;
+}
+.y82 {
+    bottom: 655.77px;
+}
+.y6d {
+    bottom: 656.1px;
+}
+.y151 {
+    bottom: 659.91px;
+}
+.y17 {
+    bottom: 667.695px;
+}
+.y1c {
+    bottom: 670.395px;
+}
+.y14b {
+    bottom: 676.95px;
+}
+.y79 {
+    bottom: 678.63px;
+}
+.y11e {
+    bottom: 680.97px;
+}
+.y10 {
+    bottom: 697.47px;
+}
+.y119 {
+    bottom: 701.79px;
+}
+.y2a {
+    bottom: 706.035px;
+}
+.y88 {
+    bottom: 709.53px;
+}
+.y2c {
+    bottom: 710.355px;
+}
+.y15b {
+    bottom: 710.565px;
+}
+.y12f {
+    bottom: 727.71px;
+}
+.y15c {
+    bottom: 730.05px;
+}
+.y11d {
+    bottom: 738.615px;
+}
+.y77 {
+    bottom: 747.54px;
+}
+.y15a {
+    bottom: 762.405px;
+}
+.h2b {
+    height: 38.671875px;
+}
+.h9 {
+    height: 43.64625px;
+}
+.h30 {
+    height: 45.19125px;
+}
+.h31 {
+    height: 45.2685px;
+}
+.h27 {
+    height: 51.37125px;
+}
+.h2a {
+    height: 57.231563px;
+}
+.h11 {
+    height: 57.9375px;
+}
+.h17 {
+    height: 58.01475px;
+}
+.h20 {
+    height: 64.50375px;
+}
+.h2e {
+    height: 65.429766px;
+}
+.h26 {
+    height: 66.209063px;
+}
+.h29 {
+    height: 66.308625px;
+}
+.h1e {
+    height: 67.989375px;
+}
+.h1f {
+    height: 68.075437px;
+}
+.h5 {
+    height: 70.68375px;
+}
+.h6 {
+    height: 70.761px;
+}
+.h41 {
+    height: 71.862187px;
+}
+.h42 {
+    height: 71.94825px;
+}
+.h23 {
+    height: 74.671875px;
+}
+.h3e {
+    height: 75.852422px;
+}
+.h16 {
+    height: 77.25px;
+}
+.h18 {
+    height: 77.32725px;
+}
+.h1c {
+    height: 78.747187px;
+}
+.h1d {
+    height: 78.83325px;
+}
+.h10 {
+    height: 85.299844px;
+}
+.h19 {
+    height: 86.0625px;
+}
+.h1a {
+    height: 86.148562px;
+}
+.hf {
+    height: 89.99625px;
+}
+.he {
+    height: 90.0735px;
+}
+.h2c {
+    height: 90.105469px;
+}
+.h2d {
+    height: 90.182812px;
+}
+.h1b {
+    height: 93.377812px;
+}
+.h44 {
+    height: 93.463875px;
+}
+.h36 {
+    height: 97.747031px;
+}
+.h2f {
+    height: 99.5625px;
+}
+.hd {
+    height: 100.262812px;
+}
+.h15 {
+    height: 100.348875px;
+}
+.h35 {
+    height: 103.12875px;
+}
+.h38 {
+    height: 103.206px;
+}
+.h3 {
+    height: 103.253906px;
+}
+.h4 {
+    height: 103.33125px;
+}
+.h39 {
+    height: 114.893437px;
+}
+.h3a {
+    height: 114.9795px;
+}
+.h22 {
+    height: 115.875px;
+}
+.h21 {
+    height: 115.95225px;
+}
+.h25 {
+    height: 115.990312px;
+}
+.h24 {
+    height: 116.089875px;
+}
+.h28 {
+    height: 117.191719px;
+}
+.h3f {
+    height: 128.62125px;
+}
+.h40 {
+    height: 128.6985px;
+}
+.h7 {
+    height: 128.777344px;
+}
+.h8 {
+    height: 128.854687px;
+}
+.h3b {
+    height: 129.09375px;
+}
+.h43 {
+    height: 129.179812px;
+}
+.h34 {
+    height: 132.915937px;
+}
+.h37 {
+    height: 133.0155px;
+}
+.h3c {
+    height: 141.75375px;
+}
+.hc {
+    height: 141.925781px;
+}
+.h12 {
+    height: 142.003125px;
+}
+.h2 {
+    height: 154.6875px;
+}
+.h1 {
+    height: 154.764844px;
+}
+.h33 {
+    height: 182.697187px;
+}
+.h32 {
+    height: 182.79675px;
+}
+.h13 {
+    height: 193.359375px;
+}
+.h14 {
+    height: 193.436719px;
+}
+.h3d {
+    height: 231.82725px;
+}
+.h0 {
+    height: 810px;
+}
+.w1 {
+    width: 1439.999979px;
+}
+.w0 {
+    width: 1440px;
+}
+.x0 {
+    left: 0;
+}
+.xa {
+    left: 5.795979px;
+}
+.x28 {
+    left: 10.799979px;
+}
+.x52 {
+    left: 17.207979px;
+}
+.x7a {
+    left: 23.147979px;
+}
+.x70 {
+    left: 26.315979px;
+}
+.x9 {
+    left: 32.759979px;
+}
+.x36 {
+    left: 37.619979px;
+}
+.xa8 {
+    left: 45.071979px;
+}
+.x50 {
+    left: 55.547979px;
+}
+.x2a {
+    left: 60.731979px;
+}
+.x67 {
+    left: 73.259979px;
+}
+.x29 {
+    left: 74.339979px;
+}
+.x13 {
+    left: 81.503979px;
+}
+.x81 {
+    left: 85.895979px;
+}
+.x74 {
+    left: 89.639979px;
+}
+.x75 {
+    left: 95.759979px;
+}
+.xe {
+    left: 109.799979px;
+}
+.x10 {
+    left: 115.199979px;
+}
+.x1 {
+    left: 116.855979px;
+}
+.x12 {
+    left: 120.815979px;
+}
+.x72 {
+    left: 129.527979px;
+}
+.x7c {
+    left: 132.587979px;
+}
+.x17 {
+    left: 136.835979px;
+}
+.x64 {
+    left: 146.663979px;
+}
+.x56 {
+    left: 151.229979px;
+}
+.x3 {
+    left: 153.569979px;
+}
+.x1b {
+    left: 158.939979px;
+}
+.x24 {
+    left: 163.829979px;
+}
+.x2e {
+    left: 184.034979px;
+}
+.x26 {
+    left: 190.829979px;
+}
+.x33 {
+    left: 193.604979px;
+}
+.x1e {
+    left: 200.849979px;
+}
+.x11 {
+    left: 206.354979px;
+}
+.x2f {
+    left: 213.554979px;
+}
+.x8 {
+    left: 218.804979px;
+}
+.x34 {
+    left: 226.154979px;
+}
+.x31 {
+    left: 233.894979px;
+}
+.x22 {
+    left: 238.829979px;
+}
+.x20 {
+    left: 243.644979px;
+}
+.x4 {
+    left: 246.989979px;
+}
+.x3c {
+    left: 250.349979px;
+}
+.x1d {
+    left: 251.669979px;
+}
+.x6 {
+    left: 253.904979px;
+}
+.x69 {
+    left: 257.684979px;
+}
+.x21 {
+    left: 259.529979px;
+}
+.x23 {
+    left: 263.369979px;
+}
+.x60 {
+    left: 269.384979px;
+}
+.x7 {
+    left: 272.264979px;
+}
+.x58 {
+    left: 276.734979px;
+}
+.x59 {
+    left: 278.354979px;
+}
+.x57 {
+    left: 280.829979px;
+}
+.x61 {
+    left: 289.949979px;
+}
+.x15 {
+    left: 296.069979px;
+}
+.x65 {
+    left: 297.149979px;
+}
+.x45 {
+    left: 308.054979px;
+}
+.x48 {
+    left: 309.239979px;
+}
+.x46 {
+    left: 312.119979px;
+}
+.x49 {
+    left: 313.304979px;
+}
+.x42 {
+    left: 324.749979px;
+}
+.x4b {
+    left: 326.159979px;
+}
+.x3d {
+    left: 337.139979px;
+}
+.x25 {
+    left: 348.734979px;
+}
+.x43 {
+    left: 354.749979px;
+}
+.x47 {
+    left: 357.329979px;
+}
+.x4a {
+    left: 358.484979px;
+}
+.x44 {
+    left: 386.969979px;
+}
+.x2 {
+    left: 394.094979px;
+}
+.x6e {
+    left: 400.679979px;
+}
+.x5 {
+    left: 423.509979px;
+}
+.xa9 {
+    left: 424.829979px;
+}
+.x14 {
+    left: 430.919979px;
+}
+.x3e {
+    left: 433.079979px;
+}
+.x5b {
+    left: 441.644979px;
+}
+.x5a {
+    left: 456.044979px;
+}
+.x53 {
+    left: 488.054979px;
+}
+.x71 {
+    left: 519.914979px;
+}
+.x80 {
+    left: 529.844979px;
+}
+.x4c {
+    left: 544.754979px;
+}
+.x1f {
+    left: 550.724979px;
+}
+.x77 {
+    left: 582.629979px;
+}
+.x1a {
+    left: 586.364979px;
+}
+.x4d {
+    left: 601.094979px;
+}
+.x5d {
+    left: 609.659979px;
+}
+.x5c {
+    left: 626.939979px;
+}
+.x2d {
+    left: 634.964979px;
+}
+.x2c {
+    left: 640.409979px;
+}
+.x83 {
+    left: 654.329979px;
+}
+.xd {
+    left: 663.194979px;
+}
+.x7b {
+    left: 667.259979px;
+}
+.x39 {
+    left: 668.909979px;
+}
+.x79 {
+    left: 671.009979px;
+}
+.x7e {
+    left: 674.099979px;
+}
+.x19 {
+    left: 690.944979px;
+}
+.x8d {
+    left: 695.774979px;
+}
+.x16 {
+    left: 707.684979px;
+}
+.x68 {
+    left: 717.989979px;
+}
+.x1c {
+    left: 730.904979px;
+}
+.x38 {
+    left: 731.954979px;
+}
+.x37 {
+    left: 735.914979px;
+}
+.x18 {
+    left: 758.444979px;
+}
+.x8f {
+    left: 762.839979px;
+}
+.x8a {
+    left: 767.444979px;
+}
+.x5f {
+    left: 769.649979px;
+}
+.x55 {
+    left: 771.509979px;
+}
+.x89 {
+    left: 776.159979px;
+}
+.x95 {
+    left: 783.824979px;
+}
+.x5e {
+    left: 788.369979px;
+}
+.x87 {
+    left: 793.694979px;
+}
+.x9c {
+    left: 802.364979px;
+}
+.x66 {
+    left: 804.314979px;
+}
+.x51 {
+    left: 808.229979px;
+}
+.x27 {
+    left: 811.109979px;
+}
+.x8e {
+    left: 814.064979px;
+}
+.x6f {
+    left: 834.119979px;
+}
+.x4e {
+    left: 837.869979px;
+}
+.x4f {
+    left: 854.069979px;
+}
+.x93 {
+    left: 862.814979px;
+}
+.x32 {
+    left: 867.059979px;
+}
+.x7f {
+    left: 881.639979px;
+}
+.x9f {
+    left: 887.069979px;
+}
+.x9a {
+    left: 901.694979px;
+}
+.xa1 {
+    left: 903.989979px;
+}
+.xa0 {
+    left: 910.649979px;
+}
+.x78 {
+    left: 913.169979px;
+}
+.x30 {
+    left: 915.374979px;
+}
+.x2b {
+    left: 931.139979px;
+}
+.x84 {
+    left: 958.289979px;
+}
+.x63 {
+    left: 972.929979px;
+}
+.x8c {
+    left: 996.869979px;
+}
+.x54 {
+    left: 999.899979px;
+}
+.x62 {
+    left: 1001.369979px;
+}
+.x3b {
+    left: 1009.229979px;
+}
+.x35 {
+    left: 1019.594979px;
+}
+.x88 {
+    left: 1023.119979px;
+}
+.x94 {
+    left: 1026.179979px;
+}
+.x98 {
+    left: 1031.864979px;
+}
+.x90 {
+    left: 1034.024979px;
+}
+.x91 {
+    left: 1038.314979px;
+}
+.x9b {
+    left: 1040.864979px;
+}
+.xa6 {
+    left: 1044.749979px;
+}
+.x92 {
+    left: 1050.554979px;
+}
+.xa2 {
+    left: 1058.864979px;
+}
+.x3a {
+    left: 1060.559979px;
+}
+.xa5 {
+    left: 1069.124979px;
+}
+.x3f {
+    left: 1101.449979px;
+}
+.x6d {
+    left: 1116.614979px;
+}
+.x40 {
+    left: 1127.909979px;
+}
+.x41 {
+    left: 1139.909979px;
+}
+.x76 {
+    left: 1149.149979px;
+}
+.x96 {
+    left: 1154.954979px;
+}
+.x86 {
+    left: 1158.404979px;
+}
+.x8b {
+    left: 1164.854979px;
+}
+.x6c {
+    left: 1168.529979px;
+}
+.xa7 {
+    left: 1173.524979px;
+}
+.x85 {
+    left: 1189.334979px;
+}
+.x82 {
+    left: 1195.454979px;
+}
+.x9d {
+    left: 1198.829979px;
+}
+.x6b {
+    left: 1203.659979px;
+}
+.x73 {
+    left: 1211.039979px;
+}
+.x7d {
+    left: 1214.099979px;
+}
+.x99 {
+    left: 1222.409979px;
+}
+.x97 {
+    left: 1240.169979px;
+}
+.xa3 {
+    left: 1243.439979px;
+}
+.x6a {
+    left: 1254.494979px;
+}
+.xa4 {
+    left: 1255.859979px;
+}
+.x9e {
+    left: 1258.739979px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- total: 18 -->
+<!-- <div id="page-container"> -->
+<div id="page-container">
+
+<div id="pf5" class="pf w0 h0" data-page-no="5">
+<div class="pc pc5 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image1-w1920-h1080.webp"
+	srcset="images-webp/image1-w1920-h1080.webp 1920w,
+			images-webp/image1-w1400-h787.webp 1400w,
+			images-webp/image1-w1177-h662.webp 1177w,
+			images-webp/image1-w760-h427.webp 760w,
+			images-webp/image1-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 y1c ff1 fsf fc0 sc0 ls0 ws0">Goals for representing knowledge (outline)</div>
+<div class="t m0 xe hd y1d ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">Make things (articles, genes, </span></div>
+<div class="t m0 x17 he y1e ff2 fsd fc0 sc0 ls0 ws0">antibodies, etc.) easier to find</div>
+<div class="t m0 xe hd y1f ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">Answer questions</span></div>
+<div class="t m0 xe hd y20 ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">Generate hypotheses</span></div>
+<div class="t m0 x18 hf y21 ff2 fsc fc2 sc0 ls0 ws0">Controlled vocabularies (MeSH)</div>
+<div class="t m0 x18 hf y22 ff2 fsc fc2 sc0 ls0 ws0">Ontologies (Gene Ontology)</div>
+<div class="t m0 x19 he y23 ff2 fsd fc2 sc0 ls0 ws0">knowledge graphs on the Web:</div>
+<div class="t m0 x19 hf y24 ff2 fsc fc2 sc0 ls0 ws0">the SPARQL query language</div>
+<div class="t m0 x1a hf y25 ff2 fsc fc2 sc0 ls0 ws0">knowledge plus computation =</div>
+<div class="t m0 x1a hf y26 ff2 fsc fc2 sc0 ls0 ws0">inference, the ABC model</div>
+</div>
+</div>
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pff" class="pf w0 h0" data-page-no="f">
+<div class="pc pcf w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+	   src="images-webp/image2-w1920-h1080.webp"
+	srcset="images-webp/image2-w1920-h1080.webp 1920w,
+			images-webp/image2-w1400-h787.webp 1400w,
+			images-webp/image2-w1177-h662.webp 1177w,
+			images-webp/image2-w760-h427.webp 760w,
+			images-webp/image2-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 y1c ff3 fsf fc0 sc0 ls0 ws0">“Ontology”</div>
+<div class="t m0 xe hd y1d ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">The word comes from philosophy:</span></div>
+<div class="t m0 x24 h19 y48 ff5 fs12 fc0 sc0 ls0 ws0">•&nbsp;<span class="ff6">“<span class="ff2">the branch of metaphysics dealing with the nature of <span class="ff6">being”</span></span></span></div>
+<div class="t m0 xe hd y49 ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">In practice they are:</span></div>
+<div class="t m0 x24 h19 y4a ff5 fs12 fc0 sc0 ls0 ws0">•&nbsp;<span class="ff4">A set of concepts, definitions and inter-relationships.</span></div>
+<div class="t m0 x24 h19 y4b ff5 fs12 fc0 sc0 ls0 ws0">•&nbsp;<span class="ff6">(The dividing line between “controlled vocabulary”, “thesaurus”, “ontology” is </span></div>
+<div class="t m0 x26 h16 y5a ff2 fs12 fc0 sc0 ls0 ws0">hazy and not terribly important for practical purposes.)</div>
+<div class="t m0 xe hd y5b ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">We have hundreds of ontologies in biology, e.g. see:</span></div>
+<div class="t m0 x24 h19 y5c ff5 fs12 fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2 fc1">http://www.obofoundry.org<span class="fc0">&nbsp;(100+)</span></span></div>
+<div class="t m0 x24 h19 y5d ff5 fs12 fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2 fc1">http://bioportal.bioontology.org<span class="fc0">&nbsp;(500+) </span></span></div></div>
+<a class="l" href="http://www.obofoundry.org/">
+<div class="d m1" style="border-style:none;position:absolute;left:165.630000px;bottom:201.315000px;width:289.470000px;height:21.600000px;background-color:rgba(255,255,255,0.000001);">
+</div>
+</a>
+<a class="l" href="http://bioportal.bioontology.org/">
+<div class="d m1" style="border-style:none;position:absolute;left:165.630000px;bottom:155.055000px;width:330.390000px;height:21.600000px;background-color:rgba(255,255,255,0.000001);">
+</div>
+</a>
+</div>
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf10" class="pf w0 h0" data-page-no="10">
+<div class="pc pc10 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+	   src="images-webp/image3-w1920-h1080.webp"
+	srcset="images-webp/image3-w1920-h1080.webp 1920w,
+			images-webp/image3-w1400-h787.webp 1400w,
+			images-webp/image3-w1177-h662.webp 1177w,
+			images-webp/image3-w760-h427.webp 760w,
+			images-webp/image3-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 y1c ff1 fsf fc0 sc0 ls0 ws0">The Gene Ontology</div>
+<div class="t m0 x27 h20 y5e ff2 fs18 fc0 sc0 ls0 ws0">Ashburner et al., Nat Genet. 2000 May;25(1):25-9.</div>
+<div class="t m0 x10 h21 y5f ff2 fs19 fc0 sc0 ls0 ws0">Started in 1999</div>
+<div class="t m0 x10 h22 y60 ff2 fs1a fc0 sc0 ls0 ws0">As a collaboration between 3 Model Organism Databases</div>
+<div class="t m0 x28 h23 y61 ff2 fse fc4 sc0 ls0 ws0">Slide credit: <span class="ff7">Mélanie Courtot, Ph.D.</span></div></div>
+</div>
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf11" class="pf w0 h0" data-page-no="11">
+<div class="pc pc11 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image4-w1920-h1080.webp"
+	srcset="images-webp/image4-w1920-h1080.webp 1920w,
+			images-webp/image4-w1400-h787.webp 1400w,
+			images-webp/image4-w1177-h662.webp 1177w,
+			images-webp/image4-w760-h427.webp 760w,
+			images-webp/image4-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 x29 h24 y62 ff5 fsd fc0 sc0 ls0 ws0">•&nbsp;<span class="ff7">A way to capture biological </span></div>
+<div class="t m0 x29 h25 y63 ff7 fsc fc0 sc0 ls0 ws0">knowledge for individual gene</div>
+<div class="t m0 x29 h25 y64 ff7 fsc fc0 sc0 ls0 ws0">products in a computable form</div>
+<div class="t m0 x2a h24 y65 ff5 fsd fc0 sc0 ls0 ws0">•&nbsp;<span class="ff7">A set of concepts <span class="lsa">and </span>their </span></div>
+<div class="t m0 x2a h25 y66 ff7 fsc fc0 sc0 ls0 ws0">relationships to each other</div>
+<div class="t m0 x2a h25 y67 ff7 fsc fc0 sc0 lsb ws0">arranged as <span class="ls0">a hierarchy</span></div>
+<div class="t m0 x2b h26 y68 ff7 fs1b fc1 sc0 lsc ws0">http://www.ebi.ac.uk/QuickGO</div>
+<div class="t m0 x2c h27 y69 ff2 fs1b fc5 sc0 ls0 ws0">Less specific concepts</div>
+<div class="t m0 x2d h27 y6a ff2 fs1b fc5 sc0 ls0 ws0">More specific concepts</div>
+<div class="t m0 xe h12 y1c ff1 fsf fc0 sc0 ls0 ws0">The Gene Ontology</div>
+<div class="t m0 x28 h23 y61 ff2 fse fc4 sc0 ls0 ws0">Slide credit: <span class="ff7">Mélanie Courtot, Ph.D.</span></div></div>
+<a class="l" href="http://www.ebi.ac.uk/QuickGO">
+
+<div class="d m1" style="border-style:none;position:absolute;left:931.140000px;bottom:86.616000px;width:212.180000px;height:14.880000px;background-color:rgba(255,255,255,0.000001);"></div>
+</a>
+</div>
+
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf12" class="pf w0 h0" data-page-no="12">
+<div class="pc pc12 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image5-w1920-h1080.webp"
+	srcset="images-webp/image5-w1920-h1080.webp 1920w,
+			images-webp/image5-w1400-h787.webp 1400w,
+			images-webp/image5-w1177-h662.webp 1177w,
+			images-webp/image5-w760-h427.webp 760w,
+			images-webp/image5-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 x2e h28 y6b ff8 fsc fc0 sc0 ls0 ws0">1. Molecular Function</div>
+<div class="t m0 x2f h11 y6c ff2 fse fc6 sc0 ls0 ws0">An elemental activity or task or job</div>
+<div class="t m0 x30 h27 y6d ff9 fs1b fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">protein kinase activity</span></div>
+<div class="t m0 x30 h27 y6e ff9 fs1b fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">insulin receptor activity</span></div>
+<div class="t m0 x2e h10 y6f ff4 fsc fc0 sc0 ls0 ws0">3. Cellular Component</div>
+<div class="t m0 x31 h11 y70 ff2 fse fc6 sc0 ls0 ws0">Where a gene product is located</div>
+<div class="t m0 x32 h26 y71 ffa fs1b fc0 sc0 ls0 ws0">•&nbsp;<span class="ff7">mitochondrion </span></div>
+<div class="t m0 x32 h26 y72 ffa fs1b fc0 sc0 ls0 ws0">•&nbsp;<span class="ff7">mitochondrial matrix</span></div>
+<div class="t m0 x32 h29 y73 ffa fs1c fc0 sc0 ls0 ws0">•&nbsp;<span class="ff7">mitochondrial inner membrane</span></div>
+<div class="t m0 x33 h10 y74 ff4 fsc fc0 sc0 ls0 ws0">2. Biological Process</div>
+<div class="t m0 x34 h11 y75 ff2 fse fc6 sc0 ls0 ws0">A commonly recognized series of events</div>
+<div class="t m0 x35 h2a y76 ff5 fs1b fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">cell division</span></div>
+<div class="t m0 x36 hc y77 ff1 fsb fc0 sc0 ls0 ws0">The GO branches</div>
+<div class="t m0 x28 h23 y61 ff2 fse fc4 sc0 ls0 ws0">Slide credit: <span class="ff7">Mélanie Courtot, Ph.D.</span></div></div>
+</div>
+
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf24" class="pf w0 h0" data-page-no="24">
+
+<div class="pc pc24 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image6-w1920-h1080.webp"
+	srcset="images-webp/image6-w1920-h1080.webp 1920w,
+			images-webp/image6-w1400-h787.webp 1400w,
+			images-webp/image6-w1177-h662.webp 1177w,
+			images-webp/image6-w760-h427.webp 760w,
+			images-webp/image6-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 y1c ff1 fsf fc0 sc0 ls0 ws0">Knowledge Graphs</div>
+<div class="t m0 xe hd y1d ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff6">Also called “knowledge bases” </span></div>
+<div class="t m0 x17 he y1e ff2 fsd fc0 sc0 ls0 ws0">to distinguish them from</div>
+<div class="t m0 x17 he yd7 ff2 fsd fc0 sc0 ls0 ws0">databases.</div>
+<div class="t m0 xe hd yd8 ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">An integrated collection of </span></div>
+<div class="t m0 x17 hf yd9 ff2 fsc fc0 sc0 ls0 ws0">assertions or claims represented</div>
+<div class="t m0 x17 he yda ff2 fsd fc0 sc0 ls0 ws0">in something that can be</div>
+<div class="t m0 x17 hf ydb ff2 fsc fc0 sc0 ls0 ws0">visualized as a graph and is</div>
+<div class="t m0 x17 hf ydc ff2 fsc fc0 sc0 ls0 ws0">technically very much like a</div>
+<div class="t m0 x17 hf ydd ff2 fsc fc0 sc0 ls0 ws0">database.</div>
+<div class="t m0 x6a h11 yde ff2 fse fc0 sc0 ls0 ws0">RNASeq reads</div>
+<div class="t m0 x6b h11 ydf ff2 fse fc0 sc0 ls0 ws0">Gene X is expressed</div>
+<div class="t m0 x6c h11 ye0 ff2 fse fc0 sc0 ls0 ws0">Drug A caused Gene</div>
+<div class="t m0 x6c h11 ye1 ff2 fse fc0 sc0 ls0 ws0">X to be expressed</div>
+<div class="t m0 x6d h11 ye2 ff2 fse fc0 sc0 ls0 ws0">Knowing what to do with</div>
+<div class="t m0 x6d h11 ye3 ff2 fse fc0 sc0 ls0 ws0">Drug A..</div>
+</div>
+</div>
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf25" class="pf w0 h0" data-page-no="25">
+
+<div class="pc pc25 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image7-w1920-h1080.webp"
+	srcset="images-webp/image7-w1920-h1080.webp 1920w,
+			images-webp/image7-w1400-h787.webp 1400w,
+			images-webp/image7-w1177-h662.webp 1177w,
+			images-webp/image7-w760-h427.webp 760w,
+			images-webp/image7-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 y1c ff1 fsf fc0 sc0 ls0 ws0">Example knowledge graphs</div>
+<div class="t m0 xe h39 ye4 ff5 fs2 fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">Wikidata:  The structured equivalent of Wikipedia </span></div>
+<div class="t m0 x24 h3a ye5 ff5 fs3 fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2 fc1">http://wikidata.org</span></div>
+<div class="t m0 xe h39 ye6 ff5 fs2 fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">UniProt Knowledge Base: Manually curated Protein </span></div>
+<div class="t m0 x17 h35 ye7 ff2 fs2 fc0 sc0 ls0 ws0">knowledge base</div>
+<div class="t m0 x24 h3a ye8 ff5 fs3 fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2 fc1">http://www<span class="_ _9"></span>.uniprot.org/uniprot/</span></div>
+<div class="t m0 xe h3b ye9 ff5 fs1a fc0 sc0 ls0 ws0">•&nbsp;<span class="ff6">Microsoft Knowledge Graph (“Satori”)</span></div>
+<div class="t m0 xe h3b yea ff5 fs1a fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">Google Knowledge Graph</span></div>
+</div>
+
+<a class="l" href="http://wikidata.org/">
+<div class="d m1" style="border-style:none;position:absolute;left:166.350000px;bottom:481.830000px;width:264.270000px;height:28.800000px;background-color:rgba(255,255,255,0.000001);"></div>
+</a>
+
+<a class="l" href="http://www.uniprot.org/uniprot/">
+<div class="d m1" style="border-style:none;position:absolute;left:166.350000px;bottom:303.765000px;width:447.770000px;height:28.800000px;background-color:rgba(255,255,255,0.000001);"></div>
+</a>
+
+</div>
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf26" class="pf w0 h0" data-page-no="26">
+<div class="pc pc26 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image8-w1920-h1080.webp"
+	srcset="images-webp/image8-w1920-h1080.webp 1920w,
+			images-webp/image8-w1400-h787.webp 1400w,
+			images-webp/image8-w1177-h662.webp 1177w,
+			images-webp/image8-w760-h427.webp 760w,
+			images-webp/image8-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+>
+</amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 y1c ff3 fsf fc0 sc0 ls0 ws0">Example: “Google Knowledge Graph” (GKG)</div>
+<div class="t m0 x2a he yeb ff2 fsd fc0 sc0 ls0 ws0">Vemurafenib</div>
+<div class="t m0 x2a hf yec ff2 fsc fc0 sc0 ls0 ws0">405,000 results</div>
+<div class="t m0 x2a hf yed ff2 fsc fc0 sc0 ls15 ws0">1 <span class="ls0">infobox</span></div>
+<div class="t m0 x2a hf yee ff2 fsc fc0 sc0 ls0 ws0">1 node in GKG</div>
+<div class="t m0 x6e h11 yef ff2 fse fc1 sc0 ls0 ws0">https://googleblog.blogspot.com/2012/05/introducing-knowledge-graph-things-not.html</div>
+</div>
+<a class="l" href="https://googleblog.blogspot.com/2012/05/introducing-knowledge-graph-things-not.html">
+
+<div class="d m1" style="border-style:none;position:absolute;left:400.680000px;bottom:5.040000px;width:651.550000px;height:16.200000px;background-color:rgba(255,255,255,0.000001);"></div>
+</a>
+</div>
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf27" class="pf w0 h0" data-page-no="27">
+<div class="pc pc27 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image9-w1920-h1080.webp"
+	srcset="images-webp/image9-w1920-h1080.webp 1920w,
+			images-webp/image9-w1400-h787.webp 1400w,
+			images-webp/image9-w1177-h662.webp 1177w,
+			images-webp/image9-w760-h427.webp 760w,
+			images-webp/image9-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 y1c ff1 fsf fc0 sc0 ls0 ws0">Why Knowledge Graphs?</div>
+<div class="t m0 x6f h38 yf0 ff2 fs3 fc3 sc0 ls0 ws0">?</div>
+<div class="t m0 x70 hd yf1 ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">Answer explicit questions</span></div>
+<div class="t m0 x70 h15 yf2 ff5 fsd fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">Uncover implicit relations</span></div></div>
+</div>
+
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf28" class="pf w0 h0" data-page-no="28">
+
+<div class="pc pc28 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image10-w1920-h1080.webp"
+	srcset="images-webp/image10-w1920-h1080.webp 1920w,
+			images-webp/image10-w1400-h787.webp 1400w,
+			images-webp/image10-w1177-h662.webp 1177w,
+			images-webp/image10-w760-h427.webp 760w,
+			images-webp/image10-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 yf3 ff1 fsf fc0 sc0 ls0 ws0">Implicit relations for hypothesis generation</div>
+<div class="t m0 xe hc yf4 ff1 fsb fc0 sc0 ls0 ws0">ABC model</div>
+<div class="t m0 x71 h11 yf5 ff2 fse fc0 sc0 ls0 ws0">Swanson (1986) Fish <span class="ff6">oil, Raynaud’s syndrome and undiscovered public <span class="ff2">knowledge</span></span></div>
+<div class="t m0 x71 h11 yf6 ff2 fse fc1 sc0 ls0 ws0">http://muse.jhu.edu/article/403510/pdf</div>
+<div class="t m0 xd h3c yf7 ff2 fsb fc0 sc0 ls0 ws0">B</div>
+<div class="t m0 x72 h3c yf8 ff2 fsb fc0 sc0 ls0 ws0">A</div>
+<div class="t m0 x73 h3c yf7 ff2 fsb fc0 sc0 ls0 ws0">C</div>
+<div class="t m0 x74 h11 yf9 ff6 fse fc2 sc0 ls0 ws0">Raynaud’s</div>
+<div class="t m0 x75 h11 yfa ff2 fse fc2 sc0 ls0 ws0">Syndrome</div>
+<div class="t m0 x76 h11 yfb ff2 fse fc2 sc0 ls0 ws0">Dietary fish oil</div>
+<div class="t m0 x77 h2a yfc ff5 fs1b fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">platelet inhibition</span></div>
+<div class="t m0 x77 h2a yfd ff5 fs1b fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">vasodilation</span></div>
+<div class="t m0 x77 h2a ydd ff5 fs1b fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">lower blood viscosity</span></div>
+<div class="t m0 x48 h11 yfe ff2 fse fc0 sc0 ls16 ws0">Co-occurs in an</div>
+<div class="t m0 x48 h11 yff ff2 fse fc0 sc0 ls0 ws0">article with</div>
+<div class="t m0 x78 h11 y100 ff2 fse fc0 sc0 ls16 ws0">Co-occurs in an</div>
+<div class="t m0 x78 h11 y101 ff2 fse fc0 sc0 ls0 ws0">article with</div>
+<div class="t m0 x79 h35 y102 ff2 fs2 fc3 sc0 ls0 ws0">?</div>
+</div>
+
+<a class="l" href="http://muse.jhu.edu/article/403510/pdf">
+<div class="d m1" style="border-style:none;position:absolute;left:519.915000px;bottom:9.108000px;width:295.250000px;height:16.200000px;background-color:rgba(255,255,255,0.000001);"></div>
+</a>
+
+</div>
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf29" class="pf w0 h0" data-page-no="29">
+<div class="pc pc29 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image11-w1920-h1080.webp"
+	srcset="images-webp/image11-w1920-h1080.webp 1920w,
+			images-webp/image11-w1400-h787.webp 1400w,
+			images-webp/image11-w1177-h662.webp 1177w,
+			images-webp/image11-w760-h427.webp 760w,
+			images-webp/image11-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 y1c ff1 fsf fc0 sc0 ls0 ws0">Open Discovery and Closed Discovery</div>
+<div class="t m0 x7a hd y1d ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff6">Open, you don’t know what C or B is (e.g. disease <span class="ff2">-&gt; ?drug)</span></span></div>
+<div class="t m0 x7a h15 y45 ff5 fsd fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">Closed, you know what C is and are looking for B (e.g. disease <span class="ff6">– </span>why? <span class="ff6">–&nbsp;</span>drug)</span></div>
+<div class="t m0 x7b h3c y103 ff2 fsb fc0 sc0 ls0 ws0">B</div>
+<div class="t m0 x7c h3c y104 ff2 fsb fc0 sc0 ls0 ws0">A</div>
+<div class="t m0 x7d h3c y103 ff2 fsb fc0 sc0 ls0 ws0">C</div>
+<div class="t m0 x7e h35 y105 ff2 fs2 fc3 sc0 ls0 ws0">?</div></div>
+</div>
+
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf2a" class="pf w0 h0" data-page-no="2a">
+<div class="pc pc2a w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image12-w1920-h1080.webp"
+	srcset="images-webp/image12-w1920-h1080.webp 1920w,
+			images-webp/image12-w1400-h787.webp 1400w,
+			images-webp/image12-w1177-h662.webp 1177w,
+			images-webp/image12-w760-h427.webp 760w,
+			images-webp/image12-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 y1c ff1 fsf fc0 sc0 ls0 ws0">Example question: drug repurposing</div>
+<div class="t m0 xe hd y1d ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">For a given drug, what </span></div>
+<div class="t m0 x17 he y1e ff2 fsd fc0 sc0 ls0 ws0">diseases might it be</div>
+<div class="t m0 x17 he yd7 ff2 fsd fc0 sc0 ls0 ws0">used to treat?</div>
+<div class="t m0 x7f h11 y9a ff2 fse fc1 sc0 ls0 ws0">http://www.ncbi.nlm.nih.gov/pubmed/27189611</div>
+<div class="t m0 x80 h11 y106 ff2 fse fc0 sc0 ls0 ws0">&apos;RE:fine drugs&apos;: an interactive dashboard to access drug repurposing opportunities.</div>
+</div>
+
+<a class="l" href="http://www.ncbi.nlm.nih.gov/pubmed/27189611">
+<div class="d m1" style="border-style:none;position:absolute;left:881.640000px;bottom:7.992000px;width:361.130000px;height:16.200000px;background-color:rgba(255,255,255,0.000001);"></div>
+</a>
+
+</div>
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf2b" class="pf w0 h0" data-page-no="2b">
+<div class="pc pc2b w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image13-w1920-h1080.webp"
+	srcset="images-webp/image13-w1920-h1080.webp 1920w,
+			images-webp/image13-w1400-h787.webp 1400w,
+			images-webp/image13-w1177-h662.webp 1177w,
+			images-webp/image13-w760-h427.webp 760w,
+			images-webp/image13-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 yf3 ff1 fsf fc0 sc0 ls0 ws0">Implicit relations for hypothesis generation</div>
+<div class="t m0 xe hc yf4 ff1 fsb fc0 sc0 ls0 ws0">ABC model for drug repurposing</div>
+<div class="t m0 xd h3c yf7 ff2 fsb fc0 sc0 ls0 ws0">B</div>
+<div class="t m0 x72 h3c yf8 ff2 fsb fc0 sc0 ls0 ws0">A</div>
+<div class="t m0 x73 h3c yf7 ff2 fsb fc0 sc0 ls0 ws0">C</div>
+<div class="t m0 x81 h11 y107 ff2 fse fc2 sc0 ls0 ws0">drug</div>
+<div class="t m0 x82 h11 y108 ff2 fse fc2 sc0 ls0 ws0">disease</div>
+<div class="t m0 x83 h35 y109 ff2 fs2 fc0 sc0 ls0 ws0">genes</div>
+<div class="t m0 x48 h11 yfe ff2 fse fc0 sc0 ls0 ws0">Physical</div>
+<div class="t m0 x48 h11 yff ff2 fse fc0 sc0 ls0 ws0">interaction</div>
+<div class="t m0 x78 h11 y100 ff2 fse fc0 sc0 ls0 ws0">genetic</div>
+<div class="t m0 x78 h11 y101 ff2 fse fc0 sc0 ls0 ws0">association</div>
+<div class="t m0 x79 h35 y102 ff2 fs2 fc3 sc0 ls0 ws0">?</div></div>
+</div>
+
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf2d" class="pf w0 h0" data-page-no="2d">
+<div class="pc pc2d w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image14-w1920-h1080.webp"
+	srcset="images-webp/image14-w1920-h1080.webp 1920w,
+			images-webp/image14-w1400-h787.webp 1400w,
+			images-webp/image14-w1177-h662.webp 1177w,
+			images-webp/image14-w760-h427.webp 760w,
+			images-webp/image14-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 y1c ff1 fsf fc0 sc0 ls0 ws0">Querying a knowledge graph with SPARQL</div>
+<div class="t m0 xe hd y1d ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff6">“<span class="ff2">SPARQL protocol and RDF query </span></span></div>
+<div class="t m0 x17 he y1e ff6 fsd fc0 sc0 ls0 ws0">language”</div>
+<div class="t m0 xe hd y1f ff5 fsc fc0 sc0 ls0 ws0">•&nbsp;<span class="ff2">RDF: Resource Description </span></div>
+<div class="t m0 x17 hf yd8 ff2 fsc fc0 sc0 ls0 ws0">Framework (common standard for</div>
+<div class="t m0 x17 hf yd9 ff2 fsc fc0 sc0 ls0 ws0">storing knowledge graphs)</div>
+<div class="t m0 xe h15 y10a ff5 fsd fc0 sc0 ls0 ws0">•&nbsp;<span class="ff4">A SPARQL query = a partially </span></div>
+<div class="t m0 x17 h10 y10b ff4 fsc fc0 sc0 ls0 ws0">completed <span class="fc3">graph </span></div>
+<div class="t m0 x24 h19 y10c ff5 fs12 fc0 sc0 ls0 ws0">•&nbsp;<span class="ffd">?’s show what you are looking for</span></div>
+<div class="t m0 x24 h19 y10d ff5 fs12 fc0 sc0 ls0 ws0">•&nbsp;<span class="ff4">rest constrains the search</span></div>
+<div class="t m0 x84 h11 y9a ff2 fse fc1 sc0 ls0 ws0">http://www.w3.org/TR/rdf-sparql-query/</div>
+<div class="t m0 x85 h18 y10e ff2 fs14 fc2 sc0 ls0 ws0">?disease</div>
+<div class="t m0 x86 h35 y10f ff2 fs2 fc0 sc0 ls0 ws0">Asking for</div>
+<div class="t m0 x51 h35 y110 ff2 fs2 fc0 sc0 ls0 ws0">Constraints</div>
+<div class="t m0 x87 h18 y10e ff2 fs14 fc2 sc0 ls0 ws0">Metformin</div>
+<div class="t m0 x88 h16 y111 ff2 fs12 fc0 sc0 ls0 ws0">treats</div>
+<div class="t m0 x89 h11 y112 ff2 fse fc0 sc0 ls0 ws0">Result:</div>
+<div class="t m0 x8a h16 y113 ff2 fs12 fc2 sc0 ls0 ws0">Metformin</div>
+<div class="t m0 x8b h16 y114 ff2 fs12 fc2 sc0 ls0 ws0">Type <span class="ls10">2 </span></div>
+<div class="t m0 x76 h16 y115 ff2 fs12 fc2 sc0 ls0 ws0">diabetes</div>
+<div class="t m0 x8c h16 y116 ff2 fs12 fc0 sc0 ls0 ws0">treats</div>
+</div>
+<a class="l" href="http://www.w3.org/TR/rdf-sparql-query/">
+<div class="d m1" style="border-style:none;position:absolute;left:958.290000px;bottom:7.992000px;width:300.640000px;height:16.200000px;background-color:rgba(255,255,255,0.000001);"></div>
+</a>
+</div>
+
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf2e" class="pf w0 h0" data-page-no="2e">
+<div class="pc pc2e w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image15-w1920-h1080.webp"
+	srcset="images-webp/image15-w1920-h1080.webp 1920w,
+			images-webp/image15-w1400-h787.webp 1400w,
+			images-webp/image15-w1177-h662.webp 1177w,
+			images-webp/image15-w760-h427.webp 760w,
+			images-webp/image15-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 x8d h3d y117 ff2 fs20 fc3 sc0 ls0 ws0">=</div>
+<div class="t m0 x8e h22 y118 ff2 fs1a fc1 sc0 ls0 ws0">https://query.wikidata.org/</div>
+<div class="t m0 x8f h35 y119 ff2 fs2 fc0 sc0 ls0 ws0">Metformin<span class="ff6">’s unique id:  Q19484</span></div>
+<div class="t m0 x8f h35 y11a ff2 fs2 fc0 sc0 ls0 ws0">Treats property id: P2175</div>
+<div class="t m0 x66 h16 y11b ff2 fs12 fc2 sc0 ls0 ws0">Metformin<span class="_ _23"> </span>?disease</div>
+<div class="t m0 x90 h16 y11c ff2 fs12 fc0 sc0 ls0 ws0">treats</div></div>
+<a class="l" href="https://query.wikidata.org/">
+<div class="d m1" style="border-style:none;position:absolute;left:814.065000px;bottom:10.476000px;width:398.210000px;height:32.400000px;background-color:rgba(255,255,255,0.000001);"></div>
+</a>
+</div>
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf2f" class="pf w0 h0" data-page-no="2f">
+<div class="pc pc2f w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image16-w1920-h1080.webp"
+	srcset="images-webp/image16-w1920-h1080.webp 1920w,
+			images-webp/image16-w1400-h787.webp 1400w,
+			images-webp/image16-w1177-h662.webp 1177w,
+			images-webp/image16-w760-h427.webp 760w,
+			images-webp/image16-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+<div class="c x0 y0 w1 h0">
+<div class="t m0 x1c h38 y11d ff6 fs3 fc0 sc0 ls0 ws0">Metformin’s unique id:  Q19484</div>
+<div class="t m0 x1c h35 y11e ff2 fs2 fc0 sc0 ls0 ws0">Treats property id: P2175</div>
+<div class="t m0 x51 h16 y11f ff2 fs12 fc2 sc0 ls0 ws0">Metformin<span class="_ _23"> </span>?disease</div>
+<div class="t m0 x91 h16 y120 ff2 fs12 fc0 sc0 ls0 ws0">treats</div>
+<div class="t m0 x1c h3e y121 ffe fsc fc1 sc0 lse ws0">http://<span class="ls0">tinyurl.com/gwd6pep</span></div>
+</div>
+<a class="l" href="http://tinyurl.com/gwd6pep">
+<div class="d m1" style="border-style:none;position:absolute;left:730.620000px;bottom:16.524000px;width:435.890000px;height:26.760000px;background-color:rgba(255,255,255,0.000001);"></div>
+</a>
+</div>
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf30" class="pf w0 h0" data-page-no="30">
+<div class="pc pc30 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image17-w1920-h1080.webp"
+	srcset="images-webp/image17-w1920-h1080.webp 1920w,
+			images-webp/image17-w1400-h787.webp 1400w,
+			images-webp/image17-w1177-h662.webp 1177w,
+			images-webp/image17-w760-h427.webp 760w,
+			images-webp/image17-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe h12 y1c ff1 fsf fc0 sc0 ls0 ws0">Example question: drug repurposing</div>
+<div class="t m0 xe h22 y122 ff6 fs1a fc0 sc0 ls0 ws0">“<span class="ff2">For a given drug, what </span></div>
+<div class="t m0 xe h21 y123 ff2 fs19 fc0 sc0 ls0 ws0">diseases might it be</div>
+<div class="t m0 xe h22 y124 ff2 fs1a fc0 sc0 ls0 ws0">used to treat<span class="ff6 ls17">?”</span></div>
+<div class="t m0 x92 h16 y125 ff2 fs12 fc2 sc0 ls0 ws0">?drug</div>
+<div class="t m0 x6b h16 y126 ff2 fs12 fc2 sc0 ls0 ws0">?disease</div>
+<div class="t m0 x6f h16 y127 ff2 fs12 fc0 sc0 ls0 ws0">interacts</div>
+<div class="t m0 x6f h18 y128 ff2 fs14 fc0 sc0 ls0 ws0">with</div>
+<div class="t m0 x93 h11 y129 ff2 fse fc2 sc0 ls0 ws0">protein</div>
+<div class="t m0 x94 h17 y12a ff2 fs13 fc2 sc0 ls0 ws0">gene</div>
+<div class="t m0 x95 h16 y12b ff2 fs12 fc0 sc0 ls0 ws0">encoded by</div>
+<div class="t m0 x96 h16 y12c ff2 fs12 fc0 sc0 ls0 ws0">genetic</div>
+<div class="t m0 x96 h18 y12d ff2 fs14 fc0 sc0 ls0 ws0">association</div>
+<div class="t m0 x97 h18 y12e ff2 fs14 fc3 sc0 ls0 ws0">treats??</div></div>
+</div>
+
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+<div id="pf31" class="pf w0 h0" data-page-no="31">
+<div class="pc pc31 w0 h0">
+<amp-img
+	class="bi x0 y0 w0 h0"
+       src="images-webp/image18-w1920-h1080.webp"
+	srcset="images-webp/image18-w1920-h1080.webp 1920w,
+			images-webp/image18-w1400-h787.webp 1400w,
+			images-webp/image18-w1177-h662.webp 1177w,
+			images-webp/image18-w760-h427.webp 760w,
+			images-webp/image18-w200-h112.webp 200w"
+	width="1920"
+	height="1080"
+	layout="responsive"
+></amp-img>
+<div class="c x0 y0 w1 h0">
+<div class="t m0 xe hc y12f ff1 fsb fc0 sc0 ls0 ws0">Example question: repurposing Metformin</div>
+<div class="t m0 x8d h3f y130 ff2 fs6 fc1 sc0 ls0 ws0">http://tinyurl.com/zem3oxz</div>
+<div class="t m0 x98 h16 y131 ff2 fs12 fc2 sc0 ls0 ws0">Metformin</div>
+<!-- 
+<div class="t m0 x99 h18 y132 ff2 fs14 fc2 sc0 ls0 ws0">?disease</div>
+-->
+<div class="t m0 x4f h16 y133 ff2 fs12 fc0 sc0 ls0 ws0">interacts</div>
+<div class="t m0 x4f h16 y134 ff2 fs12 fc0 sc0 ls0 ws0">with</div>
+<!-- 
+<div class="t m0 x9a h11 y135 ff2 fse fc2 sc0 ls0 ws0">protein</div>
+<div class="t m0 x9b h11 y136 ff2 fse fc2 sc0 ls0 ws0">SLC22A3</div>
+-->
+<div class="t m0 x9c h18 y137 ff2 fs14 fc0 sc0 ls0 ws0">encoded by</div>
+<div class="t m0 x9d h16 y138 ff2 fs12 fc0 sc0 ls0 ws0">genetic</div>
+<div class="t m0 x9d h16 y139 ff2 fs12 fc0 sc0 ls0 ws0">association</div>
+<div class="t m0 x9e h16 y13a ff2 fs12 fc3 sc0 ls0 ws0">treats??</div>
+<div class="t m0 x9f h11 y13b ff2 fse fc2 sc0 ls0 ws0">Solute carrier</div>
+<div class="t m0 xa0 h11 y13c ff2 fse fc2 sc0 ls0 ws0">family 22</div>
+<div class="t m0 xa1 h17 y13d ff2 fs13 fc2 sc0 ls0 ws0">member 3</div>
+<div class="t m0 xa2 h11 y13e ff2 fse fc2 sc0 ls0 ws0">SLC22A3</div>
+<div class="t m0 xa3 h18 y13f ff2 fs14 fc2 sc0 ls0 ws0">prostate</div>
+<div class="t m0 xa4 h16 y140 ff2 fs12 fc2 sc0 ls0 ws0">cancer</div>
+</div>
+<a class="l" href="http://tinyurl.com/zem3oxz">
+<div class="d m1" style="border-style:none;position:absolute;left:695.595000px;bottom:8.244000px;width:450.410000px;height:36.000000px;background-color:rgba(255,255,255,0.000001);"></div>
+</a>
+</div>
+<!-- <div class="pi" data-data='{"ctm":[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}'></div> -->
+</div>
+
+</div>
+</body>
+</html>

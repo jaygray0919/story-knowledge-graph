@@ -1,0 +1,111 @@
+
+slide 1
+Goals for representing knowledge (outline)
+SVG
+
+
+slide 3
+The Gene Ontology
+PNG may be OK
+
+
+slide 4
+The Gene Ontology
+will use new B/W SVG
+
+
+slide 5
+The GO branches
+has 3 components
+see source for each component
+
+top
+replace arrow 1
+https://en.wikipedia.org/wiki/Insulin_receptor#/media/File:Insulin_glucose_metabolism.jpg
+similar
+https://www.researchgate.net/figure/Insulin-binds-to-insulin-receptor-and-induces-its-dimerization-and-auto-phosphorylation_fig1_340230064
+
+middle
+https://vpmmanifold.com/read/1-cytology/section/630bd1bd-dc3d-439c-bdd9-fe13efc81432
+search for
+Schematic:
+Schematic emphasizing differences between phases of mitosis.
+
+bottom
+https://micro.magnet.fsu.edu/cells/mitochondria/mitochondria.html
+
+
+slide 6
+Knowledge Graphs
+new SVG
+
+
+slide 8
+Example: “Google Knowledge Graph” (GKG)
+use frame grabs from google web
+Vemurafenib diagram
+https://www.google.com/search?q=vemurafenib&oq=Vemurafenib&aqs=chrome.0.69i59i131i433i512j0i512l9.3879j0j15&sourceid=chrome&ie=UTF-8
+
+
+slide 9
+Why Knowledge Graphs?
+use three sources
+right side image
+Vemurafenib diagram
+https://www.google.com/search?q=vemurafenib&oq=Vemurafenib&aqs=chrome.0.69i59i131i433i512j0i512l9.3879j0j15&sourceid=chrome&ie=UTF-8
+
+middle image
+https://en.wikipedia.org/wiki/BRAF_(gene)
+https://upload.wikimedia.org/wikipedia/commons/a/af/Protein_BRAF_PDB_1uwh.png
+
+left image
+reuse image from
+Example: “Google Knowledge Graph” (GKG)
+
+
+slide 10
+Implicit relations for hypothesis generation ABC model
+new SVG
+
+
+slide 11
+Open Discovery and Closed Discovery
+new SVG
+
+
+slide 12
+Example question: drug repurposing
+new SVG
+
+
+slide 13
+Implicit relations for hypothesis generationABC model for drug repurposing
+combine new SVGs
+
+
+slide 14
+Querying a knowledge graph with SPARQL
+new SVG (image, right)
+
+
+slide 15
+Metformin’s unique id:  Q19484 Treats property id: P2175
+new SVG
+do not include blue hand
+
+
+slide 16
+Metformin’s unique id:  Q19484 Treats property id: P2175
+new SVG
+do not include blue hand
+
+
+slide 17
+Example question: drug repurposing
+new SVG
+
+
+slide 18
+one single SVG for simplicity
+
+
