@@ -8626,7 +8626,7 @@
             "text-border-width": 0,
             "text-border-style": "solid",
             "text-border-color": "#000",
-            "font-family": "Helvetica Neue, Helvetica, sans-serif",
+            "font-family": "NotoSans-Regular-400, sans-serif",
             "font-style": "normal",
             "font-weight": "normal",
             "font-size": 16,

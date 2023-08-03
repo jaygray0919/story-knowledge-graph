@@ -1,4 +1,7 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+@font-face{font-family:NotoSans-Regular-400;font-style:normal;font-weight:400;src:url("https://s3.amazonaws.com/benetta.net/fonts/noto-sans/NotoSans-Regular.ttf") format("truetype");font-display:swap;}
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -150,7 +153,7 @@ template {
 .app,
 body,
 html {
-  font-family: helvetica neue, helvetica, sans-serif;
+  font-family: NotoSans-Regular-400;
   margin: 0;
   padding: 0;
   background: #272822;
@@ -175,6 +178,8 @@ html {
 .loader {
   position: absolute;
 }
+
+/*
 .loader {
   opacity: 0.5;
   color: #fff;
@@ -204,8 +209,11 @@ html {
   background-size: contain;
   background-repeat: no-repeat;
 }
+*/
 .loader h1 {
+  font-family: NotoSans-Regular-400;
   font-weight: 400;
+  color: #ffffff;
 }
 a {
   color: #8ccbff;
