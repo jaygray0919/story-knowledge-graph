@@ -1,4 +1,0 @@
-
-uses combo of
-	/images
-	/images-new
