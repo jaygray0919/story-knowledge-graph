@@ -1,6 +1,9 @@
 <!--
 grid is basically correct
   upgrade to use new terse structure
+fractal-noise-w1000-h1000.svg
+  fails in Chrome
+  success in FF
 -->
 <!DOCTYPE html>
 <html amp lang="en">
@@ -229,6 +232,15 @@ Story: Knowledge Graph
   --on-ffd700: #ffd700;
   --on-fffe7f: #fffe7f;
   --on-ffffff: #ffffff;
+
+  --on-0cfa2e: #0cfa2e;
+  --on-08446a: #08446a;
+  --on-d88b42: #d88b42;
+  --on-652a16: #652a16;
+  --on-5c8f93: #5c8f93;
+  --on-341abd: #341abd;
+  --on-f9794e: #f9794e;
+  --on-17a2af: #17a2af;
 }
 
 /* use mnemonic for target/theme color */
@@ -239,6 +251,35 @@ Story: Knowledge Graph
   color: var(--on-1f64ff);
 }
 
+/**
+ *  Attachment DL-DT-DD
+ */
+
+.p-s {
+    padding-left: 1em;
+}
+
+.chartlegend span {
+    display: inline-block;
+    height: 0.65em;
+    width:  0.65em;
+    border-radius: 0.25em;
+}
+
+.mr-s {
+    margin-right: 1em;
+}
+
+
+.c-11{background-color: var(--on-0cfa2e);}
+.c-12{background-color: var(--on-08446a);}
+.c-13{background-color: var(--on-d88b42);}
+.c-14{background-color: var(--on-652a16);}
+.c-15{background-color: var(--on-5c8f93);}
+.c-16{background-color: var(--on-341abd);}
+.c-17{background-color: var(--on-f9794e);}
+.c-18{background-color: var(--on-17a2af);}
+
    @font-face {
      font-family: Poppins-100-Normal;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Thin.ttf")
@@ -247,7 +288,6 @@ Story: Knowledge Graph
      font-style: normal;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-100-Italic;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ThinItalic.ttf")
@@ -256,7 +296,6 @@ Story: Knowledge Graph
      font-style: italic;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-200-Normal;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraLight.ttf")
@@ -265,7 +304,6 @@ Story: Knowledge Graph
      font-style: normal;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-200-Italic;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraLightItalic.ttf")
@@ -274,7 +312,6 @@ Story: Knowledge Graph
      font-style: italic;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-300-Normal;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Light.ttf")
@@ -283,7 +320,6 @@ Story: Knowledge Graph
      font-style: normal;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-300-Italic;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-LightItalic.ttf")
@@ -292,7 +328,6 @@ Story: Knowledge Graph
      font-style: italic;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-400-Normal;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Regular.ttf")
@@ -301,7 +336,6 @@ Story: Knowledge Graph
      font-style: normal;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-400-Italic;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Italic.ttf")
@@ -310,7 +344,6 @@ Story: Knowledge Graph
      font-style: italic;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-500-Normal;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Medium.ttf")
@@ -319,7 +352,6 @@ Story: Knowledge Graph
      font-style: normal;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-500-Italic;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-MediumItalic.ttf")
@@ -328,7 +360,6 @@ Story: Knowledge Graph
      font-style: italic;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-600-Normal;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-SemiBold.ttf")
@@ -337,7 +368,6 @@ Story: Knowledge Graph
      font-style: normal;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-600-Italic;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-SemiBoldItalic.ttf")
@@ -346,7 +376,6 @@ Story: Knowledge Graph
      font-style: italic;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-700-Normal;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Bold.ttf")
@@ -355,7 +384,6 @@ Story: Knowledge Graph
      font-style: normal;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-700-Italic;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-BoldItalic.ttf")
@@ -364,7 +392,6 @@ Story: Knowledge Graph
      font-style: italic;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-800-Normal;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraBold.ttf")
@@ -373,7 +400,6 @@ Story: Knowledge Graph
      font-style: normal;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-800-Italic;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraBoldItalic.ttf")
@@ -382,7 +408,6 @@ Story: Knowledge Graph
      font-style: italic;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-900-Normal;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Black.ttf")
@@ -391,7 +416,6 @@ Story: Knowledge Graph
      font-style: normal;
      font-display: swap;
    }
-   
    @font-face {
      font-family: Poppins-900-Italic;
      src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-BlackItalic.ttf")
@@ -401,7 +425,8 @@ Story: Knowledge Graph
      font-display: swap;
    }
 
-   /* Poppins style */
+/* Poppins style */
+
    .Poppins-Thin-100 {
      font-family: Poppins-Thin-100, sans-serif;
      font-style: normal;
@@ -493,6 +518,7 @@ Story: Knowledge Graph
      font-weight: 900;
    }
 
+/* Noto Serif */
 
    @font-face {
      font-family: NotoSerif-Thin-100;
@@ -640,6 +666,8 @@ Story: Knowledge Graph
    }
 
 
+/* Noto Serif style */
+
    .NotoSerif-Thin-100 {
      font-family: NotoSerif-Thin-100;
      font-style: normal;
@@ -731,6 +759,7 @@ Story: Knowledge Graph
      font-weight: 900;
    }
 
+/* Zilla Slab */
 
    @font-face {
      font-family: ZillaSlab-Light-300;
@@ -813,6 +842,8 @@ Story: Knowledge Graph
      font-display: swap;
    }
 
+/* Zilla Slab style*/
+
    .ZillaSlab-Light-300 {
      font-family: ZillaSlab-Light-300, sans-serif;
      font-style: normal;
@@ -863,6 +894,45 @@ Story: Knowledge Graph
      font-style: italic;
      font-weight: 700;
    }
+
+/**
+ *  Font: Recursive
+ */
+
+@font-face {
+    font-family: Recursive;
+    src:
+        url('https://s3.amazonaws.com/benetta.net/fonts/recursive/Recursive-VF.ttf')
+            format('truetype'),
+        url('https://s3.amazonaws.com/benetta.net/fonts/recursive/recursive-2019_11_22-20_38.woff2')
+            format('woff2-variations');
+    text-align: initial;
+    font-weight: 100 600;
+    font-stretch: 25% 151%;
+    font-display: swap;
+}
+
+/* If class is applied, update custom property */
+.rcsv-pnum{--rcsv-pnum:"pnum" on}.rcsv-ss01{--rcsv-ss01:"ss01" on}.rcsv-ss02{--rcsv-ss02:"ss02" on}.rcsv-ss03{--rcsv-ss03:"ss03" on}.rcsv-ss04{--rcsv-ss04:"ss04" on}.rcsv-ss05{--rcsv-ss05:"ss05" on}.rcsv-ss06{--rcsv-ss06:"ss06" on}.rcsv-ss07{--rcsv-ss07:"ss07" on}.rcsv-ss08{--rcsv-ss08:"ss08" on}.rcsv-ss09{--rcsv-ss09:"ss09" on}.rcsv-ss10{--rcsv-ss10:"ss10" on}.rcsv-ss11{--rcsv-ss11:"ss11" on}.rcsv-ss20{--rcsv-ss20:"ss20" on}
+
+/* Apply current state of all custom properties when a class is applied */
+.rcsv-pnum,.rcsv-ss01,.rcsv-ss02,.rcsv-ss03,.rcsv-ss04,.rcsv-ss05,.rcsv-ss06,.rcsv-ss07,.rcsv-ss08,.rcsv-ss09,.rcsv-ss10,.rcsv-ss11,
+.rcsv-ss20 {font-feature-settings:var(--rcsv-pnum), var(--rcsv-ss01), var(--rcsv-ss02), var(--rcsv-ss03), var(--rcsv-ss04), var(--rcsv-ss05), var(--rcsv-ss06), var(--rcsv-ss07), var(--rcsv-ss08), var(--rcsv-ss09), var(--rcsv-ss10), var(--rcsv-ss11), var(--rcsv-ss20);}
+
+/* Options by style */
+.rcsv-sans-casual{font-family:Recursive;font-variation-settings:"MONO" 0,"CASL" 1,"slnt" 0,"ital" 0.5;}
+.rcsv-sans-casual-italic{font-family:Recursive;font-variation-settings:"MONO" 0,"CASL" 1,"slnt" -15,"ital" 1;}
+
+.rcsv-sans-linear{font-family:Recursive;font-variation-settings:"MONO" 0,"CASL" 1,"slnt" 0,"ital" 0.5;}
+.rcsv-sans-linear-italic{font-family:Recursive;font-variation-settings:"MONO" 0,"CASL" 1,"slnt" -15,"ital" 1;}
+
+.rcsv-mono-casual-italic{font-family:Recursive;font-variation-settings:"MONO" 1,"CASL" 1,"slnt" -15,"ital" 1;}
+.rcsv-mono-casual{font-family:Recursive;font-variation-settings:"MONO" 1,"CASL" 1,"slnt" 0,"ital" 0.5;}
+
+.rcsv-mono-linear-italic{font-family:Recursive;font-variation-settings:"MONO" 1,"CASL" 0,"slnt" -15,"ital" 1;}
+.rcsv-mono-linear{font-family:Recursive;font-variation-settings:"MONO" 1,"CASL" 0,"slnt" 0,"ital" 0.5;}
+
+
 
    .fs-10 {
      font-size: calc(1 * var(--story-page-vw));
@@ -1224,32 +1294,32 @@ Story: Knowledge Graph
    }
 
 
-/* for background, dark */
-.hcolor-light {
-  color: var(--on-ffffff);
-}
-
-/* for background, light */
-.hcolor-dark {
-  color: var(--on-595775);
-}
-
-/* constellation original */
-.shadow-text {
-  text-shadow: 0px 4px 4px rgb(0 0 0 / 0.95);
-}
-
-/* for background, light: shadow-text-back-light - stbl */
-.stbl {
-  text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
-}
-
-/* for background, dark: shadow-text-back-dark - stbd */
-.stbd {
-  text-shadow:
-    2px 7px 5px rgba(0, 0, 0, 0.3),
-    0px -4px 10px rgba(255, 255, 255, 0.3);
-}
+   /* for background, dark */
+   .hcolor-light {
+     color: var(--on-ffffff);
+   }
+   
+   /* for background, light */
+   .hcolor-dark {
+     color: var(--on-595775);
+   }
+   
+   /* constellation original */
+   .shadow-text {
+     text-shadow: 0px 4px 4px rgb(0 0 0 / 0.95);
+   }
+   
+   /* for background, light: shadow-text-back-light - stbl */
+   .stbl {
+     text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
+   }
+   
+   /* for background, dark: shadow-text-back-dark - stbd */
+   .stbd {
+     text-shadow:
+       2px 7px 5px rgba(0, 0, 0, 0.3),
+       0px -4px 10px rgba(255, 255, 255, 0.3);
+   }
 
 /**
  *  updated to new structure
@@ -1901,16 +1971,21 @@ blockquote:before {
         layout="nodisplay"
         cta-image="https://s3.amazonaws.com/benetta.net/media/logo/ontomatica/ontomatica-symbol-w33-h36-color-1F64FF-bgnd-white.svg"
         cta-text="Credits"
-        data-title="Credits and Reference"
+        data-title="Ontology Slide credit"
       >
-        <section>
-          <div class="Poppins-Regular-400">
-            <p>Improve treatment of credits and references</p>
-
-            <p>Ontology Slide credit: M&#x00E9;lanie Courtot, Ph.D.</p>
-
-            <p>https://www.ebi.ac.uk/QuickGO/</p>
-          </div>
+        <section class="p-s">
+          <dl class="chartlegend Poppins-Regular-400">
+            <dt>
+            </dt>
+            <dd class="rcsv-mono-linear fs-12" style="font-weight: 400;">
+              <span class="c-11 mr-s"></span>
+              M&#x00E9;lanie Courtot, Ph.D.
+            </dd>
+            <dd class="rcsv-mono-linear fs-12" style="font-weight: 400;">
+              <span class="c-12 mr-s"></span>
+              <a class="uline" href="https://www.ebi.ac.uk/QuickGO/">https://www.ebi.ac.uk/QuickGO/</a>
+            </dd>
+          </dl>
         </section>
       </amp-story-page-attachment>
     </amp-story-page>
@@ -3324,50 +3399,52 @@ arrow
         layout="nodisplay"
         cta-image="https://s3.amazonaws.com/benetta.net/media/logo/ontomatica/ontomatica-symbol-w33-h36-color-1F64FF-bgnd-white.svg"
         cta-text="More information"
-        data-title="Attachments include information that complements slide content."
+        data-title="More about linking similar items"
       >
         <section class="p-s">
-          <p>More about linking similar items.</p>
-          <hr />
           <dl class="chartlegend">
-            <div class="av">Similarity to other substances</div>
-            <dt>item-1</dt>
-            <dd>
-              <span class="c-c0334d mr-s"></span>
+            <div class="av">
+            Similarity to other substances
+            </div>
+            <dt>
+            item-1
+            </dt>
+            <dd class="rcsv-mono-linear fs-12" style="font-weight: 400;">
+              <span class="c-11 mr-s"></span>
               (3R,5R)-7-[2-(4-fluorophenyl)-3-phenyl-4-(phenylcarbamoyl)-5-propan-2-yl(314C)pyrrol-1-yl]-3,5-dihydroxyheptanoic
               acid
             </dd>
-            <dd>
-              <span class="c-f3d480 mr-s"></span>
+            <dd class="rcsv-mono-linear fs-12" style="font-weight: 400;">
+              <span class="c-12 mr-s"></span>
               XUKUURHRXDUEBC-IEILOPHXSA-N
             </dd>
             <dt>item-2</dt>
-            <dd>
-              <span class="c-8f715b mr-s"></span>
+            <dd class="rcsv-mono-linear fs-12" style="font-weight: 400;">
+              <span class="c-13 mr-s"></span>
               (3R,5R)-7-[2-cyclopropyl-5-(4-fluorophenyl)-4-phenyl-3-(phenylcarbamoyl)pyrrol-1-yl]-3,5-dihydroxyheptanoic
               acid
             </dd>
-            <dd>
-              <span class="c-78d68c mr-s"></span>
+            <dd class="rcsv-mono-linear fs-12" style="font-weight: 400;">
+              <span class="c-14 mr-s"></span>
               WDKDRVHIGPVFCW-KAYWLYCHSA-N
             </dd>
             <dt>item-3</dt>
-            <dd>
-              <span class="c-d8d583 mr-s"></span>
+            <dd class="rcsv-mono-linear fs-12" style="font-weight: 400;">
+              <span class="c-15 mr-s"></span>
               (E,3R,5S)-7-[5-[(3-chlorophenyl)carbamoyl]-3,4-bis(4-fluorophenyl)-1-propan-2-ylpyrrol-2-yl]-3,5-dihydroxyhept-6-enoic
               acid
             </dd>
-            <dd>
-              <span class="c-d98c2a mr-s"></span>
+            <dd class="rcsv-mono-linear fs-12" style="font-weight: 400;">
+              <span class="c-16 mr-s"></span>
               JNJZDKOQTIGNNB-FDFRSNTISA-N
             </dd>
             <div class="av">Has component</div>
-            <dd>
-              <span class="c-a3586d mr-s"></span>
+            <dd class="rcsv-mono-linear fs-12" style="font-weight: 400;">
+              <span class="c-17 mr-s"></span>
               Atorvastatin sodium
             </dd>
-            <dd>
-              <span class="c-aba6bf mr-s"></span>
+            <dd class="rcsv-mono-linear fs-12" style="font-weight: 400;">
+              <span class="c-18 mr-s"></span>
               VVRPOCPLIUDBSA-CNZCJKERSA-M
             </dd>
           </dl>
