@@ -1,8 +1,0 @@
-
-E:\content\__projects\_projects-Story\____story-$-knowledge-graph\__story-22-11-01\___notes.txt
-
-issue:
-does not include paula-perez edits
-
-needs SPARQL query in attachment or outlink
-

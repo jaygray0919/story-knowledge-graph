@@ -1,13 +1,18 @@
 <!--
 issues
+  PubChem is hosed!
+    switch to amp-img
   does NOT include Truett correction
-  make SPARQL work - outlink
+
+missing NotoSerif
+missing ZillaSlab for alt H2
 
 has unique CSS for PubChem from extractor
   ./33 is broken - refer to original; missing CSS
 
 grid is basically correct
   upgrade to use new terse structure
+
 -->
 <!DOCTYPE html>
 <html amp lang="en">
@@ -111,6 +116,10 @@ Story template: Knowledge Graph
 
 /** @format */
 /* format used by prettier */
+
+.amp-comment-button {
+  display: none;
+}
 
 :root {
   --space-unit-v: 1rem;
@@ -247,549 +256,542 @@ Story template: Knowledge Graph
   color: var(--on-1f64ff);
 }
 
-@font-face {
-  font-family: Poppins-100-Normal;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Thin.ttf")
-    format("truetype");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
+   @font-face {
+     font-family: Poppins-100-Normal;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Thin.ttf")
+       format("truetype");
+     font-weight: 100;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-100-Italic;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ThinItalic.ttf")
+       format("truetype");
+     font-weight: 100;
+     font-style: italic;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-200-Normal;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraLight.ttf")
+       format("truetype");
+     font-weight: 200;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-200-Italic;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraLightItalic.ttf")
+       format("truetype");
+     font-weight: 200;
+     font-style: italic;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-300-Normal;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Light.ttf")
+       format("truetype");
+     font-weight: 300;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-300-Italic;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-LightItalic.ttf")
+       format("truetype");
+     font-weight: 300;
+     font-style: italic;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-400-Normal;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Regular.ttf")
+       format("truetype");
+     font-weight: 400;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-400-Italic;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Italic.ttf")
+       format("truetype");
+     font-weight: 400;
+     font-style: italic;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-500-Normal;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Medium.ttf")
+       format("truetype");
+     font-weight: 500;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-500-Italic;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-MediumItalic.ttf")
+       format("truetype");
+     font-weight: 500;
+     font-style: italic;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-600-Normal;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-SemiBold.ttf")
+       format("truetype");
+     font-weight: 600;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-600-Italic;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-SemiBoldItalic.ttf")
+       format("truetype");
+     font-weight: 600;
+     font-style: italic;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-700-Normal;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Bold.ttf")
+       format("truetype");
+     font-weight: 700;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-700-Italic;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-BoldItalic.ttf")
+       format("truetype");
+     font-weight: 700;
+     font-style: italic;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-800-Normal;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraBold.ttf")
+       format("truetype");
+     font-weight: 800;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-800-Italic;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraBoldItalic.ttf")
+       format("truetype");
+     font-weight: 800;
+     font-style: italic;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-900-Normal;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Black.ttf")
+       format("truetype");
+     font-weight: 900;
+     font-style: normal;
+     font-display: swap;
+   }
+   
+   @font-face {
+     font-family: Poppins-900-Italic;
+     src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-BlackItalic.ttf")
+       format("truetype");
+     font-weight: 900;
+     font-style: italic;
+     font-display: swap;
+   }
 
-@font-face {
-  font-family: Poppins-100-Italic;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ThinItalic.ttf")
-    format("truetype");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
+   /* Poppins style */
+   .Poppins-Thin-100 {
+     font-family: Poppins-Thin-100, sans-serif;
+     font-style: normal;
+     font-weight: 100;
+   }
+   .Poppins-ThinItalic-100 {
+     font-family: Poppins-ThinItalic-100, sans-serif;
+     font-style: italic;
+     font-weight: 100;
+   }
+   .Poppins-ExtraLight-200 {
+     font-family: Poppins-ExtraLight-200, sans-serif;
+     font-style: normal;
+     font-weight: 200;
+   }
+   .Poppins-ExtraLightItalic-200 {
+     font-family: Poppins-ExtraLightItalic-200, sans-serif;
+     font-style: italic;
+     font-weight: 200;
+   }
+   .Poppins-Light-300 {
+     font-family: Poppins-Light-300, sans-serif;
+     font-style: normal;
+     font-weight: 300;
+   }
+   .Poppins-LightItalic-300 {
+     font-family: Poppins-LightItalic-300, sans-serif;
+     font-style: italic;
+     font-weight: 300;
+   }
+   .Poppins-Regular-400 {
+     font-family: Poppins-Regular-400, sans-serif;
+     font-style: normal;
+     font-weight: 400;
+   }
+   .Poppins-Italic-400 {
+     font-family: Poppins-Italic-400, sans-serif;
+     font-style: italic;
+     font-weight: 400;
+   }
+   .Poppins-Medium-500 {
+     font-family: Poppins-Medium-500, sans-serif;
+     font-style: normal;
+     font-weight: 500;
+   }
+   .Poppins-MediumItalic-500 {
+     font-family: Poppins-MediumItalic-500, sans-serif;
+     font-style: italic;
+     font-weight: 500;
+   }
+   .Poppins-SemiBold-600 {
+     font-family: Poppins-SemiBold-600, sans-serif;
+     font-style: normal;
+     font-weight: 600;
+   }
+   .Poppins-SemiBoldItalic-600 {
+     font-family: Poppins-SemiBoldItalic-600, sans-serif;
+     font-style: italic;
+     font-weight: 600;
+   }
+   .Poppins-Bold-700 {
+     font-family: Poppins-Bold-700, sans-serif;
+     font-style: normal;
+     font-weight: 700;
+   }
+   .Poppins-BoldItalic-700 {
+     font-family: Poppins-BoldItalic-700, sans-serif;
+     font-style: italic;
+     font-weight: 700;
+   }
+   .Poppins-ExtraBold-800 {
+     font-family: Poppins-ExtraBold-800, sans-serif;
+     font-style: normal;
+     font-weight: 800;
+   }
+   .Poppins-ExtraBoldItalic-800 {
+     font-family: Poppins-ExtraBoldItalic-800, sans-serif;
+     font-style: italic;
+     font-weight: 800;
+   }
+   .Poppins-Black-900 {
+     font-family: Poppins-Black-900, sans-serif;
+     font-style: normal;
+     font-weight: 900;
+   }
+   .Poppins-BlackItalic-900 {
+     font-family: Poppins-BlackItalic-900, sans-serif;
+     font-style: italic;
+     font-weight: 900;
+   }
 
-@font-face {
-  font-family: Poppins-200-Normal;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraLight.ttf")
-    format("truetype");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: Poppins-200-Italic;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraLightItalic.ttf")
-    format("truetype");
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
+   .fs-10 {
+     font-size: calc(1 * var(--story-page-vw));
+   }
+   .fs-11 {
+     font-size: calc(1.1 * var(--story-page-vw));
+   }
+   .fs-12 {
+     font-size: calc(1.2 * var(--story-page-vw));
+   }
+   .fs-13 {
+     font-size: calc(1.3 * var(--story-page-vw));
+   }
+   .fs-14 {
+     font-size: calc(1.4 * var(--story-page-vw));
+   }
+   .fs-15 {
+     font-size: calc(1.5 * var(--story-page-vw));
+   }
+   .fs-16 {
+     font-size: calc(1.6 * var(--story-page-vw));
+   }
+   .fs-17 {
+     font-size: calc(1.7 * var(--story-page-vw));
+   }
+   .fs-18 {
+     font-size: calc(1.8 * var(--story-page-vw));
+   }
+   .fs-19 {
+     font-size: calc(1.9 * var(--story-page-vw));
+   }
+   .fs-20 {
+     font-size: calc(2 * var(--story-page-vw));
+   }
+   .fs-21 {
+     font-size: calc(2.1 * var(--story-page-vw));
+   }
+   .fs-22 {
+     font-size: calc(2.2 * var(--story-page-vw));
+   }
+   .fs-23 {
+     font-size: calc(2.3 * var(--story-page-vw));
+   }
+   .fs-24 {
+     font-size: calc(2.4 * var(--story-page-vw));
+   }
+   .fs-25 {
+     font-size: calc(2.5 * var(--story-page-vw));
+   }
+   .fs-26 {
+     font-size: calc(2.6 * var(--story-page-vw));
+   }
+   .fs-27 {
+     font-size: calc(2.7 * var(--story-page-vw));
+   }
+   .fs-28 {
+     font-size: calc(2.8 * var(--story-page-vw));
+   }
+   .fs-29 {
+     font-size: calc(2.9 * var(--story-page-vw));
+   }
+   .fs-30 {
+     font-size: calc(3 * var(--story-page-vw));
+   }
+   .fs-31 {
+     font-size: calc(3.1 * var(--story-page-vw));
+   }
+   .fs-32 {
+     font-size: calc(3.2 * var(--story-page-vw));
+   }
+   .fs-33 {
+     font-size: calc(3.3 * var(--story-page-vw));
+   }
+   .fs-34 {
+     font-size: calc(3.4 * var(--story-page-vw));
+   }
+   .fs-35 {
+     font-size: calc(3.5 * var(--story-page-vw));
+   }
+   .fs-36 {
+     font-size: calc(3.6 * var(--story-page-vw));
+   }
+   .fs-37 {
+     font-size: calc(3.7 * var(--story-page-vw));
+   }
+   .fs-38 {
+     font-size: calc(3.8 * var(--story-page-vw));
+   }
+   .fs-39 {
+     font-size: calc(3.9 * var(--story-page-vw));
+   }
+   .fs-40 {
+     font-size: calc(4 * var(--story-page-vw));
+   }
+   .fs-41 {
+     font-size: calc(4.1 * var(--story-page-vw));
+   }
+   .fs-42 {
+     font-size: calc(4.2 * var(--story-page-vw));
+   }
+   .fs-43 {
+     font-size: calc(4.3 * var(--story-page-vw));
+   }
+   .fs-44 {
+     font-size: calc(4.4 * var(--story-page-vw));
+   }
+   .fs-45 {
+     font-size: calc(4.5 * var(--story-page-vw));
+   }
+   .fs-46 {
+     font-size: calc(4.6 * var(--story-page-vw));
+   }
+   .fs-47 {
+     font-size: calc(4.7 * var(--story-page-vw));
+   }
+   .fs-48 {
+     font-size: calc(4.8 * var(--story-page-vw));
+   }
+   .fs-49 {
+     font-size: calc(4.9 * var(--story-page-vw));
+   }
+   .fs-50 {
+     font-size: calc(5 * var(--story-page-vw));
+   }
+   .fs-51 {
+     font-size: calc(5.1 * var(--story-page-vw));
+   }
+   .fs-52 {
+     font-size: calc(5.2 * var(--story-page-vw));
+   }
+   .fs-53 {
+     font-size: calc(5.3 * var(--story-page-vw));
+   }
+   .fs-54 {
+     font-size: calc(5.4 * var(--story-page-vw));
+   }
+   .fs-55 {
+     font-size: calc(5.5 * var(--story-page-vw));
+   }
+   .fs-56 {
+     font-size: calc(5.6 * var(--story-page-vw));
+   }
+   .fs-57 {
+     font-size: calc(5.7 * var(--story-page-vw));
+   }
+   .fs-58 {
+     font-size: calc(5.8 * var(--story-page-vw));
+   }
+   .fs-59 {
+     font-size: calc(5.9 * var(--story-page-vw));
+   }
+   .fs-60 {
+     font-size: calc(6 * var(--story-page-vw));
+   }
+   .fs-61 {
+     font-size: calc(6.1 * var(--story-page-vw));
+   }
+   .fs-62 {
+     font-size: calc(6.2 * var(--story-page-vw));
+   }
+   .fs-63 {
+     font-size: calc(6.3 * var(--story-page-vw));
+   }
+   .fs-64 {
+     font-size: calc(6.4 * var(--story-page-vw));
+   }
+   .fs-65 {
+     font-size: calc(6.5 * var(--story-page-vw));
+   }
+   .fs-66 {
+     font-size: calc(6.6 * var(--story-page-vw));
+   }
+   .fs-67 {
+     font-size: calc(6.7 * var(--story-page-vw));
+   }
+   .fs-68 {
+     font-size: calc(6.8 * var(--story-page-vw));
+   }
+   .fs-69 {
+     font-size: calc(6.9 * var(--story-page-vw));
+   }
+   .fs-70 {
+     font-size: calc(7 * var(--story-page-vw));
+   }
 
-@font-face {
-  font-family: Poppins-300-Normal;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Light.ttf")
-    format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-300-Italic;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-LightItalic.ttf")
-    format("truetype");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-400-Normal;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Regular.ttf")
-    format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-400-Italic;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Italic.ttf")
-    format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-500-Normal;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Medium.ttf")
-    format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-500-Italic;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-MediumItalic.ttf")
-    format("truetype");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-600-Normal;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-SemiBold.ttf")
-    format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-600-Italic;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-SemiBoldItalic.ttf")
-    format("truetype");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-700-Normal;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Bold.ttf")
-    format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-700-Italic;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-BoldItalic.ttf")
-    format("truetype");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-800-Normal;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraBold.ttf")
-    format("truetype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-800-Italic;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-ExtraBoldItalic.ttf")
-    format("truetype");
-  font-weight: 800;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-900-Normal;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-Black.ttf")
-    format("truetype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Poppins-900-Italic;
-  src: url("https://s3.amazonaws.com/benetta.net/fonts/poppins/Poppins-BlackItalic.ttf")
-    format("truetype");
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* Poppins style */
-.popn-100-reg {
-  font-family: Poppins-100-Normal;
-  font-style: normal;
-  font-weight: 100;
-}
-.popn-100-ita {
-  font-family: Poppins-100-Italic;
-  font-style: italic;
-  font-weight: 100;
-}
-
-.popn-200-reg {
-  font-family: Poppins-200-Normal;
-  font-style: normal;
-  font-weight: 200;
-}
-.popn-200-ita {
-  font-family: Poppins-200-Italic;
-  font-style: italic;
-  font-weight: 200;
-}
-
-.popn-300-reg {
-  font-family: Poppins-300-Normal;
-  font-style: normal;
-  font-weight: 300;
-}
-.popn-300-ita {
-  font-family: Poppins-300-Italic;
-  font-style: italic;
-  font-weight: 300;
-}
-
-.popn-400-reg {
-  font-family: Poppins-400-Normal;
-  font-style: normal;
-  font-weight: 400;
-}
-.popn-400-ita {
-  font-family: Poppins-400-Italic;
-  font-style: italic;
-  font-weight: 400;
-}
-
-.popn-500-reg {
-  font-family: Poppins-500-Normal;
-  font-style: normal;
-  font-weight: 500;
-}
-.popn-500-ita {
-  font-family: Poppins-500-Italic;
-  font-style: italic;
-  font-weight: 500;
-}
-
-.popn-600-reg {
-  font-family: Poppins-600-Normal;
-  font-style: normal;
-  font-weight: 600;
-}
-.popn-600-ita {
-  font-family: Poppins-600-Italic;
-  font-style: italic;
-  font-weight: 600;
-}
-
-.popn-700-reg {
-  font-family: Poppins-700-Normal;
-  font-style: normal;
-  font-weight: 700;
-}
-.popn-700-ita {
-  font-family: Poppins-700-Italic;
-  font-style: italic;
-  font-weight: 700;
-}
-
-.popn-800-reg {
-  font-family: Poppins-800-Normal;
-  font-style: normal;
-  font-weight: 800;
-}
-.popn-800-ita {
-  font-family: Poppins-800-Italic;
-  font-style: italic;
-  font-weight: 800;
-}
-
-.popn-900-reg {
-  font-family: Poppins-900-Normal;
-  font-style: normal;
-  font-weight: 900;
-}
-.popn-900-ita {
-  font-family: Poppins-900-Italic;
-  font-style: italic;
-  font-weight: 900;
-}
-
-.fs-10 {
-  font-size: calc(1 * var(--story-page-vw));
-}
-.fs-11 {
-  font-size: calc(1.1 * var(--story-page-vw));
-}
-.fs-12 {
-  font-size: calc(1.2 * var(--story-page-vw));
-}
-.fs-13 {
-  font-size: calc(1.3 * var(--story-page-vw));
-}
-.fs-14 {
-  font-size: calc(1.4 * var(--story-page-vw));
-}
-.fs-15 {
-  font-size: calc(1.5 * var(--story-page-vw));
-}
-.fs-16 {
-  font-size: calc(1.6 * var(--story-page-vw));
-}
-.fs-17 {
-  font-size: calc(1.7 * var(--story-page-vw));
-}
-.fs-18 {
-  font-size: calc(1.8 * var(--story-page-vw));
-}
-.fs-19 {
-  font-size: calc(1.9 * var(--story-page-vw));
-}
-.fs-20 {
-  font-size: calc(2 * var(--story-page-vw));
-}
-.fs-21 {
-  font-size: calc(2.1 * var(--story-page-vw));
-}
-.fs-22 {
-  font-size: calc(2.2 * var(--story-page-vw));
-}
-.fs-23 {
-  font-size: calc(2.3 * var(--story-page-vw));
-}
-.fs-24 {
-  font-size: calc(2.4 * var(--story-page-vw));
-}
-.fs-25 {
-  font-size: calc(2.5 * var(--story-page-vw));
-}
-.fs-26 {
-  font-size: calc(2.6 * var(--story-page-vw));
-}
-.fs-27 {
-  font-size: calc(2.7 * var(--story-page-vw));
-}
-.fs-28 {
-  font-size: calc(2.8 * var(--story-page-vw));
-}
-.fs-29 {
-  font-size: calc(2.9 * var(--story-page-vw));
-}
-.fs-30 {
-  font-size: calc(3 * var(--story-page-vw));
-}
-.fs-31 {
-  font-size: calc(3.1 * var(--story-page-vw));
-}
-.fs-32 {
-  font-size: calc(3.2 * var(--story-page-vw));
-}
-.fs-33 {
-  font-size: calc(3.3 * var(--story-page-vw));
-}
-.fs-34 {
-  font-size: calc(3.4 * var(--story-page-vw));
-}
-.fs-35 {
-  font-size: calc(3.5 * var(--story-page-vw));
-}
-.fs-36 {
-  font-size: calc(3.6 * var(--story-page-vw));
-}
-.fs-37 {
-  font-size: calc(3.7 * var(--story-page-vw));
-}
-.fs-38 {
-  font-size: calc(3.8 * var(--story-page-vw));
-}
-.fs-39 {
-  font-size: calc(3.9 * var(--story-page-vw));
-}
-.fs-40 {
-  font-size: calc(4 * var(--story-page-vw));
-}
-.fs-41 {
-  font-size: calc(4.1 * var(--story-page-vw));
-}
-.fs-42 {
-  font-size: calc(4.2 * var(--story-page-vw));
-}
-.fs-43 {
-  font-size: calc(4.3 * var(--story-page-vw));
-}
-.fs-44 {
-  font-size: calc(4.4 * var(--story-page-vw));
-}
-.fs-45 {
-  font-size: calc(4.5 * var(--story-page-vw));
-}
-.fs-46 {
-  font-size: calc(4.6 * var(--story-page-vw));
-}
-.fs-47 {
-  font-size: calc(4.7 * var(--story-page-vw));
-}
-.fs-48 {
-  font-size: calc(4.8 * var(--story-page-vw));
-}
-.fs-49 {
-  font-size: calc(4.9 * var(--story-page-vw));
-}
-.fs-50 {
-  font-size: calc(5 * var(--story-page-vw));
-}
-.fs-51 {
-  font-size: calc(5.1 * var(--story-page-vw));
-}
-.fs-52 {
-  font-size: calc(5.2 * var(--story-page-vw));
-}
-.fs-53 {
-  font-size: calc(5.3 * var(--story-page-vw));
-}
-.fs-54 {
-  font-size: calc(5.4 * var(--story-page-vw));
-}
-.fs-55 {
-  font-size: calc(5.5 * var(--story-page-vw));
-}
-.fs-56 {
-  font-size: calc(5.6 * var(--story-page-vw));
-}
-.fs-57 {
-  font-size: calc(5.7 * var(--story-page-vw));
-}
-.fs-58 {
-  font-size: calc(5.8 * var(--story-page-vw));
-}
-.fs-59 {
-  font-size: calc(5.9 * var(--story-page-vw));
-}
-.fs-60 {
-  font-size: calc(6 * var(--story-page-vw));
-}
-.fs-61 {
-  font-size: calc(6.1 * var(--story-page-vw));
-}
-.fs-62 {
-  font-size: calc(6.2 * var(--story-page-vw));
-}
-.fs-63 {
-  font-size: calc(6.3 * var(--story-page-vw));
-}
-.fs-64 {
-  font-size: calc(6.4 * var(--story-page-vw));
-}
-.fs-65 {
-  font-size: calc(6.5 * var(--story-page-vw));
-}
-.fs-66 {
-  font-size: calc(6.6 * var(--story-page-vw));
-}
-.fs-67 {
-  font-size: calc(6.7 * var(--story-page-vw));
-}
-.fs-68 {
-  font-size: calc(6.8 * var(--story-page-vw));
-}
-.fs-69 {
-  font-size: calc(6.9 * var(--story-page-vw));
-}
-.fs-70 {
-  font-size: calc(7 * var(--story-page-vw));
-}
-
-/*************
- * line-height
- */
-.lh-06 {
-  line-height: calc(0.6rem + 0.1rem);
-}
-.lh-08 {
-  line-height: calc(0.8rem + 0.2rem);
-}
-.lh-10 {
-  line-height: calc(1rem + 0.3rem);
-}
-.lh-12 {
-  line-height: calc(1.2rem + 0.4rem);
-}
-.lh-14 {
-  line-height: calc(1.4rem + 0.5rem);
-}
-.lh-16 {
-  line-height: calc(1.6rem + 0.6rem);
-}
-.lh-18 {
-  line-height: calc(1.8rem + 0.7rem);
-}
-.lh-20 {
-  line-height: calc(2rem + 0.7rem);
-}
-.lh-22 {
-  line-height: calc(2.2rem + 0.7rem);
-}
-.lh-24 {
-  line-height: calc(2.4rem + 0.7rem);
-}
-.lh-26 {
-  line-height: calc(2.6rem + 0.7rem);
-}
-.lh-28 {
-  line-height: calc(2.8rem + 0.7rem);
-}
-.lh-30 {
-  line-height: calc(3rem + 0.7rem);
-}
-.lh-32 {
-  line-height: calc(3.2rem + 0.7rem);
-}
-.lh-34 {
-  line-height: calc(3.4rem + 0.7rem);
-}
-
-/* spacers, vertical */
-.v-sp-1 {
-  height: var(--space-xxxxs);
-}
-.v-sp-2 {
-  height: var(--space-xxxs);
-}
-.v-sp-3 {
-  height: var(--space-xxs);
-}
-.v-sp-4 {
-  height: var(--space-xs);
-}
-.v-sp-5 {
-  height: var(--space-sm);
-}
-.v-sp-6 {
-  height: var(--space-md);
-}
-.v-sp-7 {
-  height: var(--space-lg);
-}
-.v-sp-8 {
-  height: var(--space-xl);
-}
-.v-sp-9 {
-  height: var(--space-xxl);
-}
-.v-sp-10 {
-  height: var(--space-xxxl);
-}
-.v-sp-11 {
-  height: var(--space-xxxxl);
-}
-
-/* spacers, horizontal */
-.h-sp-08 {
-  width: var(--space-05);
-}
-.h-sp-16 {
-  width: var(--space-10);
-}
-.h-sp-24 {
-  width: var(--space-15);
-}
-.h-sp-32 {
-  width: var(--space-20);
-}
+   /*************
+    * line-height
+    */
+   .lh-06 {
+     line-height: calc(0.6rem + 0.1rem);
+   }
+   .lh-08 {
+     line-height: calc(0.8rem + 0.2rem);
+   }
+   .lh-10 {
+     line-height: calc(1rem + 0.3rem);
+   }
+   .lh-12 {
+     line-height: calc(1.2rem + 0.4rem);
+   }
+   .lh-14 {
+     line-height: calc(1.4rem + 0.5rem);
+   }
+   .lh-16 {
+     line-height: calc(1.6rem + 0.6rem);
+   }
+   .lh-18 {
+     line-height: calc(1.8rem + 0.7rem);
+   }
+   .lh-20 {
+     line-height: calc(2rem + 0.7rem);
+   }
+   .lh-22 {
+     line-height: calc(2.2rem + 0.7rem);
+   }
+   .lh-24 {
+     line-height: calc(2.4rem + 0.7rem);
+   }
+   .lh-26 {
+     line-height: calc(2.6rem + 0.7rem);
+   }
+   .lh-28 {
+     line-height: calc(2.8rem + 0.7rem);
+   }
+   .lh-30 {
+     line-height: calc(3rem + 0.7rem);
+   }
+   .lh-32 {
+     line-height: calc(3.2rem + 0.7rem);
+   }
+   .lh-34 {
+     line-height: calc(3.4rem + 0.7rem);
+   }
+   
+   /* spacers, vertical */
+   .v-sp-1 {
+     height: var(--space-xxxxs);
+   }
+   .v-sp-2 {
+     height: var(--space-xxxs);
+   }
+   .v-sp-3 {
+     height: var(--space-xxs);
+   }
+   .v-sp-4 {
+     height: var(--space-xs);
+   }
+   .v-sp-5 {
+     height: var(--space-sm);
+   }
+   .v-sp-6 {
+     height: var(--space-md);
+   }
+   .v-sp-7 {
+     height: var(--space-lg);
+   }
+   .v-sp-8 {
+     height: var(--space-xl);
+   }
+   .v-sp-9 {
+     height: var(--space-xxl);
+   }
+   .v-sp-10 {
+     height: var(--space-xxxl);
+   }
+   .v-sp-11 {
+     height: var(--space-xxxxl);
+   }
+   
+   /* spacers, horizontal */
+   .h-sp-08 {
+     width: var(--space-05);
+   }
+   .h-sp-16 {
+     width: var(--space-10);
+   }
+   .h-sp-24 {
+     width: var(--space-15);
+   }
+   .h-sp-32 {
+     width: var(--space-20);
+   }
 
 /*
   Font: Noto Serif
@@ -805,86 +807,82 @@ Story template: Knowledge Graph
   font-display: swap;
 }
 
-/************
- * title page
- * switch to logical labels - color
- */
+   /**
+    * cover page
+    */
 
-.noedge {
-  padding: 0;
-}
-.c-bottom {
-  align-content: end;
-}
-.mb {
-  margin-bottom: 1em;
-}
+   .noedge {
+     padding: 0;
+   }
+   .c-bottom {
+     align-content: end;
+   }
+   .mb {
+     margin-bottom: 1em;
+   }
+   .paper {
+     box-shadow:
+       0 1px 1px 0 rgba(0, 0, 0, 0.14),
+       0 1.5px 0.5px -1px rgba(0, 0, 0, 0.2),
+       0 0 2.5px 0 rgba(0, 0, 0, 0.12);
+     -webkit-box-shadow:
+       0 1px 1px 0 rgba(0, 0, 0, 0.14),
+       0 1.5px 0.5px -1px rgba(0, 0, 0, 0.2),
+       0 0 2.5px 0 rgba(0, 0, 0, 0.12);
+     -moz-box-shadow:
+       0 1px 1px 0 rgba(0, 0, 0, 0.14),
+       0 1.5px 0.5px -1px rgba(0, 0, 0, 0.2),
+       0 0 2.5px 0 rgba(0, 0, 0, 0.12);
+   }
+   .co-s {
+     color: var(--on-6c757d);
+   }
+   .bg-w {
+     background-color: var(--on-ffffff);
+   }
+   .cover-70 {
+     width: 70%;
+   }
+   .cover-50 {
+     width: 50%;
+   }
+   .d-flex {
+     display: flex;
+     display: -ms-flexbox;
+   }
+   .flex-fill {
+     flex: 1 1 auto;
+   }
+   .pt {
+     padding-top: 1em;
+   }
+   .pb {
+     color: var(--on-440044);
+     padding-bottom: 1em;
+   }
+   .ml-s {
+     margin-left: 0.5em;
+   }
+   .co-p {
+     color: var(--on-ff0000);
+   }
+   .co-h1 {
+     color: var(--on-440044);
+   }
+   .w-80 {
+     width: 80%;
+   }
+   .w-50 {
+     width: 50%;
+   }
+   .mx-a {
+     margin-left: auto;
+     margin-right: auto;
+   }
+   .sep-v {
+     border-left: 24px solid var(--on-ff0000);
+   }
 
-.paper {
-  box-shadow:
-    0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 1.5px 0.5px -1px rgba(0, 0, 0, 0.2),
-    0 0 2.5px 0 rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow:
-    0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 1.5px 0.5px -1px rgba(0, 0, 0, 0.2),
-    0 0 2.5px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow:
-    0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 1.5px 0.5px -1px rgba(0, 0, 0, 0.2),
-    0 0 2.5px 0 rgba(0, 0, 0, 0.12);
-}
-
-.co-s {
-  color: var(--on-6c757d);
-}
-.bg-w {
-  background-color: var(--on-ffffff);
-}
-
-.cover-70 {
-  width: 70%;
-}
-.cover-50 {
-  width: 50%;
-}
-
-.d-flex {
-  display: flex;
-  display: -ms-flexbox;
-}
-.flex-fill {
-  flex: 1 1 auto;
-}
-.pt {
-  padding-top: 1em;
-}
-.pb {
-  color: var(--on-440044);
-  padding-bottom: 1em;
-}
-.ml-s {
-  margin-left: 0.5em;
-}
-.co-p {
-  color: var(--on-ff0000);
-}
-.co-h1 {
-  color: var(--on-440044);
-}
-.w-80 {
-  width: 80%;
-}
-.w-50 {
-  width: 50%;
-}
-.mx-a {
-  margin-left: auto;
-  margin-right: auto;
-}
-.sep-v {
-  border-left: 24px solid var(--on-ff0000);
-}
 
 /* for background, dark */
 .hcolor-light {
@@ -913,7 +911,7 @@ Story template: Knowledge Graph
     0px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
-/***************************
+/**
  *  updated to new structure
  *  text-shadow: 0px 4px 4px rgb(0 0 0 / .95);
  *  Poppins
@@ -2054,18 +2052,19 @@ blockquote:before {
         <div class="paper co-s bg-w cover-70 d-flex">
           <div class="flex-fill pt pb">
             <hgroup class="ml-s">
-              <div class="popn-400-reg fs-14 co-p">
+              <div class="Poppins-Medium-500 fs-14 co-p">
                 part of education series: connecting the dots
               </div>
-              <h1 class="popn-800-ita fs-20 co-h1">
+              <h1 class="Poppins-ExtraBoldItalic-800 fs-32 co-h1">
                 Solve Problems with Knowledge Graphs
               </h1>
             </hgroup>
-            <div class="popn-500-reg fs-16 w-80 mx-a">by Paula Perez</div>
+            <div class="Poppins-Medium-500 fs-16 w-80 mx-a">by Paula Perez</div>
           </div>
           <div class="sep-v"></div>
         </div>
       </amp-story-grid-layer>
+
     </amp-story-page>
 
     <amp-story-page
@@ -2093,10 +2092,10 @@ blockquote:before {
             <div class="row-1">
               <div class="ta-c">
                 <div animate-in="fade-in" animate-in-duration="4s">
-                  <h2 class="popn-700-reg fs-30 stbd">
+                  <h2 class="Poppins-Bold-700 fs-30 stbd">
                     A knowledge graph is a way to represent knowledge
                   </h2>
-                  <h3 class="popn-300-ita fs-24 stbd">
+                  <h3 class="Poppins-LightItalic-300 fs-24 stbd">
                     It helps us visualize information in a more intuitive way
                   </h3>
                 </div>
@@ -2109,7 +2108,7 @@ blockquote:before {
                 animate-in-duration="4s"
                 animate-in-delay="0.5s"
               >
-                <h4 class="popn-400-reg fs-24 stbd" style="margin-top: 0.6em">
+                <h4 class="Poppins-Regular-400 fs-24 stbd" style="margin-top: 0.6em">
                   It helps to find objects
                 </h4>
               </div>
@@ -2132,7 +2131,7 @@ blockquote:before {
                 animate-in-delay="0.5s"
               >
                 <div class="box-1">
-                  <h4 class="popn-400-ita fs-22 stbd">
+                  <h4 class="Poppins-Italic-400 fs-22 stbd">
                     controlled vocabularies (MeSH)&#x003B; ontologies (Gene
                     Ontology)
                   </h4>
@@ -2146,7 +2145,7 @@ blockquote:before {
                 animate-in-duration="4s"
                 animate-in-delay="1.5s"
               >
-                <h4 class="popn-400-reg fs-24 stbd" style="margin-top: 0.6em">
+                <h4 class="Poppins-Regular-400 fs-24 stbd" style="margin-top: 0.6em">
                   It answers questions
                 </h4>
               </div>
@@ -2169,7 +2168,7 @@ blockquote:before {
                 animate-in-delay="1.5s"
               >
                 <div class="box-1">
-                  <h4 class="popn-400-ita fs-22 stbd">
+                  <h4 class="Poppins-Italic-400 fs-22 stbd">
                     knowledge graphs on the Web&#x003B; SPARQL query language
                   </h4>
                 </div>
@@ -2182,7 +2181,7 @@ blockquote:before {
                 animate-in-duration="4s"
                 animate-in-delay="2.5s"
               >
-                <h4 class="popn-400-reg fs-24 stbd" style="margin-top: 0.6em">
+                <h4 class="Poppins-Regular-400 fs-24 stbd" style="margin-top: 0.6em">
                   It generates hypotheses
                 </h4>
               </div>
@@ -2205,7 +2204,7 @@ blockquote:before {
                 animate-in-delay="2.5s"
               >
                 <div class="box-1">
-                  <h4 class="popn-400-ita fs-22">
+                  <h4 class="Poppins-Italic-400 fs-22">
                     knowledge plus computation &#x003D; inference; ABC model
                   </h4>
                 </div>
@@ -2225,7 +2224,7 @@ blockquote:before {
         <div class="hcolor-light">
           <div animate-in="fade-in" animate-in-duration="4s">
             <div class="ta-c">
-              <h2 class="popn-600-reg fs-36 lh-28 stbd">
+              <h2 class="Poppins-SemiBold-600 fs-36 lh-28 stbd">
                 Objects in knowledge graphs are organized in ontologies
               </h2>
             </div>
@@ -2239,7 +2238,7 @@ blockquote:before {
             animate-in-delay="1s"
           >
             <div class="ta-c">
-              <h3 class="popn-300-ita fs-26 lh-18 stbd">
+              <h3 class="Poppins-LightItalic-300 fs-26 lh-18 stbd">
                 An ontology is defined as &#x201C;the branch of metaphysics
                 dealing with the nature of being&#x201D;
               </h3>
@@ -2254,7 +2253,7 @@ blockquote:before {
             animate-in-delay="2s"
           >
             <div class="ta-c">
-              <h3 class="popn-300-reg fs-26 lh-18 stbd">
+              <h3 class="Poppins-Light-300 fs-26 lh-18 stbd">
                 In practice, it is a set of concepts, definitions and
                 inter&#x2010;relationships
               </h3>
@@ -2269,7 +2268,7 @@ blockquote:before {
             animate-in-delay="3s"
           >
             <div class="ta-c">
-              <h3 class="popn-300-reg fs-24 lh-18 stbd">
+              <h3 class="Poppins-Light-300 fs-24 lh-18 stbd">
                 There are hundreds of ontologies in life sciences
               </h3>
             </div>
@@ -2318,7 +2317,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="0.5s"
           >
-            <h2 class="popn-600-reg fs-36 stbd">
+            <h2 class="Poppins-SemiBold-600 fs-36 stbd">
               Example&#x003A; Gene Ontology
             </h2>
           </div>
@@ -2328,7 +2327,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="1s"
           >
-            <h3 class="popn-500-ita fs-18 lh-14 ta-l stbd">
+            <h3 class="Poppins-MediumItalic-500 fs-18 lh-14 ta-l stbd">
               Started in 1999 as a collaboration among three Model Organism
               Databases
             </h3>
@@ -2346,7 +2345,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="1.5s"
           >
-            <h3 class="popn-500-ita fs-18 lh-14 ta-l stbd">
+            <h3 class="Poppins-MediumItalic-500 fs-18 lh-14 ta-l stbd">
               GO is a set of concepts and their relationships to each other
               organized within a hierarchy.
             </h3>
@@ -2359,7 +2358,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="2s"
           >
-            <h3 class="popn-500-ita fs-18 lh-14 ta-l stbd">
+            <h3 class="Poppins-MediumItalic-500 fs-18 lh-14 ta-l stbd">
               GO is a way to capture biological knowledge for individual gene
               products in a way computers understand.
             </h3>
@@ -2375,7 +2374,7 @@ blockquote:before {
         data-title="Credits and Reference"
       >
         <section>
-          <div class="popn-400-reg">
+          <div class="Poppins-Regular-400">
             <p>Improve treatment of credits and references</p>
 
             <p>Ontology Slide credit: M&#x00E9;lanie Courtot, Ph.D.</p>
@@ -2416,7 +2415,7 @@ blockquote:before {
       <amp-story-grid-layer template="vertical" position="landscape-half-right">
         <div class="hcolor-dark">
           <div animate-in="fade-in" animate-in-duration="4s">
-            <h2 class="popn-700-reg fs-42 stbd">GO Branches</h2>
+            <h2 class="Poppins-Bold-700 fs-42 stbd">GO Branches</h2>
           </div>
 
           <div
@@ -2424,7 +2423,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="1s"
           >
-            <h3 class="popn-400-ita fs-18 lh-14 ta-l stbd">
+            <h3 class="Poppins-Italic-400 fs-18 lh-14 ta-l stbd">
               An ontology like GO allows us to define different aspects of
               biological knowledge
             </h3>
@@ -2437,7 +2436,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="2s"
           >
-            <h4 class="popn-500-reg fs-24 stbd">Molecular Function</h4>
+            <h4 class="Poppins-Medium-500 fs-24 stbd">Molecular Function</h4>
             <p>An elemental activity or task or job</p>
           </div>
 
@@ -2448,7 +2447,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="3s"
           >
-            <h4 class="popn-500-reg fs-24 stbd">Biological Process</h4>
+            <h4 class="Poppins-Medium-500 fs-24 stbd">Biological Process</h4>
             <p>A commonly recognized series of events</p>
           </div>
 
@@ -2459,7 +2458,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="4s"
           >
-            <h4 class="popn-500-reg fs-24 stbd">Cellular Component</h4>
+            <h4 class="Poppins-Medium-500 fs-24 stbd">Cellular Component</h4>
             <p>Where a gene is located</p>
           </div>
         </div>
@@ -2508,7 +2507,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="0s"
           >
-            <h2 class="popn-700-reg fs-32 lh-22 stbd">
+            <h2 class="Poppins-Bold-700 fs-32 lh-22 stbd">
               But at times&#x002C; an ontology like GO is not enough
             </h2>
           </div>
@@ -2520,7 +2519,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="1s"
           >
-            <div class="popn-500-reg fs-24 stbd">
+            <div class="Poppins-Medium-500 fs-24 stbd">
               <h3>
                 Knowledge graphs&#x002C; or knowledge bases&#x002C; go one step
                 further than ontologies or databases.
@@ -2535,7 +2534,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="2s"
           >
-            <div class="popn-500-reg fs-24 stbd">
+            <div class="Poppins-Medium-500 fs-24 stbd">
               <h3>
                 It is an integrated collection of claims that can be represented
                 in a graph.
@@ -2550,7 +2549,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="3s"
           >
-            <div class="popn-500-reg fs-24 stbd">
+            <div class="Poppins-Medium-500 fs-24 stbd">
               <h3>
                 They help with the communication between machines and humans,
                 and allow for more organic and implicit information to be
@@ -2575,7 +2574,7 @@ blockquote:before {
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-42 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-42 stbd">
                 Why knowledge graphs&#x003F;
               </h2>
             </div>
@@ -2587,7 +2586,7 @@ blockquote:before {
             animate-in-delay="1s"
           >
             <div class="ta-c">
-              <h3 class="popn-500-reg fs-28 lh-20 stbd">
+              <h3 class="Poppins-Medium-500 fs-28 lh-20 stbd">
                 To answer explicit questions from the user.
               </h3>
             </div>
@@ -2601,7 +2600,7 @@ blockquote:before {
             animate-in-delay="2s"
           >
             <div class="ta-c">
-              <h3 class="popn-500-reg fs-28 lh-20 stbd">
+              <h3 class="Poppins-Medium-500 fs-28 lh-20 stbd">
                 To uncover implicit relationships that are
                 &#x201C;hidden&#x201D; within daily language and context.
               </h3>
@@ -2616,7 +2615,7 @@ blockquote:before {
             animate-in-delay="3s"
           >
             <div class="ta-c">
-              <h3 class="popn-500-reg fs-28 lh-20 stbd">
+              <h3 class="Poppins-Medium-500 fs-28 lh-20 stbd">
                 To go deeper in the information provided to the user.
               </h3>
             </div>
@@ -2639,7 +2638,7 @@ blockquote:before {
               animate-in-delay="0s"
             >
               <div class="ta-c">
-                <h2 class="popn-800-reg fs-42 lh-28 stbd">
+                <h2 class="Poppins-ExtraBold-800 fs-42 lh-28 stbd">
                   Some famous knowledge graphs
                 </h2>
               </div>
@@ -2653,7 +2652,7 @@ blockquote:before {
                 animate-in-duration="4s"
                 animate-in-delay="1s"
               >
-                <h3 class="popn-500-ita fs-22 stbd">
+                <h3 class="Poppins-MediumItalic-500 fs-22 stbd">
                   Wikidata: the Wikipedia Foundation knowledge graph
                 </h3>
               </div>
@@ -2665,7 +2664,7 @@ blockquote:before {
                 animate-in-duration="4s"
                 animate-in-delay="2s"
               >
-                <h3 class="popn-500-ita fs-22 stbd">
+                <h3 class="Poppins-MediumItalic-500 fs-22 stbd">
                   UniProt Protein knowledge base
                 </h3>
               </div>
@@ -2677,7 +2676,7 @@ blockquote:before {
                 animate-in-duration="4s"
                 animate-in-delay="3s"
               >
-                <h3 class="popn-500-ita fs-22 stbd">Google Knowledge Graph</h3>
+                <h3 class="Poppins-MediumItalic-500 fs-22 stbd">Google Knowledge Graph</h3>
               </div>
 
               <div class="v-sp-2"></div>
@@ -2687,7 +2686,7 @@ blockquote:before {
                 animate-in-duration="4s"
                 animate-in-delay="4s"
               >
-                <h3 class="popn-500-ita fs-22 stbd">
+                <h3 class="Poppins-MediumItalic-500 fs-22 stbd">
                   PubChem from US National Institutes of Health (NIH)
                 </h3>
               </div>
@@ -2741,7 +2740,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="0s"
           >
-            <h2 class="popn-800-reg fs-32 lh-28 stbd">
+            <h2 class="Poppins-ExtraBold-800 fs-32 lh-28 stbd">
               Google Knowledge Graph
             </h2>
           </div>
@@ -2753,7 +2752,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="1s"
           >
-            <h3 class="popn-500-reg fs-28 stbd">
+            <h3 class="Poppins-Medium-500 fs-28 stbd">
               <i>search for&#x003A;</i>
               &nbsp;&nbsp;&nbsp;Vemurafenib
             </h3>
@@ -2766,7 +2765,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="2s"
           >
-            <h4 class="popn-400-ita fs-28 stbd">2,310,000 results</h4>
+            <h4 class="Poppins-Italic-400 fs-28 stbd">2,310,000 results</h4>
           </div>
 
           <div class="v-sp-6"></div>
@@ -2776,7 +2775,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="3s"
           >
-            <h4 class="popn-400-ita fs-28 stbd">1 infobox</h4>
+            <h4 class="Poppins-Italic-400 fs-28 stbd">1 infobox</h4>
           </div>
 
           <div class="v-sp-6"></div>
@@ -2786,7 +2785,7 @@ blockquote:before {
             animate-in-duration="4s"
             animate-in-delay="4s"
           >
-            <h4 class="popn-400-ita fs-28 lh-18 stbd">
+            <h4 class="Poppins-Italic-400 fs-28 lh-18 stbd">
               1 node in Google Knowledge Graph
             </h4>
           </div>
@@ -2820,7 +2819,7 @@ blockquote:before {
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-48 lh-28 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-48 lh-28 stbd">
                 Why use a Knowledge Graphs&#x003F;
               </h2>
             </div>
@@ -2834,7 +2833,7 @@ blockquote:before {
             animate-in-delay="1s"
           >
             <div class="ta-c">
-              <h3 class="popn-500-ita fs-28 stbd">
+              <h3 class="Poppins-MediumItalic-500 fs-28 stbd">
                 Answer explicit questions&#x003B; uncover implicit relations
               </h3>
             </div>
@@ -2885,7 +2884,7 @@ blockquote:before {
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-48 lh-28 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-48 lh-28 stbd">
                 Implicit relations for hypothesis generation
               </h2>
             </div>
@@ -2899,7 +2898,7 @@ blockquote:before {
             animate-in-delay="1s"
           >
             <div class="ta-c">
-              <h3 class="popn-500-ita fs-28 stbd">ABC model</h3>
+              <h3 class="Poppins-MediumItalic-500 fs-28 stbd">ABC model</h3>
             </div>
           </div>
 
@@ -2948,7 +2947,7 @@ blockquote:before {
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-48 lh-28 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-48 lh-28 stbd">
                 Open Discovery and Closed Discovery
               </h2>
             </div>
@@ -2965,7 +2964,7 @@ arrow
             animate-in-delay="1s"
           >
             <div class="ta-c">
-              <h3 class="popn-500-ita fs-18 stbd">
+              <h3 class="Poppins-MediumItalic-500 fs-18 stbd">
                 Open, you don&#x0027;t know what C or B is
                 (&#x0065;&#x002E;&#x0067;&#x002E; disease &#x1F826;
                 &#x003F;drug)
@@ -2979,7 +2978,7 @@ arrow
             animate-in-delay="2s"
           >
             <div class="ta-c">
-              <h3 class="popn-500-ita fs-18 stbd">
+              <h3 class="Poppins-MediumItalic-500 fs-18 stbd">
                 Closed, you know what C is and are looking for B
                 (&#x0065;&#x002E;&#x0067;&#x002E; disease – why&#x003F; – drug)
               </h3>
@@ -3049,7 +3048,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="0s"
           >
-            <h2 class="popn-800-reg fs-40 stbd">Example question&#x003A;</h2>
+            <h2 class="Poppins-ExtraBold-800 fs-40 stbd">Example question&#x003A;</h2>
           </div>
 
           <div
@@ -3057,7 +3056,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="0s"
           >
-            <p class="popn-600-reg fs-22 stbd">&nbsp;&nbsp;drug repurposing</p>
+            <p class="Poppins-SemiBold-600 fs-22 stbd">&nbsp;&nbsp;drug repurposing</p>
           </div>
 
           <div class="v-sp-8"></div>
@@ -3067,7 +3066,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="1s"
           >
-            <h3 class="popn-400-ita fs-20 lh-14 stbd">
+            <h3 class="Poppins-Italic-400 fs-20 lh-14 stbd">
               For a given drug, what diseases might it be used to treat&#x003F;
             </h3>
           </div>
@@ -3079,7 +3078,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="2s"
           >
-            <h3 class="popn-400-ita fs-20 lh-14 stbd">Detail</h3>
+            <h3 class="Poppins-Italic-400 fs-20 lh-14 stbd">Detail</h3>
           </div>
 
           <div class="v-sp-6"></div>
@@ -3089,7 +3088,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="3s"
           >
-            <h3 class="popn-400-ita fs-20 lh-14 stbd">Detail</h3>
+            <h3 class="Poppins-Italic-400 fs-20 lh-14 stbd">Detail</h3>
           </div>
 
           <div class="v-sp-6"></div>
@@ -3099,7 +3098,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="4s"
           >
-            <h3 class="popn-400-ita fs-20 lh-14 stbd">Detail</h3>
+            <h3 class="Poppins-Italic-400 fs-20 lh-14 stbd">Detail</h3>
           </div>
         </div>
       </amp-story-grid-layer>
@@ -3122,7 +3121,7 @@ arrow
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-36 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-36 stbd">
                 Implicit relations for hypothesis generation
               </h2>
             </div>
@@ -3134,7 +3133,7 @@ arrow
             animate-in-delay="1s"
           >
             <div class="ta-c">
-              <h3 class="popn-500-ita fs-28 stbd">
+              <h3 class="Poppins-MediumItalic-500 fs-28 stbd">
                 ABC model for drug repurposing
               </h3>
             </div>
@@ -3204,7 +3203,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="0s"
           >
-            <h2 class="popn-800-reg fs-40 lh-30 stbd">
+            <h2 class="Poppins-ExtraBold-800 fs-40 lh-30 stbd">
               Query a knowledge graph with SPARQL
             </h2>
           </div>
@@ -3216,7 +3215,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="1s"
           >
-            <h3 class="popn-500-reg fs-18 lh-14 stbd">
+            <h3 class="Poppins-Medium-500 fs-18 lh-14 stbd">
               SPARQL protocol and RDF query language
             </h3>
           </div>
@@ -3228,7 +3227,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="2s"
           >
-            <h3 class="popn-500-reg fs-18 lh-14 stbd">
+            <h3 class="Poppins-Medium-500 fs-18 lh-14 stbd">
               RDF: Resource Description Framework (common standard for storing
               knowledge graphs)
             </h3>
@@ -3241,7 +3240,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="3s"
           >
-            <h3 class="popn-500-reg fs-18 lh-14 stbd">
+            <h3 class="Poppins-Medium-500 fs-18 lh-14 stbd">
               A SPARQL query &#x003D; a partially completed graph
             </h3>
           </div>
@@ -3256,7 +3255,7 @@ arrow
               animate-in-duration="4s"
               animate-in-delay="4s"
             >
-              <dd class="popn-400-reg fs-18 lh-14 stbd">
+              <dd class="Poppins-Regular-400 fs-18 lh-14 stbd">
                 &#x003F;'s show what you are looking for
               </dd>
             </div>
@@ -3266,7 +3265,7 @@ arrow
               animate-in-duration="4s"
               animate-in-delay="5s"
             >
-              <dd class="popn-400-reg fs-18 lh-14 stbd">
+              <dd class="Poppins-Regular-400 fs-18 lh-14 stbd">
                 remainder constrains the search
               </dd>
             </div>
@@ -3301,7 +3300,7 @@ arrow
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-32 lh-20 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-32 lh-20 stbd">
                 Using Wikidata, Metformin&#x2019;s unique id&#x003A; Q19484
                 <i>treats</i>
                 property id&#x003A; P2175
@@ -3351,7 +3350,7 @@ arrow
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-32 lh-20 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-32 lh-20 stbd">
                 Adding human readable labels to the SPARQL query
               </h2>
             </div>
@@ -3398,7 +3397,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="0s"
           >
-            <h2 class="popn-800-reg fs-44 stbd">
+            <h2 class="Poppins-ExtraBold-800 fs-44 stbd">
               Query a knowledge graph with SPARQL
             </h2>
           </div>
@@ -3410,7 +3409,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="1s"
           >
-            <h3 class="popn-500-reg fs-18 stbd">
+            <h3 class="Poppins-Medium-500 fs-18 stbd">
               Our question&#x003A; &#x201C;For a given drug, what diseases might
               it be used to treat&#x003F;&#x201D;
             </h3>
@@ -3493,7 +3492,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="0s"
           >
-            <h2 class="popn-800-reg fs-36 stbd">
+            <h2 class="Poppins-ExtraBold-800 fs-36 stbd">
               Answer to our question&#x003A;
             </h2>
           </div>
@@ -3505,7 +3504,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="1s"
           >
-            <h3 class="popn-500-reg fs-18 lh-14 stbd">
+            <h3 class="Poppins-Medium-500 fs-18 lh-14 stbd">
               &#x201C;For a given drug, what diseases might it be used to
               treat&#x003F;&#x201D;
             </h3>
@@ -3518,7 +3517,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="2s"
           >
-            <h4 class="popn-400-ita fs-14 stbd">detail</h4>
+            <h4 class="Poppins-Italic-400 fs-14 stbd">detail</h4>
           </div>
 
           <div class="v-sp-6"></div>
@@ -3528,7 +3527,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="3s"
           >
-            <h4 class="popn-400-ita fs-14 stbd">detail</h4>
+            <h4 class="Poppins-Italic-400 fs-14 stbd">detail</h4>
           </div>
 
           <div class="v-sp-6"></div>
@@ -3538,7 +3537,7 @@ arrow
             animate-in-duration="4s"
             animate-in-delay="4s"
           >
-            <h4 class="popn-400-ita fs-14 stbd">detail</h4>
+            <h4 class="Poppins-Italic-400 fs-14 stbd">detail</h4>
           </div>
         </div>
       </amp-story-grid-layer>
@@ -3569,7 +3568,7 @@ arrow
               animate-in-delay="0s"
             >
               <div class="ta-c">
-                <h2 class="popn-700-reg fs-36 stbd">
+                <h2 class="Poppins-Bold-700 fs-36 stbd">
                   PubChem is a biochemistry knowledge base
                 </h2>
               </div>
@@ -3583,7 +3582,7 @@ arrow
               animate-in-delay="1s"
             >
               <div class="ta-c">
-                <h3 class="popn-600-reg fs-28 stbd">
+                <h3 class="Poppins-SemiBold-600 fs-28 stbd">
                   The following pages show how to use PubChem to&#x003A;
                 </h3>
               </div>
@@ -3597,7 +3596,7 @@ arrow
               animate-in-delay="2s"
             >
               <div class="ta-c">
-                <h4 class="popn-400-ita fs-20 stbd">
+                <h4 class="Poppins-Italic-400 fs-20 stbd">
                   identify an item by measurement value
                 </h4>
               </div>
@@ -3611,7 +3610,7 @@ arrow
               animate-in-delay="3s"
             >
               <div class="ta-c">
-                <h4 class="popn-400-ita fs-20 stbd">
+                <h4 class="Poppins-Italic-400 fs-20 stbd">
                   link an item to similar items
                 </h4>
               </div>
@@ -3625,7 +3624,7 @@ arrow
               animate-in-delay="4s"
             >
               <div class="ta-c">
-                <h4 class="popn-400-ita fs-20 stbd">
+                <h4 class="Poppins-Italic-400 fs-20 stbd">
                   define measurement methods to link an item to similar items
                 </h4>
               </div>
@@ -3639,7 +3638,7 @@ arrow
               animate-in-delay="5s"
             >
               <div class="ta-c">
-                <h4 class="popn-400-ita fs-20 stbd">
+                <h4 class="Poppins-Italic-400 fs-20 stbd">
                   identify a specific dataset from an investigation
                 </h4>
               </div>
@@ -3653,7 +3652,7 @@ arrow
               animate-in-delay="6s"
             >
               <div class="ta-c">
-                <h4 class="popn-400-ita fs-20 stbd">
+                <h4 class="Poppins-Italic-400 fs-20 stbd">
                   identify a specific study and its evidence
                 </h4>
               </div>
@@ -3667,7 +3666,7 @@ arrow
               animate-in-delay="7s"
             >
               <div class="ta-c">
-                <h4 class="popn-400-ita fs-20 stbd">
+                <h4 class="Poppins-Italic-400 fs-20 stbd">
                   provide additional information about a bioassay from an
                   investigation
                 </h4>
@@ -3691,13 +3690,13 @@ arrow
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-36 stbd">Identify a unique item</h2>
+              <h2 class="Poppins-ExtraBold-800 fs-36 stbd">Identify a unique item</h2>
             </div>
           </div>
 
           <div class="v-sp-6"></div>
 
-          <div class="grid-pc popn-400-reg fs-18 stbd">
+          <div class="grid-pc Poppins-Regular-400 fs-18 stbd">
             <div class="g-1-1" animate-in="fade-in" animate-in-delay="2.0s">
               Atorvastatin (CID60823)
             </div>
@@ -3811,7 +3810,7 @@ arrow
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-36 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-36 stbd">
                 Link an item to similar items
               </h2>
             </div>
@@ -3819,7 +3818,7 @@ arrow
 
           <div class="v-sp-6"></div>
 
-          <div class="grid-pc popn-400-reg fs-18 stbd">
+          <div class="grid-pc Poppins-Regular-400 fs-18 stbd">
             <div class="g-1-1" animate-in="fade-in" animate-in-delay="2.0s">
               Express similarity:
             </div>
@@ -3984,7 +3983,7 @@ arrow
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-36 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-36 stbd">
                 Define measurement to link similar items
               </h2>
             </div>
@@ -3992,7 +3991,7 @@ arrow
 
           <div class="v-sp-6"></div>
 
-          <div class="grid-pc popn-400-reg fs-18 stbd">
+          <div class="grid-pc Poppins-Regular-400 fs-18 stbd">
             <div class="g-1-1" animate-in="fade-in" animate-in-delay="2.0s">
               Define items:
             </div>
@@ -4084,7 +4083,7 @@ arrow
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-36 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-36 stbd">
                 Identify a specific dataset from an investigation
               </h2>
             </div>
@@ -4092,7 +4091,7 @@ arrow
 
           <div class="v-sp-6"></div>
 
-          <div class="grid-pc popn-400-reg fs-18 stbd">
+          <div class="grid-pc Poppins-Regular-400 fs-18 stbd">
             <div class="g-1-1" animate-in="fade-in" animate-in-delay="2.0s">
               A dataset about &#x2026;
             </div>
@@ -4192,7 +4191,7 @@ arrow
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-36 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-36 stbd">
                 Identify a specific study and its evidence
               </h2>
             </div>
@@ -4200,7 +4199,7 @@ arrow
 
           <div class="v-sp-6"></div>
 
-          <div class="grid-pc popn-400-reg fs-18 stbd">
+          <div class="grid-pc Poppins-Regular-400 fs-18 stbd">
             <div class="g-1-1" animate-in="fade-in" animate-in-delay="2.0s">
               Study summarized as: &#x201C;A new class of anti-inflammatory
               ester prodrugs&#x201D;
@@ -4317,7 +4316,7 @@ arrow
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-36 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-36 stbd">
                 Provide additional information about a bioassay
               </h2>
             </div>
@@ -4325,7 +4324,7 @@ arrow
 
           <div class="v-sp-6"></div>
 
-          <div class="grid-pc popn-400-reg fs-18 stbd">
+          <div class="grid-pc Poppins-Regular-400 fs-18 stbd">
             <div class="g-1-1" animate-in="fade-in" animate-in-delay="2.0s">
               Bioassay title: &#x201C;Primary Cell-based assay for inhibitors of
               the Retinoic Acid Receptor-related orphan receptor A
@@ -4440,7 +4439,7 @@ arrow
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-36 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-36 stbd">
                 Links among PubChem subdomains
               </h2>
             </div>
@@ -4448,7 +4447,7 @@ arrow
 
           <div class="v-sp-6"></div>
 
-          <div class="grid-pc popn-400-reg fs-18 stbd">
+          <div class="grid-pc Poppins-Regular-400 fs-18 stbd">
             <div class="g-1-1" animate-in="fade-in" animate-in-delay="2.0s">
               At the center: measurments and evidence (bioassays)
             </div>
@@ -4573,7 +4572,7 @@ arrow
             animate-in-delay="0s"
           >
             <div class="ta-c">
-              <h2 class="popn-800-reg fs-36 stbd">
+              <h2 class="Poppins-ExtraBold-800 fs-36 stbd">
                 PubChem in a Single Picture
               </h2>
             </div>
@@ -4628,7 +4627,7 @@ arrow
               animate-in-delay="0s"
             >
               <div class="ta-c">
-                <h2 class="popn-800-reg fs-46 stbd">Conclusion</h2>
+                <h2 class="Poppins-ExtraBold-800 fs-46 stbd">Conclusion</h2>
               </div>
             </div>
 
@@ -4638,7 +4637,7 @@ arrow
                 animate-in-duration="4s"
                 animate-in-delay="1s"
               >
-                <h3 class="popn-400-reg fs-22 lh-14 stbd">
+                <h3 class="Poppins-Regular-400 fs-22 lh-14 stbd">
                   A knowledge graph helps us solve problems.
                 </h3>
               </div>
@@ -4652,7 +4651,7 @@ arrow
                 animate-in-duration="4s"
                 animate-in-delay="2s"
               >
-                <h3 class="popn-400-reg fs-22 lh-14 stbd">
+                <h3 class="Poppins-Regular-400 fs-22 lh-14 stbd">
                   We used questions from life sciences to illustrate problem
                   solving.
                 </h3>
@@ -4667,7 +4666,7 @@ arrow
                 animate-in-duration="4s"
                 animate-in-delay="3s"
               >
-                <h3 class="popn-400-reg fs-22 lh-14 stbd">
+                <h3 class="Poppins-Regular-400 fs-22 lh-14 stbd">
                   Knowledge graphs help us discover information that often is
                   difficult to find.
                 </h3>
@@ -4682,7 +4681,7 @@ arrow
                 animate-in-duration="4s"
                 animate-in-delay="4s"
               >
-                <h3 class="popn-400-reg fs-22 lh-14 stbd">
+                <h3 class="Poppins-Regular-400 fs-22 lh-14 stbd">
                   Knowledge graphs help us connect the dots to see new
                   possibilities and solutions.
                 </h3>
