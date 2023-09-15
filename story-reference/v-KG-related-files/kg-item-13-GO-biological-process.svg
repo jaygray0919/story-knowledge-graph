@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1644 794" style="enable-background:new 0 0 1644 794;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;}
+	.st1{font-family:'NotoSerif';}
+	.st2{font-size:13px;}
+	.st3{stroke:#000000;}
+</style>
+<g id="node1">
+	<title>GO:0032502</title>
+	<polygon class="st0" points="351.8,201.4 208.1,201.4 208.1,242.6 351.8,242.6 	"/>
+	<text transform="matrix(1 0 0 1 243.1874 217.8)" class="st1 st2">GO:0032502</text>
+	<text transform="matrix(1 0 0 1 208.6721 234.6)" class="st1 st2">developmental process</text>
+</g>
+<g id="node2">
+	<title>GO:0008150</title>
+	<polygon class="st0" points="794.4,4.2 673.5,4.2 673.5,45.4 794.4,45.4 	"/>
+	<text transform="matrix(1 0 0 1 697.1874 20.6)" class="st1 st2">GO:0008150</text>
+	<text transform="matrix(1 0 0 1 677.5827 37.4)" class="st1 st2">biological_process</text>
+</g>
+<g id="edge1">
+	<title>GO:0032502-&gt;GO:0008150</title>
+	<path class="st0" d="M335.5,201.3c8.5-3,17.2-5.9,25.4-8.5c58-18.3,84.9,2.5,132-36c29-23.7,9.1-51.4,38-75.2
+		c20.4-16.8,82.4-32.7,132.5-43.4"/>
+	<polygon class="st3" points="662.8,34.8 673.3,36.1 664.3,41.6 	"/>
+</g>
+<g id="node3">
+	<title>GO:0022607</title>
+	<polygon class="st0" points="570.6,389.8 447.3,389.8 447.3,448.6 570.6,448.6 	"/>
+	<text transform="matrix(1 0 0 1 472.1874 406.6)" class="st1 st2">GO:0022607</text>
+	<text transform="matrix(1 0 0 1 448.7043 423.4)" class="st1 st2">cellular component</text>
+	<text transform="matrix(1 0 0 1 480.1284 440.2)" class="st1 st2">assembly</text>
+</g>
+<g id="node4">
+	<title>GO:0016043</title>
+	<polygon class="st0" points="663.6,192.6 540.3,192.6 540.3,251.4 663.6,251.4 	"/>
+	<text transform="matrix(1 0 0 1 565.1874 209.4)" class="st1 st2">GO:0016043</text>
+	<text transform="matrix(1 0 0 1 541.7043 226.2)" class="st1 st2">cellular component</text>
+	<text transform="matrix(1 0 0 1 562.4135 243)" class="st1 st2">organization</text>
+</g>
+<g id="edge2">
+	<title>GO:0022607-&gt;GO:0016043</title>
+	<path class="st0" d="M505,389.8c-2.4-28.1-2.1-70.7,15-102.6c5.9-11,14.5-20.8,24-29.2"/>
+	<polygon class="st3" points="541.8,255.2 551.7,251.5 546.3,260.6 	"/>
+</g>
+<g id="node5">
+	<title>GO:0009987</title>
+	<polygon class="st0" points="785.9,98.6 682,98.6 682,139.8 785.9,139.8 	"/>
+	<text transform="matrix(1 0 0 1 697.1874 115)" class="st1 st2">GO:0009987</text>
+	<text transform="matrix(1 0 0 1 685.3427 131.8)" class="st1 st2">cellular process</text>
+</g>
+<g id="edge3">
+	<title>GO:0016043-&gt;GO:0009987</title>
+	<path class="st0" d="M639.8,192.5c18.8-14.6,41.3-32.1,59.6-46.4"/>
+	<polygon class="st3" points="697.4,143.2 707.4,139.9 701.7,148.8 	"/>
+</g>
+<g id="node6">
+	<title>GO:0071840</title>
+	<polygon class="st0" points="663.6,81.5 540.3,81.5 540.3,156.9 663.6,156.9 	"/>
+	<text transform="matrix(1 0 0 1 565.1874 98.2)" class="st1 st2">GO:0071840</text>
+	<text transform="matrix(1 0 0 1 541.7043 115)" class="st1 st2">cellular component</text>
+	<text transform="matrix(1 0 0 1 553.9108 131.8)" class="st1 st2">organization or</text>
+	<text transform="matrix(1 0 0 1 569.5388 148.6)" class="st1 st2">biogenesis</text>
+</g>
+<g id="edge4">
+	<title>GO:0016043-&gt;GO:0071840</title>
+	<path class="st0" d="M601.9,192.5c0-7.9,0-16.7,0-25.4"/>
+	<polygon class="st3" points="598.5,167.1 601.9,157.1 605.5,167.1 	"/>
+</g>
+<g id="edge5">
+	<title>GO:0009987-&gt;GO:0008150</title>
+	<path class="st0" d="M733.9,98.2c0-12.5,0-28.5,0-42.4"/>
+	<polygon class="st3" points="730.5,55.7 733.9,45.7 737.5,55.7 	"/>
+</g>
+<g id="edge6">
+	<title>GO:0071840-&gt;GO:0008150</title>
+	<path class="st0" d="M654.9,81.3c14-10,28.8-20.6,41.8-29.9"/>
+	<polygon class="st3" points="694.7,48.5 704.9,45.6 698.8,54.2 	"/>
+</g>
+<g id="node7">
+	<title>GO:0055013</title>
+	<polygon class="st0" points="342.7,723.4 219.2,723.4 219.2,782.2 342.7,782.2 	"/>
+	<text transform="matrix(1 0 0 1 244.1874 740.2)" class="st1 st2">GO:0055013</text>
+	<text transform="matrix(1 0 0 1 222.123 757)" class="st1 st2">cardiac muscle cell</text>
+	<text transform="matrix(1 0 0 1 240.382 773.8)" class="st1 st2">development</text>
+</g>
+<g id="node8">
+	<title>GO:0055002</title>
+	<polygon class="st0" points="422,620.6 297.9,620.6 297.9,679.4 422,679.4 	"/>
+	<text transform="matrix(1 0 0 1 323.1874 637.4)" class="st1 st2">GO:0055002</text>
+	<text transform="matrix(1 0 0 1 300.1931 654.2)" class="st1 st2">striated muscle cell</text>
+	<text transform="matrix(1 0 0 1 319.382 671)" class="st1 st2">development</text>
+</g>
+<g id="edge7">
+	<title>GO:0055013-&gt;GO:0055002</title>
+	<path class="st0" d="M303.6,723.3c8.6-11.2,18.5-24.1,27.6-35.9"/>
+	<polygon class="st3" points="328.4,685.3 337.3,679.5 334,689.5 	"/>
+</g>
+<g id="node9">
+	<title>GO:0055006</title>
+	<polygon class="st0" points="279.9,629.4 124,629.4 124,670.6 279.9,670.6 	"/>
+	<text transform="matrix(1 0 0 1 165.1875 645.8)" class="st1 st2">GO:0055006</text>
+	<text transform="matrix(1 0 0 1 124.4482 662.6)" class="st1 st2">cardiac cell development</text>
+</g>
+<g id="edge8">
+	<title>GO:0055013-&gt;GO:0055006</title>
+	<path class="st0" d="M258.3,723.3c-10.7-14-23.5-30.6-34.2-44.4"/>
+	<polygon class="st3" points="221.1,680.7 217.8,670.7 226.7,676.5 	"/>
+</g>
+<g id="node10">
+	<title>GO:0055001</title>
+	<polygon class="st0" points="411.6,518.2 256.3,518.2 256.3,559.4 411.6,559.4 	"/>
+	<text transform="matrix(1 0 0 1 297.1874 534.6)" class="st1 st2">GO:0055001</text>
+	<text transform="matrix(1 0 0 1 257.4035 551.4)" class="st1 st2">muscle cell development</text>
+</g>
+<g id="edge9">
+	<title>GO:0055002-&gt;GO:0055001</title>
+	<path class="st0" d="M353.1,620.8c-3.7-15.7-8.2-35.1-11.9-51.1"/>
+	<polygon class="st3" points="337.7,570.3 338.8,559.7 344.5,568.7 	"/>
+</g>
+<g id="node11">
+	<title>GO:0048468</title>
+	<polygon class="st0" points="287,398.6 174.9,398.6 174.9,439.8 287,439.8 	"/>
+	<text transform="matrix(1 0 0 1 194.1875 415)" class="st1 st2">GO:0048468</text>
+	<text transform="matrix(1 0 0 1 177.9851 431.8)" class="st1 st2">cell development</text>
+</g>
+<g id="edge10">
+	<title>GO:0055006-&gt;GO:0048468</title>
+	<path class="st0" d="M204.6,629.1c5.1-40.9,16.5-131.5,22.5-179.2"/>
+	<polygon class="st3" points="223.6,449.4 228.4,439.9 230.6,450.2 	"/>
+</g>
+<g id="edge11">
+	<title>GO:0055001-&gt;GO:0048468</title>
+	<path class="st0" d="M316,518c-16.7-19.4-41.8-48.6-60.4-70.2"/>
+	<polygon class="st3" points="252.9,450.1 249,440.2 258.2,445.5 	"/>
+</g>
+<g id="node12">
+	<title>GO:0044767</title>
+	<polygon class="st0" points="147.8,287 4.1,287 4.1,345.8 147.8,345.8 	"/>
+	<text transform="matrix(1 0 0 1 39.1874 303.8)" class="st1 st2">GO:0044767</text>
+	<text transform="matrix(1 0 0 1 26.4223 320.6)" class="st1 st2">single-organism</text>
+	<text transform="matrix(1 0 0 1 4.6721 337.4)" class="st1 st2">developmental process</text>
+</g>
+<g id="edge12">
+	<title>GO:0048468-&gt;GO:0044767</title>
+	<path class="st0" d="M199.6,398.4c-20.3-13.5-47.3-31.4-70.9-47"/>
+	<polygon class="st3" points="126.6,354.2 120.2,345.7 130.5,348.4 	"/>
+</g>
+<g id="node13">
+	<title>GO:0048869</title>
+	<polygon class="st0" points="309.8,287 166.1,287 166.1,345.8 309.8,345.8 	"/>
+	<text transform="matrix(1 0 0 1 201.1875 303.8)" class="st1 st2">GO:0048869</text>
+	<text transform="matrix(1 0 0 1 166.4467 320.6)" class="st1 st2">cellular developmental</text>
+	<text transform="matrix(1 0 0 1 214.6032 337.4)" class="st1 st2">process</text>
+</g>
+<g id="edge13">
+	<title>GO:0048468-&gt;GO:0048869</title>
+	<path class="st0" d="M232.4,398.4c0.8-12.2,1.9-28,2.9-42.4"/>
+	<polygon class="st3" points="231.8,355.5 236,345.7 238.8,356 	"/>
+</g>
+<g id="node14">
+	<title>GO:0048856</title>
+	<polygon class="st0" points="457.8,287 328.1,287 328.1,345.8 457.8,345.8 	"/>
+	<text transform="matrix(1 0 0 1 356.1874 303.8)" class="st1 st2">GO:0048856</text>
+	<text transform="matrix(1 0 0 1 328.0515 320.6)" class="st1 st2">anatomical structure</text>
+	<text transform="matrix(1 0 0 1 352.382 337.4)" class="st1 st2">development</text>
+</g>
+<g id="edge14">
+	<title>GO:0048468-&gt;GO:0048856</title>
+	<path class="st0" d="M263.7,398.4c21.3-13.5,49.7-31.5,74.4-47.2"/>
+	<polygon class="st3" points="336.4,348.1 346.7,345.7 340.1,354.1 	"/>
+</g>
+<g id="edge15">
+	<title>GO:0044767-&gt;GO:0032502</title>
+	<path class="st0" d="M139.1,287.2c27.8-12.9,60.2-27.9,86.9-40.2"/>
+	<polygon class="st3" points="224.7,243.7 235.2,242.7 227.6,250.1 	"/>
+</g>
+<g id="node15">
+	<title>GO:0044699</title>
+	<polygon class="st0" points="483.6,98.6 332.3,98.6 332.3,139.8 483.6,139.8 	"/>
+	<text transform="matrix(1 0 0 1 371.1874 115)" class="st1 st2">GO:0044699</text>
+	<text transform="matrix(1 0 0 1 333.3871 131.8)" class="st1 st2">single-organism process</text>
+</g>
+<g id="edge16">
+	<title>GO:0044767-&gt;GO:0044699</title>
+	<path class="st0" d="M98.4,287.2c22.7-27.7,60.1-68.8,100.5-94.4c37.7-23.8,84.1-41.2,123.6-53"/>
+	<polygon class="st3" points="321.6,136.4 332.2,137 323.6,143.2 	"/>
+</g>
+<g id="node16">
+	<title>GO:0044763</title>
+	<polygon class="st0" points="521.6,192.6 370.3,192.6 370.3,251.4 521.6,251.4 	"/>
+	<text transform="matrix(1 0 0 1 409.1874 209.4)" class="st1 st2">GO:0044763</text>
+	<text transform="matrix(1 0 0 1 371.1618 226.2)" class="st1 st2">single-organism cellular</text>
+	<text transform="matrix(1 0 0 1 422.6032 243)" class="st1 st2">process</text>
+</g>
+<g id="edge17">
+	<title>GO:0048869-&gt;GO:0044763</title>
+	<path class="st0" d="M302.3,287.2c22.1-10,47.1-21.4,69.9-31.7"/>
+	<polygon class="st3" points="371,252.2 381.5,251.2 373.8,258.6 	"/>
+</g>
+<g id="edge18">
+	<title>GO:0048856-&gt;GO:0032502</title>
+	<path class="st0" d="M357.8,287c-14.4-12-31-25.9-45.1-37.7"/>
+	<polygon class="st3" points="310.1,251.7 304.7,242.6 314.6,246.4 	"/>
+</g>
+<g id="edge19">
+	<title>GO:0044699-&gt;GO:0008150</title>
+	<path class="st0" d="M453.7,98.4c14-5.9,29.6-12.1,44.3-16.8c54.6-17.8,118-32.8,165.3-42.9"/>
+	<polygon class="st3" points="662.6,35.3 673.1,36.7 664,42.1 	"/>
+</g>
+<g id="edge20">
+	<title>GO:0044763-&gt;GO:0009987</title>
+	<path class="st0" d="M521.8,195.6c3.1-1,6.1-1.9,9.1-2.8c62.4-18.6,82-10.6,142-36c7.6-3.2,15.3-7.3,22.6-11.5"/>
+	<polygon class="st3" points="694.2,142 704.5,139.8 697.8,148 	"/>
+</g>
+<g id="edge21">
+	<title>GO:0044763-&gt;GO:0044699</title>
+	<path class="st0" d="M435.1,192.5c-5-13.6-11-29.6-16-43.3"/>
+	<polygon class="st3" points="415.8,150.4 415.6,139.9 422.3,148 	"/>
+</g>
+<g id="node17">
+	<title>GO:0070831</title>
+	<polygon class="st0" points="648.9,620.6 517,620.6 517,679.4 648.9,679.4 	"/>
+	<text transform="matrix(1 0 0 1 546.1874 637.4)" class="st1 st2">GO:0070831</text>
+	<text transform="matrix(1 0 0 1 517.0866 654.2)" class="st1 st2">basement membrane</text>
+	<text transform="matrix(1 0 0 1 554.1284 671)" class="st1 st2">assembly</text>
+</g>
+<g id="node18">
+	<title>GO:0085029</title>
+	<polygon class="st0" points="572,509.4 445.9,509.4 445.9,568.2 572,568.2 	"/>
+	<text transform="matrix(1 0 0 1 472.1874 526.2)" class="st1 st2">GO:0085029</text>
+	<text transform="matrix(1 0 0 1 446.5842 543)" class="st1 st2">extracellular matrix</text>
+	<text transform="matrix(1 0 0 1 480.1284 559.8)" class="st1 st2">assembly</text>
+</g>
+<g id="edge22">
+	<title>GO:0070831-&gt;GO:0085029</title>
+	<path class="st0" d="M563.5,620.8c-8.9-13.4-19.7-29.5-29.2-43.9"/>
+	<polygon class="st3" points="531.1,578.5 528.5,568.2 537,574.6 	"/>
+</g>
+<g id="node19">
+	<title>GO:0071711</title>
+	<polygon class="st0" points="721.9,509.4 590,509.4 590,568.2 721.9,568.2 	"/>
+	<text transform="matrix(1 0 0 1 619.1874 526.2)" class="st1 st2">GO:0071711</text>
+	<text transform="matrix(1 0 0 1 590.0866 543)" class="st1 st2">basement membrane</text>
+	<text transform="matrix(1 0 0 1 616.4135 559.8)" class="st1 st2">organization</text>
+</g>
+<g id="edge23">
+	<title>GO:0070831-&gt;GO:0071711</title>
+	<path class="st0" d="M602.1,620.8c8.8-13.4,19.4-29.5,28.8-43.9"/>
+	<polygon class="st3" points="628.2,574.6 636.6,568.2 634.1,578.5 	"/>
+</g>
+<g id="edge24">
+	<title>GO:0085029-&gt;GO:0022607</title>
+	<path class="st0" d="M508.9,509.5c0-15.2,0-34,0-50.5"/>
+	<polygon class="st3" points="505.5,458.6 508.9,448.6 512.5,458.6 	"/>
+</g>
+<g id="node20">
+	<title>GO:0030198</title>
+	<polygon class="st0" points="715,389.8 588.9,389.8 588.9,448.6 715,448.6 	"/>
+	<text transform="matrix(1 0 0 1 615.1874 406.6)" class="st1 st2">GO:0030198</text>
+	<text transform="matrix(1 0 0 1 589.5842 423.4)" class="st1 st2">extracellular matrix</text>
+	<text transform="matrix(1 0 0 1 612.4135 440.2)" class="st1 st2">organization</text>
+</g>
+<g id="edge25">
+	<title>GO:0085029-&gt;GO:0030198</title>
+	<path class="st0" d="M543.9,509.5c19.6-16.4,44.3-37.1,65.1-54.5"/>
+	<polygon class="st3" points="606.9,452.3 616.8,448.6 611.4,457.7 	"/>
+</g>
+<g id="edge26">
+	<title>GO:0071711-&gt;GO:0030198</title>
+	<path class="st0" d="M655,509.5c-0.5-15.2-1.1-34-1.7-50.5"/>
+	<polygon class="st3" points="649.8,458.7 652.9,448.6 656.8,458.4 	"/>
+</g>
+<g id="node21">
+	<title>GO:0043062</title>
+	<polygon class="st0" points="667.4,287 528.5,287 528.5,345.8 667.4,345.8 	"/>
+	<text transform="matrix(1 0 0 1 561.1874 303.8)" class="st1 st2">GO:0043062</text>
+	<text transform="matrix(1 0 0 1 528.0082 320.6)" class="st1 st2">extracellular structure</text>
+	<text transform="matrix(1 0 0 1 558.4135 337.4)" class="st1 st2">organization</text>
+</g>
+<g id="edge27">
+	<title>GO:0030198-&gt;GO:0043062</title>
+	<path class="st0" d="M636.5,389.7c-5.7-10.9-12.3-23.3-18.3-34.9"/>
+	<polygon class="st3" points="615,356.3 613.4,345.9 621.2,353.1 	"/>
+</g>
+<g id="edge29">
+	<title>GO:0043062-&gt;GO:0016043</title>
+	<path class="st0" d="M599.2,287c0.3-8.1,0.7-17,1.1-25.5"/>
+	<polygon class="st3" points="596.8,261.2 600.7,251.3 603.8,261.5 	"/>
+</g>
+<g id="edge28">
+	<title>GO:0043062-&gt;GO:0044763</title>
+	<path class="st0" d="M550.7,287c-15.4-9.6-32.7-20.3-48.8-30.3"/>
+	<polygon class="st3" points="499.8,259.6 493.2,251.3 503.5,253.6 	"/>
+</g>
+<g id="node22">
+	<title>GO:0009888</title>
+	<polygon class="st0" points="428.7,398.6 305.2,398.6 305.2,439.8 428.7,439.8 	"/>
+	<text transform="matrix(1 0 0 1 330.1874 415)" class="st1 st2">GO:0009888</text>
+	<text transform="matrix(1 0 0 1 306.8566 431.8)" class="st1 st2">tissue development</text>
+</g>
+<g id="edge30">
+	<title>GO:0009888-&gt;GO:0048856</title>
+	<path class="st0" d="M372.2,398.4c3.1-12.3,7.2-28.3,10.8-42.8"/>
+	<polygon class="st3" points="379.7,354.6 385.5,345.7 386.5,356.3 	"/>
+</g>
+<g id="node23">
+	<title>GO:0071474</title>
+	<polygon class="st0" points="1011.6,509.4 874.3,509.4 874.3,568.2 1011.6,568.2 	"/>
+	<text transform="matrix(1 0 0 1 906.1874 526.2)" class="st1 st2">GO:0071474</text>
+	<text transform="matrix(1 0 0 1 875.3474 543)" class="st1 st2">cellular hyperosmotic</text>
+	<text transform="matrix(1 0 0 1 915.1313 559.8)" class="st1 st2">response</text>
+</g>
+<g id="node24">
+	<title>GO:0071470</title>
+	<polygon class="st0" points="928.3,389.8 803.6,389.8 803.6,448.6 928.3,448.6 	"/>
+	<text transform="matrix(1 0 0 1 829.1874 406.6)" class="st1 st2">GO:0071470</text>
+	<text transform="matrix(1 0 0 1 805.1425 423.4)" class="st1 st2">cellular response to</text>
+	<text transform="matrix(1 0 0 1 822.4907 440.2)" class="st1 st2">osmotic stress</text>
+</g>
+<g id="edge31">
+	<title>GO:0071474-&gt;GO:0071470</title>
+	<path class="st0" d="M924.1,509.5c-10.2-15.8-22.8-35.4-33.7-52.4"/>
+	<polygon class="st3" points="887.3,458.9 884.9,448.6 893.2,455.1 	"/>
+</g>
+<g id="node25">
+	<title>GO:0006972</title>
+	<polygon class="st0" points="1091.1,398.6 946.8,398.6 946.8,439.8 1091.1,439.8 	"/>
+	<text transform="matrix(1 0 0 1 982.1874 415)" class="st1 st2">GO:0006972</text>
+	<text transform="matrix(1 0 0 1 947.1008 431.8)" class="st1 st2">hyperosmotic response</text>
+</g>
+<g id="edge32">
+	<title>GO:0071474-&gt;GO:0006972</title>
+	<path class="st0" d="M961.5,509.5c11.8-18.5,27-42.4,38.8-61"/>
+	<polygon class="st3" points="997.5,446.5 1005.8,439.9 1003.4,450.2 	"/>
+</g>
+<g id="node26">
+	<title>GO:0071214</title>
+	<polygon class="st0" points="810.3,287 685.6,287 685.6,345.8 810.3,345.8 	"/>
+	<text transform="matrix(1 0 0 1 711.1874 303.8)" class="st1 st2">GO:0071214</text>
+	<text transform="matrix(1 0 0 1 687.1425 320.6)" class="st1 st2">cellular response to</text>
+	<text transform="matrix(1 0 0 1 698.5746 337.4)" class="st1 st2">abiotic stimulus</text>
+</g>
+<g id="edge33">
+	<title>GO:0071470-&gt;GO:0071214</title>
+	<path class="st0" d="M832.1,389.7c-13.3-11.6-28.8-25.1-42.8-37.3"/>
+	<polygon class="st3" points="787,355.1 781.8,345.9 791.6,349.8 	"/>
+</g>
+<g id="node27">
+	<title>GO:0006970</title>
+	<polygon class="st0" points="1098.7,287 971.2,287 971.2,345.8 1098.7,345.8 	"/>
+	<text transform="matrix(1 0 0 1 998.1875 303.8)" class="st1 st2">GO:0006970</text>
+	<text transform="matrix(1 0 0 1 973.5713 320.6)" class="st1 st2">response to osmotic</text>
+	<text transform="matrix(1 0 0 1 1017.3225 337.4)" class="st1 st2">stress</text>
+</g>
+<g id="edge34">
+	<title>GO:0071470-&gt;GO:0006970</title>
+	<path class="st0" d="M914.4,389.7c19.9-12.1,43.1-26.2,63.7-38.8"/>
+	<polygon class="st3" points="976.4,347.9 986.8,345.7 980.1,353.9 	"/>
+</g>
+<g id="node28">
+	<title>GO:0033554</title>
+	<polygon class="st0" points="953.3,287 828.6,287 828.6,345.8 953.3,345.8 	"/>
+	<text transform="matrix(1 0 0 1 854.1874 303.8)" class="st1 st2">GO:0033554</text>
+	<text transform="matrix(1 0 0 1 830.1425 320.6)" class="st1 st2">cellular response to</text>
+	<text transform="matrix(1 0 0 1 873.3224 337.4)" class="st1 st2">stress</text>
+</g>
+<g id="edge35">
+	<title>GO:0071470-&gt;GO:0033554</title>
+	<path class="st0" d="M873.1,389.7c2.6-10.5,5.5-22.6,8.2-33.8"/>
+	<polygon class="st3" points="878,354.8 883.8,345.9 884.8,356.4 	"/>
+</g>
+<g id="edge36">
+	<title>GO:0006972-&gt;GO:0006970</title>
+	<path class="st0" d="M1022.2,398.4c1.9-12.2,4.4-28,6.6-42.4"/>
+	<polygon class="st3" points="1025.4,355.1 1030.4,345.7 1032.3,356.2 	"/>
+</g>
+<g id="node29">
+	<title>GO:0009628</title>
+	<polygon class="st0" points="949.4,192.6 828.5,192.6 828.5,251.4 949.4,251.4 	"/>
+	<text transform="matrix(1 0 0 1 852.1874 209.4)" class="st1 st2">GO:0009628</text>
+	<text transform="matrix(1 0 0 1 830.6689 226.2)" class="st1 st2">response to abiotic</text>
+	<text transform="matrix(1 0 0 1 862.3088 243)" class="st1 st2">stimulus</text>
+</g>
+<g id="edge37">
+	<title>GO:0071214-&gt;GO:0009628</title>
+	<path class="st0" d="M791.8,287c14.2-9.5,30.1-20.1,44.8-30"/>
+	<polygon class="st3" points="834.9,254 845.1,251.3 838.8,259.8 	"/>
+</g>
+<g id="node30">
+	<title>GO:0051716</title>
+	<polygon class="st0" points="810.3,192.6 685.6,192.6 685.6,251.4 810.3,251.4 	"/>
+	<text transform="matrix(1 0 0 1 711.1874 209.4)" class="st1 st2">GO:0051716</text>
+	<text transform="matrix(1 0 0 1 687.1425 226.2)" class="st1 st2">cellular response to</text>
+	<text transform="matrix(1 0 0 1 721.3088 243)" class="st1 st2">stimulus</text>
+</g>
+<g id="edge38">
+	<title>GO:0071214-&gt;GO:0051716</title>
+	<path class="st0" d="M747.9,287c0-8.1,0-17,0-25.5"/>
+	<polygon class="st3" points="744.5,261.3 747.9,251.3 751.5,261.3 	"/>
+</g>
+<g id="edge39">
+	<title>GO:0006970-&gt;GO:0009628</title>
+	<path class="st0" d="M989.6,287c-14.8-9.6-31.4-20.3-46.8-30.3"/>
+	<polygon class="st3" points="940.8,259.7 934.3,251.3 944.6,253.8 	"/>
+</g>
+<g id="node31">
+	<title>GO:0006950</title>
+	<polygon class="st0" points="1086.9,201.4 973,201.4 973,242.6 1086.9,242.6 	"/>
+	<text transform="matrix(1 0 0 1 993.1875 217.8)" class="st1 st2">GO:0006950</text>
+	<text transform="matrix(1 0 0 1 975.0872 234.6)" class="st1 st2">response to stress</text>
+</g>
+<g id="edge40">
+	<title>GO:0006970-&gt;GO:0006950</title>
+	<path class="st0" d="M1033.4,287c-0.6-10.9-1.2-23.3-1.8-34.3"/>
+	<polygon class="st3" points="1028.1,252.8 1031,242.6 1035.1,252.4 	"/>
+</g>
+<g id="edge42">
+	<title>GO:0033554-&gt;GO:0051716</title>
+	<path class="st0" d="M846.5,287c-14.4-9.5-30.5-20.1-45.5-30"/>
+	<polygon class="st3" points="798.8,259.8 792.4,251.3 802.7,253.9 	"/>
+</g>
+<g id="edge41">
+	<title>GO:0033554-&gt;GO:0006950</title>
+	<path class="st0" d="M934.2,287c18.2-12.4,39.3-26.7,57-38.7"/>
+	<polygon class="st3" points="989.3,245.4 999.5,242.6 993.2,251.2 	"/>
+</g>
+<g id="node32">
+	<title>GO:0050896</title>
+	<polygon class="st0" points="934.3,98.6 803.6,98.6 803.6,139.8 934.3,139.8 	"/>
+	<text transform="matrix(1 0 0 1 832.1874 115)" class="st1 st2">GO:0050896</text>
+	<text transform="matrix(1 0 0 1 805.0734 131.8)" class="st1 st2">response to stimulus</text>
+</g>
+<g id="edge43">
+	<title>GO:0009628-&gt;GO:0050896</title>
+	<path class="st0" d="M883.2,192.5c-2.6-13.4-5.7-29.3-8.3-42.9"/>
+	<polygon class="st3" points="871.4,150.3 873,139.9 878.3,149 	"/>
+</g>
+<g id="edge45">
+	<title>GO:0051716-&gt;GO:0009987</title>
+	<path class="st0" d="M743.9,192.5c-1.8-13.3-3.9-29-5.8-42.5"/>
+	<polygon class="st3" points="734.6,150.2 736.8,139.9 741.6,149.3 	"/>
+</g>
+<g id="edge44">
+	<title>GO:0051716-&gt;GO:0050896</title>
+	<path class="st0" d="M782.6,192.5c17-14.5,37.5-31.8,54.1-46"/>
+	<polygon class="st3" points="834.8,143.7 844.6,139.9 839.3,149 	"/>
+</g>
+<g id="edge46">
+	<title>GO:0006950-&gt;GO:0050896</title>
+	<path class="st0" d="M997.4,201.2c-25.2-16.1-60.3-38.5-87.4-55.8"/>
+	<polygon class="st3" points="908,148.3 901.5,140 911.8,142.4 	"/>
+</g>
+<g id="edge47">
+	<title>GO:0050896-&gt;GO:0008150</title>
+	<path class="st0" d="M839.3,98.5c-19.9-13.9-46.2-32.3-67.6-47.3"/>
+	<polygon class="st3" points="769.7,54.1 763.5,45.5 773.7,48.3 	"/>
+</g>
+<g id="node33">
+	<title>GO:0085027</title>
+	<polygon class="st0" points="1598.2,715.1 1439.7,715.1 1439.7,790.5 1598.2,790.5 	"/>
+	<text transform="matrix(1 0 0 1 1482.1875 731.8)" class="st1 st2">GO:0085027</text>
+	<text transform="matrix(1 0 0 1 1462.2781 748.6)" class="st1 st2">entry into host via</text>
+	<text transform="matrix(1 0 0 1 1439.8708 765.4)" class="st1 st2">enzymatic degradation of</text>
+	<text transform="matrix(1 0 0 1 1439.2646 782.2)" class="st1 st2">host anatomical structure</text>
+</g>
+<g id="node34">
+	<title>GO:0044411</title>
+	<polygon class="st0" points="1590.9,620.6 1447,620.6 1447,679.4 1590.9,679.4 	"/>
+	<text transform="matrix(1 0 0 1 1482.1875 637.4)" class="st1 st2">GO:0044411</text>
+	<text transform="matrix(1 0 0 1 1446.8025 654.2)" class="st1 st2">entry into host through</text>
+	<text transform="matrix(1 0 0 1 1478.8359 671)" class="st1 st2">host barriers</text>
+</g>
+<g id="edge48">
+	<title>GO:0085027-&gt;GO:0044411</title>
+	<path class="st0" d="M1518.9,715.1c0-8.4,0-17.3,0-25.8"/>
+	<polygon class="st3" points="1515.4,689.3 1518.9,679.3 1522.4,689.3 	"/>
+</g>
+<g id="node35">
+	<title>GO:0051830</title>
+	<polygon class="st0" points="1525.9,492.8 1368,492.8 1368,584.8 1525.9,584.8 	"/>
+	<text transform="matrix(1 0 0 1 1410.1875 509.4)" class="st1 st2">GO:0051830</text>
+	<text transform="matrix(1 0 0 1 1366.8552 526.2)" class="st1 st2">entry into other organism</text>
+	<text transform="matrix(1 0 0 1 1368.7214 543)" class="st1 st2">through barriers of other</text>
+	<text transform="matrix(1 0 0 1 1380.9502 559.8)" class="st1 st2">organism involved in</text>
+	<text transform="matrix(1 0 0 1 1380.9883 576.6)" class="st1 st2">symbiotic interaction</text>
+</g>
+<g id="edge49">
+	<title>GO:0044411-&gt;GO:0051830</title>
+	<path class="st0" d="M1500,620.8c-5.4-8.4-11.5-17.8-17.6-27.2"/>
+	<polygon class="st3" points="1479.4,595.3 1476.9,585 1485.3,591.5 	"/>
+</g>
+<g id="node36">
+	<title>GO:0044409</title>
+	<polygon class="st0" points="1640.3,518.2 1543.6,518.2 1543.6,559.4 1640.3,559.4 	"/>
+	<text transform="matrix(1 0 0 1 1555.1875 534.6)" class="st1 st2">GO:0044409</text>
+	<text transform="matrix(1 0 0 1 1546.469 551.4)" class="st1 st2">entry into host</text>
+</g>
+<g id="edge50">
+	<title>GO:0044411-&gt;GO:0044409</title>
+	<path class="st0" d="M1538.1,620.8c10.6-16.2,23.8-36.2,34.4-52.5"/>
+	<polygon class="st3" points="1569.8,566.2 1578.2,559.7 1575.6,570 	"/>
+</g>
+<g id="node37">
+	<title>GO:0051828</title>
+	<polygon class="st0" points="1598.9,381.5 1441,381.5 1441,456.9 1598.9,456.9 	"/>
+	<text transform="matrix(1 0 0 1 1483.1875 398.2)" class="st1 st2">GO:0051828</text>
+	<text transform="matrix(1 0 0 1 1439.8552 415)" class="st1 st2">entry into other organism</text>
+	<text transform="matrix(1 0 0 1 1453.1345 431.8)" class="st1 st2">involved in symbiotic</text>
+	<text transform="matrix(1 0 0 1 1485.8091 448.6)" class="st1 st2">interaction</text>
+</g>
+<g id="edge51">
+	<title>GO:0051830-&gt;GO:0051828</title>
+	<path class="st0" d="M1475.2,492.6c5.4-8.9,11.1-18.2,16.5-27"/>
+	<polygon class="st3" points="1488.8,463.5 1497,456.8 1494.8,467.2 	"/>
+</g>
+<g id="edge52">
+	<title>GO:0044409-&gt;GO:0051828</title>
+	<path class="st0" d="M1579.4,518c-8.7-14.4-20.5-34.1-31.4-52.1"/>
+	<polygon class="st3" points="1545,467.5 1542.8,457.2 1551,463.9 	"/>
+</g>
+<g id="node38">
+	<title>GO:0051701</title>
+	<polygon class="st0" points="1582.5,295.8 1451.4,295.8 1451.4,337 1582.5,337 	"/>
+	<text transform="matrix(1 0 0 1 1480.1875 312.2)" class="st1 st2">GO:0051701</text>
+	<text transform="matrix(1 0 0 1 1452.2388 329)" class="st1 st2">interaction with host</text>
+</g>
+<g id="edge53">
+	<title>GO:0051828-&gt;GO:0051701</title>
+	<path class="st0" d="M1518.8,381.5c-0.3-11.3-0.7-23.5-1-34.2"/>
+	<polygon class="st3" points="1514.3,347.2 1517.6,337.1 1521.3,347 	"/>
+</g>
+<g id="node39">
+	<title>GO:0044419</title>
+	<polygon class="st0" points="1583.9,192.6 1438,192.6 1438,251.4 1583.9,251.4 	"/>
+	<text transform="matrix(1 0 0 1 1474.1875 209.4)" class="st1 st2">GO:0044419</text>
+	<text transform="matrix(1 0 0 1 1437.9297 226.2)" class="st1 st2">interspecies interaction</text>
+	<text transform="matrix(1 0 0 1 1450.5044 243)" class="st1 st2">between organisms</text>
+</g>
+<g id="edge54">
+	<title>GO:0051701-&gt;GO:0044419</title>
+	<path class="st0" d="M1515.6,295.4c-0.6-10-1.4-22.3-2.2-34"/>
+	<polygon class="st3" points="1510,261.7 1512.8,251.5 1517,261.2 	"/>
+</g>
+<g id="node40">
+	<title>GO:0051704</title>
+	<polygon class="st0" points="1521.8,98.6 1374.1,98.6 1374.1,139.8 1521.8,139.8 	"/>
+	<text transform="matrix(1 0 0 1 1411.1875 115)" class="st1 st2">GO:0051704</text>
+	<text transform="matrix(1 0 0 1 1374.9329 131.8)" class="st1 st2">multi-organism process</text>
+</g>
+<g id="edge55">
+	<title>GO:0044419-&gt;GO:0051704</title>
+	<path class="st0" d="M1492.9,192.5c-8.5-13.8-18.5-30.3-27-44.1"/>
+	<polygon class="st3" points="1462.8,150.2 1460.6,139.9 1468.8,146.6 	"/>
+</g>
+<g id="edge56">
+	<title>GO:0051704-&gt;GO:0008150</title>
+	<path class="st0" d="M1409.3,98.4c-13.6-6.4-29.3-12.9-44.3-16.8c-104.2-27.4-418.3-46.1-560.1-53.4"/>
+	<polygon class="st3" points="804.3,31.7 794.5,27.7 804.7,24.7 	"/>
+</g>
+<g id="node41">
+	<title>GO:0050829</title>
+	<polygon class="st0" points="1319.6,620.6 1154.3,620.6 1154.3,679.4 1319.6,679.4 	"/>
+	<text transform="matrix(1 0 0 1 1200.1875 637.4)" class="st1 st2">GO:0050829</text>
+	<text transform="matrix(1 0 0 1 1154.6875 654.2)" class="st1 st2">defense response to Gram-</text>
+	<text transform="matrix(1 0 0 1 1176.7996 671)" class="st1 st2">negative bacterium</text>
+</g>
+<g id="node42">
+	<title>GO:0042742</title>
+	<polygon class="st0" points="1299.6,509.4 1174.3,509.4 1174.3,568.2 1299.6,568.2 	"/>
+	<text transform="matrix(1 0 0 1 1200.1875 526.2)" class="st1 st2">GO:0042742</text>
+	<text transform="matrix(1 0 0 1 1175.7649 543)" class="st1 st2">defense response to</text>
+	<text transform="matrix(1 0 0 1 1204.926 559.8)" class="st1 st2">bacterium</text>
+</g>
+<g id="edge57">
+	<title>GO:0050829-&gt;GO:0042742</title>
+	<path class="st0" d="M1236.9,620.8c0-12.9,0-28.3,0-42.3"/>
+	<polygon class="st3" points="1233.4,578.2 1236.9,568.2 1240.4,578.2 	"/>
+</g>
+<g id="node43">
+	<title>GO:0009617</title>
+	<polygon class="st0" points="1423.3,398.6 1284.6,398.6 1284.6,439.8 1423.3,439.8 	"/>
+	<text transform="matrix(1 0 0 1 1317.1875 415)" class="st1 st2">GO:0009617</text>
+	<text transform="matrix(1 0 0 1 1284.6907 431.8)" class="st1 st2">response to bacterium</text>
+</g>
+<g id="edge58">
+	<title>GO:0042742-&gt;GO:0009617</title>
+	<path class="st0" d="M1265.6,509.5c18.5-18.9,42.4-43.3,60.7-62"/>
+	<polygon class="st3" points="1324.2,444.6 1333.7,439.9 1329.2,449.5 	"/>
+</g>
+<g id="node44">
+	<title>GO:0098542</title>
+	<polygon class="st0" points="1266.8,389.8 1109.1,389.8 1109.1,448.6 1266.8,448.6 	"/>
+	<text transform="matrix(1 0 0 1 1151.1875 406.6)" class="st1 st2">GO:0098542</text>
+	<text transform="matrix(1 0 0 1 1108.3694 423.4)" class="st1 st2">defense response to other</text>
+	<text transform="matrix(1 0 0 1 1158.6333 440.2)" class="st1 st2">organism</text>
+</g>
+<g id="edge59">
+	<title>GO:0042742-&gt;GO:0098542</title>
+	<path class="st0" d="M1225,509.5c-6.3-15.5-14.2-34.7-21.1-51.5"/>
+	<polygon class="st3" points="1200.5,459.2 1200,448.6 1207,456.5 	"/>
+</g>
+<g id="node45">
+	<title>GO:0051707</title>
+	<polygon class="st0" points="1387.6,287 1276.3,287 1276.3,345.8 1387.6,345.8 	"/>
+	<text transform="matrix(1 0 0 1 1295.1875 303.8)" class="st1 st2">GO:0051707</text>
+	<text transform="matrix(1 0 0 1 1278.0076 320.6)" class="st1 st2">response to other</text>
+	<text transform="matrix(1 0 0 1 1302.6333 337.4)" class="st1 st2">organism</text>
+</g>
+<g id="edge60">
+	<title>GO:0009617-&gt;GO:0051707</title>
+	<path class="st0" d="M1349.5,398.4c-2.6-12.3-6.1-28.3-9.2-42.8"/>
+	<polygon class="st3" points="1336.9,356.3 1338.2,345.7 1343.7,354.8 	"/>
+</g>
+<g id="edge62">
+	<title>GO:0098542-&gt;GO:0051707</title>
+	<path class="st0" d="M1229.2,389.7c16.6-11.8,35.8-25.6,53.1-37.9"/>
+	<polygon class="st3" points="1280.5,348.8 1290.7,345.9 1284.6,354.5 	"/>
+</g>
+<g id="node46">
+	<title>GO:0006952</title>
+	<polygon class="st0" points="1235.7,295.8 1124.2,295.8 1124.2,337 1235.7,337 	"/>
+	<text transform="matrix(1 0 0 1 1143.1875 312.2)" class="st1 st2">GO:0006952</text>
+	<text transform="matrix(1 0 0 1 1126.4932 329)" class="st1 st2">defense response</text>
+</g>
+<g id="edge61">
+	<title>GO:0098542-&gt;GO:0006952</title>
+	<path class="st0" d="M1185.7,389.7c-1-13.3-2.3-29-3.3-42.5"/>
+	<polygon class="st3" points="1178.8,347.3 1181.6,337.1 1185.8,346.8 	"/>
+</g>
+<g id="edge64">
+	<title>GO:0051707-&gt;GO:0051704</title>
+	<path class="st0" d="M1350.2,287c6.9-11.2,14.7-24,21.7-35.8c20.8-35,44-75.6,59.3-102.4"/>
+	<polygon class="st3" points="1428.3,146.9 1436.3,139.9 1434.4,150.3 	"/>
+</g>
+<g id="node47">
+	<title>GO:0043207</title>
+	<polygon class="st0" points="1362.9,192.6 1235,192.6 1235,251.4 1362.9,251.4 	"/>
+	<text transform="matrix(1 0 0 1 1262.1875 209.4)" class="st1 st2">GO:0043207</text>
+	<text transform="matrix(1 0 0 1 1235.7813 226.2)" class="st1 st2">response to external</text>
+	<text transform="matrix(1 0 0 1 1253.2341 243)" class="st1 st2">biotic stimulus</text>
+</g>
+<g id="edge63">
+	<title>GO:0051707-&gt;GO:0043207</title>
+	<path class="st0" d="M1321.7,287c-2.9-8.3-6.1-17.4-9.1-26.1"/>
+	<polygon class="st3" points="1309.2,261.9 1309.2,251.3 1315.8,259.6 	"/>
+</g>
+<g id="edge65">
+	<title>GO:0006952-&gt;GO:0006950</title>
+	<path class="st0" d="M1147,295.7c-22.3-14-51.9-32.6-75.7-47.7"/>
+	<polygon class="st3" points="1069.4,251 1062.8,242.7 1073.1,245 	"/>
+</g>
+<g id="node48">
+	<title>GO:0009607</title>
+	<polygon class="st0" points="1356.2,89.8 1241.7,89.8 1241.7,148.6 1356.2,148.6 	"/>
+	<text transform="matrix(1 0 0 1 1262.1875 106.6)" class="st1 st2">GO:0009607</text>
+	<text transform="matrix(1 0 0 1 1244.3284 123.4)" class="st1 st2">response to biotic</text>
+	<text transform="matrix(1 0 0 1 1272.3088 140.2)" class="st1 st2">stimulus</text>
+</g>
+<g id="edge66">
+	<title>GO:0043207-&gt;GO:0009607</title>
+	<path class="st0" d="M1298.9,192.5c0-10.5,0-22.6,0-33.8"/>
+	<polygon class="st3" points="1295.4,158.7 1298.9,148.7 1302.4,158.7 	"/>
+</g>
+<g id="node49">
+	<title>GO:0009605</title>
+	<polygon class="st0" points="1079.9,89.8 952,89.8 952,148.6 1079.9,148.6 	"/>
+	<text transform="matrix(1 0 0 1 979.1874 106.6)" class="st1 st2">GO:0009605</text>
+	<text transform="matrix(1 0 0 1 952.7812 123.4)" class="st1 st2">response to external</text>
+	<text transform="matrix(1 0 0 1 989.3088 140.2)" class="st1 st2">stimulus</text>
+</g>
+<g id="edge67">
+	<title>GO:0043207-&gt;GO:0009605</title>
+	<path class="st0" d="M1235,205.3c-42.1-11.8-98.2-28.9-146-48.5c-3-1.2-6.1-2.6-9.2-3.9"/>
+	<polygon class="st3" points="1078.1,155.9 1070.5,148.6 1081,149.6 	"/>
+</g>
+<g id="node50">
+	<title>GO:0022610</title>
+	<polygon class="st0" points="1223.7,98.6 1098.2,98.6 1098.2,139.8 1223.7,139.8 	"/>
+	<text transform="matrix(1 0 0 1 1124.1875 115)" class="st1 st2">GO:0022610</text>
+	<text transform="matrix(1 0 0 1 1101.0154 131.8)" class="st1 st2">biological adhesion</text>
+</g>
+<g id="edge68">
+	<title>GO:0022610-&gt;GO:0008150</title>
+	<path class="st0" d="M1126.8,98.5c-11.7-6.3-25-12.6-37.8-16.9c-95.5-31.6-211.5-46-284.3-52.2"/>
+	<polygon class="st3" points="804.4,32.9 794.7,28.6 805,25.9 	"/>
+</g>
+</svg>
