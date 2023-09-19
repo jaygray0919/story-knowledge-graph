@@ -1,0 +1,13 @@
+
+include in this collection
+
+French wine
+Italian wine
+
+W3C wine
+
+wedge-client
+	italian cheese
+
+from French wine, use
+	wine_French_ontology_lode
