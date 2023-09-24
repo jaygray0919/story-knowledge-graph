@@ -1,8 +1,0 @@
-bs4
-requests
-tqdm
-pandas
-lxml
-matplotlib
-seaborn
-sklearn

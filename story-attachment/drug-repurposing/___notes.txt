@@ -1,0 +1,14 @@
+
+Validating drug repurposing signals using electronic health records: a case study of metformin associated with reduced cancer mortality
+https://academic.oup.com/jamia/article/22/1/179/833449
+
+
+Find drugs that may treat disease
+• according to the drug->gene->disease model
+• constrained to focus on cancers
+• ?disease wdt:P279* wd:Q12078 .
+• limited to genes related to cell proliferation
+• ?gene_product wdt:P682 ?biological_process
+• ?biological_process wdt:P279* wd:Q14818032
+
+

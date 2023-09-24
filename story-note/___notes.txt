@@ -1,9 +1,4 @@
 
-neural network article
-  https://www.asimovinstitute.org/neural-network-zoo/
-  use subset
-
-
 issue:
   does not include paula-perez edits
   needs SPARQL query in attachment or outlink
