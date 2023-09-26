@@ -1,24 +1,22 @@
 
-Validating drug repurposing signals using electronic health records:
-  a case study of metformin associated with reduced cancer mortality
-  https://academic.oup.com/jamia/article/22/1/179/833449
-
-
-Find drugs that may treat disease
-• according to the drug->gene->disease model
-• constrained to focus on cancers
-• ?disease wdt:P279* wd:Q12078 .
-• limited to genes related to cell proliferation
-• ?gene_product wdt:P682 ?biological_process
-• ?biological_process wdt:P279* wd:Q14818032
-
+COVID story
 
 ProteinKG25
 
+Protein SVG
+SQCVNLTTRTQLPPAYTN-SFTRGVYYPDKVFRSSVL
+
+_Vaccine-against-COVID.pdf
+about
+SQCVNLTTRTQLPPAYTN-SFTRGVYYPDKVFRSSVL
+
+
 https://www.zjukg.org/project/ProteinKG25/
+  ProteinKG25 is a large-scale KG dataset with aligned descriptions and protein sequences respectively to GO term and proteins entities. It contains about 612,483 entities, 4,990,097 triples (including 4,879,951 protein-go triplets and 110,146 Go-Go triplets).
+
 
 https://cheng-siyuan.github.io/ProteinKG25/
-
+  Wikidata5m is a million-scale knowledge graph dataset with aligned corpus. This dataset integrates the Wikidata knowledge graph and Wikipedia pages. Each entity in Wikidata5m is described by a corresponding Wikipedia page, which enables the evaluation of link prediction over unseen entities.
 
 Datasets
   E:\content\__JSON-LD\_chemicals-datasets_examples
