@@ -1,0 +1,42 @@
+
+proteinkg25
+https://paperswithcode.com/dataset/proteinkg25
+
+
+spike peptide
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7091875/
+
+Spike protein is one of the major structural proteins of severe acute respiratory syndrome-coronavirus.
+
+
+protein: SQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWF
+
+protein: PDKVFRSSVLHSTQDLFLPFFSNVTWSQCVNLTTRTQLPPAYTNSFTRGVYYF
+
+
+https://www.researchgate.net/publication/341544064_A_Multiple_Peptides_Vaccine_against_nCOVID-19_Designed_from_the_Nucleocapsid_phosphoprotein_N_and_Spike_Glycoprotein_S_via_the_Immunoinformatics_Approach
+
+https://pubmed.ncbi.nlm.nih.gov/33200089/
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7654333/
+
+https://www.omicsdi.org/dataset/pride/PXD006406
+
+https://oiu-sd.academia.edu/MosabAlNour
+
+Due to the current COVID-19 pandemic, the rapid discovery of a safe and effective vaccine is an essential issue, consequently, this study aims to predict potential COVID-19 peptide-based vaccine utilizing
+  the Nucleocapsid phosphoprotein (N)
+  and Spike Glycoprotein (S)
+  via the Immunoinformatics approach.
+
+To achieve this goal, several Immune Epitope Database (IEDB) tools, molecular docking, and safety prediction servers were used.
+
+According to the results, The Spike peptide peptides SQCVNLTTRTQLPPAYTNSFTRGVY is predicted to have the highest binding affinity to the B-Cells.
+
+The Spike peptide FTISVTTEI has the highest binding affinity to the MHC I HLA-B1503 allele.
+
+The Nucleocapsid peptides KTFPPTEPK and RWYFYYLGTGPEAGL have the highest binding affinity to the MHC I HLA-A0202 allele and the three MHC II alleles HLA-DPA1*01:03/DPB1*02:01, HLA-DQA1*01:02/DQB1-*06:02, HLA-DRB1, respectively.
+
+Furthermore, those peptides were predicted as non-toxic and non-allergen.
+
+Therefore, the combination of those peptides is predicted to stimulate better immunological responses with respectable safety.
