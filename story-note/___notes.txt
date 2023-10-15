@@ -1,5 +1,0 @@
-
-issue:
-  does not include paula-perez edits
-  needs SPARQL query in attachment or outlink
-
